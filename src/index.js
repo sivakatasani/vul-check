@@ -41,4 +41,4 @@ function isValidInventory(body) {
   return true;
 }
 
-asyn
+async
