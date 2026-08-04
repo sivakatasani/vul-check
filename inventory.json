@@ -8,11 +8,11 @@
       "environments": [
         {
           "env": "DEV",
-          "version": "audps_bom_v2024.08.0"
+          "version": "ausdps-v2024.11.2"
         },
         {
           "env": "ST",
-          "version": "audps_bom_v2024.08.0"
+          "version": "ausdps-v2024.11.2"
         },
         {
           "env": "SIT2",
@@ -20,16 +20,16 @@
         },
         {
           "env": "SIT3",
-          "version": null
+          "version": "audps_bom_v2024.08.0"
         },
         {
           "env": "PROD",
-          "version": null
+          "version": "audps_bom_v2024.08.0"
         }
       ],
-      "confidence": "medium",
-      "needsReview": true,
-      "reviewNote": "Version string associated with NeoDPS vs Camel block was ambiguous in source PDF",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewNote": "Confirmed from source PDF: DEV/ST run a newer BOM (2024.11.2) than SIT2/SIT3/PROD (2024.08.0) - this is real, not ambiguous",
       "scan": {
         "vulnerabilityStatus": "clear",
         "vulnerabilityCount": 0,
@@ -274,23 +274,10 @@
       "name": "APIM (3scale)",
       "eolDate": "2026-04-30",
       "reference": "3scale API Management Life Cycle - Red Hat Customer Portal",
-      "environments": [
-        {
-          "env": "NPU",
-          "version": "2.15"
-        },
-        {
-          "env": "NPM",
-          "version": "2.15"
-        },
-        {
-          "env": "PROD",
-          "version": "2.15"
-        }
-      ],
+      "environments": [],
       "confidence": "low",
       "needsReview": true,
-      "reviewNote": "Two separate APIM entries exist (30 Apr 2026 and 15 Nov 2026) - likely different APIM components/instances, could not confirm which version block belongs to which",
+      "reviewNote": "No environment/version row exists for this APIM instance in the source PDF (EOL 30 Apr 2026 entry) - task-tracker-only entry, verify manually",
       "scan": {
         "vulnerabilityStatus": "critical",
         "vulnerabilityCount": 5,
@@ -313,7 +300,7 @@
           {
             "id": "CVE-2019-14852",
             "source": "nvd",
-            "description": "A flaw was found in 3scale’s APIcast gateway that enabled the TLS 1.0 protocol. An attacker could target traffic using this weaker protocol and break its encryption, gaining access to unauthorized information. Version shipped in Red Hat 3scale API Management Platform is vulnerable to this issue.",
+            "description": "A flaw was found in 3scale\u2019s APIcast gateway that enabled the TLS 1.0 protocol. An attacker could target traffic using this weaker protocol and break its encryption, gaining access to unauthorized information. Version shipped in Red Hat 3scale API Management Platform is vulnerable to this issue.",
             "cvssScore": 7.5,
             "cvssSeverity": "HIGH",
             "published": "2021-03-18T20:15:12.660",
@@ -352,7 +339,7 @@
           {
             "id": "CVE-2020-25634",
             "source": "nvd",
-            "description": "A flaw was found in Red Hat 3scale’s API docs URL, where it is accessible without credentials. This flaw allows an attacker to view sensitive information or modify service APIs. Versions before 3scale-2.10.0-ER1 are affected.",
+            "description": "A flaw was found in Red Hat 3scale\u2019s API docs URL, where it is accessible without credentials. This flaw allows an attacker to view sensitive information or modify service APIs. Versions before 3scale-2.10.0-ER1 are affected.",
             "cvssScore": 5.4,
             "cvssSeverity": "MEDIUM",
             "published": "2021-05-26T21:15:08.070",
@@ -389,7 +376,7 @@
       ],
       "confidence": "low",
       "needsReview": true,
-      "reviewNote": "Version numbers for Elasticsearch and APIM(1) were interleaved in source - could be swapped",
+      "reviewNote": "Source PDF row for Elasticsearch reuses OpenShift's reference text verbatim and shows version 2.15 (same as APIM) - this appears to be a data entry error in the source Confluence table itself, not an extraction issue. Verify against the live Confluence page.",
       "scan": {
         "vulnerabilityStatus": "critical",
         "vulnerabilityCount": 20,
@@ -1060,6 +1047,10 @@
       "reference": "PostgreSQL: Versioning Policy",
       "environments": [
         {
+          "env": "DEV",
+          "version": "14"
+        },
+        {
           "env": "TEST",
           "version": "14"
         },
@@ -1070,10 +1061,14 @@
         {
           "env": "SIT3",
           "version": "14"
+        },
+        {
+          "env": "PROD",
+          "version": "14"
         }
       ],
-      "confidence": "medium",
-      "needsReview": true,
+      "confidence": "high",
+      "needsReview": false,
       "scan": {
         "vulnerabilityStatus": "critical",
         "vulnerabilityCount": 20,
@@ -1746,10 +1741,23 @@
       "name": "APIM (instance 2)",
       "eolDate": "2026-11-15",
       "reference": "3scale API Management Life Cycle - Red Hat Customer Portal",
-      "environments": [],
-      "confidence": "low",
-      "needsReview": true,
-      "reviewNote": "Could not confidently map any version/environment rows to this second APIM entry - please fill in manually",
+      "environments": [
+        {
+          "env": "NPU",
+          "version": "2.15"
+        },
+        {
+          "env": "NPM",
+          "version": "2.15"
+        },
+        {
+          "env": "PROD",
+          "version": "2.15"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "reviewNote": null,
       "scan": {
         "vulnerabilityStatus": "critical",
         "vulnerabilityCount": 5,
@@ -1772,7 +1780,7 @@
           {
             "id": "CVE-2019-14852",
             "source": "nvd",
-            "description": "A flaw was found in 3scale’s APIcast gateway that enabled the TLS 1.0 protocol. An attacker could target traffic using this weaker protocol and break its encryption, gaining access to unauthorized information. Version shipped in Red Hat 3scale API Management Platform is vulnerable to this issue.",
+            "description": "A flaw was found in 3scale\u2019s APIcast gateway that enabled the TLS 1.0 protocol. An attacker could target traffic using this weaker protocol and break its encryption, gaining access to unauthorized information. Version shipped in Red Hat 3scale API Management Platform is vulnerable to this issue.",
             "cvssScore": 7.5,
             "cvssSeverity": "HIGH",
             "published": "2021-03-18T20:15:12.660",
@@ -1811,7 +1819,7 @@
           {
             "id": "CVE-2020-25634",
             "source": "nvd",
-            "description": "A flaw was found in Red Hat 3scale’s API docs URL, where it is accessible without credentials. This flaw allows an attacker to view sensitive information or modify service APIs. Versions before 3scale-2.10.0-ER1 are affected.",
+            "description": "A flaw was found in Red Hat 3scale\u2019s API docs URL, where it is accessible without credentials. This flaw allows an attacker to view sensitive information or modify service APIs. Versions before 3scale-2.10.0-ER1 are affected.",
             "cvssScore": 5.4,
             "cvssSeverity": "MEDIUM",
             "published": "2021-05-26T21:15:08.070",
@@ -1833,10 +1841,6 @@
       "eolDate": "2026-12-05",
       "reference": "FME Support Center",
       "environments": [
-        {
-          "env": "DEV",
-          "version": "FME Flow 2023.2.1 Build 23774-win64"
-        },
         {
           "env": "ST",
           "version": "FME Flow 2023.2.1 Build 23774-win64"
@@ -1995,7 +1999,7 @@
       "environments": [
         {
           "env": "DEV",
-          "version": "Not applicable"
+          "version": "7.12.1"
         },
         {
           "env": "ST",
@@ -2218,17 +2222,28 @@
       "reference": "Supported platforms",
       "environments": [
         {
+          "env": "DEV",
+          "version": "7.4.7"
+        },
+        {
+          "env": "ST",
+          "version": "7.4.7"
+        },
+        {
           "env": "SIT2",
-          "version": "4.4"
+          "version": "7.4.7"
+        },
+        {
+          "env": "SIT3",
+          "version": "7.4.7"
         },
         {
           "env": "PROD",
-          "version": "4.4"
+          "version": "7.4.7"
         }
       ],
-      "confidence": "low",
-      "needsReview": true,
-      "reviewNote": "Redis entry (30 Nov 2026) appears only in the reference table, not clearly in the environment/version block - version 4.4 is a guess based on proximity",
+      "confidence": "high",
+      "needsReview": false,
       "scan": {
         "vulnerabilityStatus": "critical",
         "vulnerabilityCount": 20,
@@ -2444,23 +2459,23 @@
       "environments": [
         {
           "env": "DEV",
-          "version": "7.4.7"
+          "version": "4.4"
         },
         {
           "env": "ST",
-          "version": "7.4.7"
+          "version": "4.4"
         },
         {
           "env": "SIT2",
-          "version": "7.4.7"
+          "version": "4.4"
         },
         {
           "env": "SIT3",
-          "version": "7.4.7"
+          "version": "4.4"
         },
         {
           "env": "PROD",
-          "version": "7.4.7"
+          "version": "4.4"
         }
       ],
       "confidence": "high",
@@ -2670,14 +2685,17 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "lastScanned": "2026-08-04T04:06:07.666Z"
-      }
+      },
+      "reviewNote": null
     }
   ],
   "metadata": {
     "sourceDocument": "Software End of Life Tracker",
     "extractedAt": "2026-08-04",
     "extractionMethod": "manual-reconstruction-from-jumbled-pdf-text",
-    "itemsNeedingReview": 8,
-    "lastFullScan": "2026-08-04T04:06:07.666Z"
+    "itemsNeedingReview": 5,
+    "lastFullScan": "2026-08-04T04:06:07.666Z",
+    "lastVersionReconciliation": "2026-08-04",
+    "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction."
   }
 }
