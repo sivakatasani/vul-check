@@ -3,7 +3,7 @@
     {
       "id": "neodps",
       "name": "NeoDPS",
-      "eolDate": "2025-11-02",
+      "eolDate": "2025-11-01",
       "reference": "",
       "environments": [
         {
@@ -395,7 +395,7 @@
     {
       "id": "elasticsearch",
       "name": "Elasticsearch",
-      "eolDate": "2026-04-08",
+      "eolDate": "2026-04-30",
       "reference": "OpenShift Operator Life Cycles - Red Hat Customer Portal",
       "environments": [
         {
@@ -2295,7 +2295,7 @@
           {
             "id": "CVE-2024-23114",
             "source": "nvd",
-            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel CassandraQL Component AggregationRepository which is vulnerable to unsafe deserialization. Under specific conditions it is possible to deserialize malicious payload.This issue affects Apache Camel: from 3.0.0 before 3.21.4, from 3.22.0 before 3.22.1, from 4.0.0 before 4.0.4, from 4.1.0 before 4.4.0.\n\nUsers are recommended to upgrade to version 4.4.0, which fixes the issue. If users are on the 4.0.x LTS releases stream, then they are suggested to upgrade to 4.0.4. If users are on 3.x, they are suggested to move to 3.21.4 or 3.22.1\n\n",
+            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel CassandraQL Component AggregationRepository which is vulnerable to unsafe deserialization. Under specific conditions it is possible to deserialize malicious payload.This issue affects Apache Camel: from 3.0.0 before 3.21.4, from 3.22.0 before 3.22.1, from 4.0.0 before 4.0.4, from 4.1.0 before 4.4.0.\n\nUsers are recommended to upgrade to version 4.4.0, which fixes the issue.\u00a0If users are on the 4.0.x LTS releases stream, then they are suggested to upgrade to 4.0.4. If users are on 3.x, they are suggested to move to 3.21.4 or 3.22.1\n\n",
             "cvssScore": 9.8,
             "cvssSeverity": "CRITICAL",
             "published": "2024-02-20T15:15:10.333",
@@ -2497,6 +2497,6 @@
     "itemsNeedingReview": 5,
     "lastFullScan": "2026-08-04T09:03:36.506Z",
     "lastVersionReconciliation": "2026-08-04",
-    "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction."
+    "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction. EOL dates cross-checked against the PDF's task-list table on 2026-08-04: corrected NeoDPS (2025-11-02 -> 2025-11-01) and Elasticsearch (2026-04-08 -> 2026-04-30)."
   }
 }
