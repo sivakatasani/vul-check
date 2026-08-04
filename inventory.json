@@ -1,0 +1,217 @@
+{
+  "software": [
+    {
+      "id": "neodps",
+      "name": "NeoDPS",
+      "eolDate": "2025-11-01",
+      "reference": null,
+      "environments": [
+        { "env": "DEV", "version": "audps_bom_v2024.08.0" },
+        { "env": "ST", "version": "audps_bom_v2024.08.0" },
+        { "env": "SIT2", "version": "audps_bom_v2024.08.0" },
+        { "env": "SIT3", "version": null },
+        { "env": "PROD", "version": null }
+      ],
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewNote": "Version string associated with NeoDPS vs Camel block was ambiguous in source PDF"
+    },
+    {
+      "id": "postgresql-apim",
+      "name": "PostgreSQL Cluster - APIM",
+      "eolDate": "2025-11-13",
+      "reference": "PostgreSQL: Versioning Policy",
+      "environments": [
+        { "env": "NPU", "version": "13" },
+        { "env": "NPM", "version": "13" },
+        { "env": "PROD", "version": "13" }
+      ],
+      "confidence": "high",
+      "needsReview": false
+    },
+    {
+      "id": "apim-1",
+      "name": "APIM (3scale)",
+      "eolDate": "2026-04-30",
+      "reference": "3scale API Management Life Cycle - Red Hat Customer Portal",
+      "environments": [
+        { "env": "NPU", "version": "2.15" },
+        { "env": "NPM", "version": "2.15" },
+        { "env": "PROD", "version": "2.15" }
+      ],
+      "confidence": "low",
+      "needsReview": true,
+      "reviewNote": "Two separate APIM entries exist (30 Apr 2026 and 15 Nov 2026) - likely different APIM components/instances, could not confirm which version block belongs to which"
+    },
+    {
+      "id": "elasticsearch",
+      "name": "Elasticsearch",
+      "eolDate": "2026-04-30",
+      "reference": "OpenShift Operator Life Cycles - Red Hat Customer Portal",
+      "environments": [
+        { "env": "NPU", "version": "2.15" },
+        { "env": "NPM", "version": "2.15" },
+        { "env": "PROD", "version": "2.15" }
+      ],
+      "confidence": "low",
+      "needsReview": true,
+      "reviewNote": "Version numbers for Elasticsearch and APIM(1) were interleaved in source - could be swapped"
+    },
+    {
+      "id": "openshift",
+      "name": "OpenShift Container Platform",
+      "eolDate": "2026-06-25",
+      "reference": "OpenShift Operator Life Cycles - Red Hat Customer Portal",
+      "environments": [
+        { "env": "NPU", "version": "4.16" },
+        { "env": "NPM", "version": "4.16" },
+        { "env": "PROD", "version": "4.16" }
+      ],
+      "confidence": "high",
+      "needsReview": false
+    },
+    {
+      "id": "postgresql-mft",
+      "name": "PostgreSQL Cluster - MFT",
+      "eolDate": "2026-11-12",
+      "reference": "PostgreSQL: Versioning Policy",
+      "environments": [
+        { "env": "DEV", "version": "14" },
+        { "env": "SIT2", "version": "14" },
+        { "env": "PROD", "version": "14" }
+      ],
+      "confidence": "medium",
+      "needsReview": true
+    },
+    {
+      "id": "postgresql-esb-neodps",
+      "name": "PostgreSQL Cluster - ESB/NeoDPS",
+      "eolDate": "2026-11-12",
+      "reference": "PostgreSQL: Versioning Policy",
+      "environments": [
+        { "env": "TEST", "version": "14" },
+        { "env": "SIT2", "version": "14" },
+        { "env": "SIT3", "version": "14" }
+      ],
+      "confidence": "medium",
+      "needsReview": true
+    },
+    {
+      "id": "postgresql-fme",
+      "name": "PostgreSQL Cluster - FME",
+      "eolDate": "2026-11-12",
+      "reference": "PostgreSQL: Versioning Policy",
+      "environments": [
+        { "env": "TEST", "version": "14" },
+        { "env": "SIT2", "version": "14" },
+        { "env": "SIT3", "version": "14" },
+        { "env": "PROD", "version": "14" }
+      ],
+      "confidence": "medium",
+      "needsReview": true
+    },
+    {
+      "id": "redhat-sso",
+      "name": "Red Hat SSO (Keycloak)",
+      "eolDate": "2026-11-13",
+      "reference": "Red Hat build of Keycloak Life Cycle and Support Policies",
+      "environments": [
+        { "env": "NPU", "version": "7.6.6" },
+        { "env": "NPM", "version": "7.6.6" },
+        { "env": "PROD", "version": "7.6.6" }
+      ],
+      "confidence": "high",
+      "needsReview": false
+    },
+    {
+      "id": "apim-2",
+      "name": "APIM (instance 2)",
+      "eolDate": "2026-11-15",
+      "reference": "3scale API Management Life Cycle - Red Hat Customer Portal",
+      "environments": [],
+      "confidence": "low",
+      "needsReview": true,
+      "reviewNote": "Could not confidently map any version/environment rows to this second APIM entry - please fill in manually"
+    },
+    {
+      "id": "fme-safe-software",
+      "name": "FME (Safe Software)",
+      "eolDate": "2026-12-05",
+      "reference": "FME Support Center",
+      "environments": [
+        { "env": "DEV", "version": "FME Flow 2023.2.1 Build 23774-win64" },
+        { "env": "ST", "version": "FME Flow 2023.2.1 Build 23774-win64" },
+        { "env": "SIT2", "version": "FME Flow 2023.2.1 Build 23774-win64" },
+        { "env": "SIT3", "version": "FME Flow 2023.2.1 Build 23774-win64" },
+        { "env": "PROD", "version": "FME Flow 2023.2.1 Build 23774-win64" }
+      ],
+      "confidence": "high",
+      "needsReview": false
+    },
+    {
+      "id": "axway",
+      "name": "Axway Secure Transport",
+      "eolDate": "2027-02-27",
+      "reference": "https://support.axway.com/en/products/view/id/86",
+      "environments": [
+        { "env": "DEV", "version": "5.5 20240725" },
+        { "env": "ST", "version": "5.5 20240725" },
+        { "env": "SIT2", "version": "5.5 20240725" },
+        { "env": "SIT3", "version": "5.5 20240125" },
+        { "env": "PROD", "version": "5.5 20240125" }
+      ],
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewNote": "Two build dates (20240725 / 20240125) appear - unclear which environments map to which build"
+    },
+    {
+      "id": "amq",
+      "name": "Red Hat AMQ",
+      "eolDate": "2027-06-30",
+      "reference": "Red Hat Application Services Product Update and Support Policy",
+      "environments": [
+        { "env": "DEV", "version": "Not applicable" },
+        { "env": "ST", "version": "7.12.1" },
+        { "env": "SIT2", "version": "7.12.1" },
+        { "env": "SIT3", "version": "7.12.1" },
+        { "env": "PROD", "version": "7.12.1" }
+      ],
+      "confidence": "high",
+      "needsReview": false
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "eolDate": "2026-11-30",
+      "reference": "Supported platforms",
+      "environments": [
+        { "env": "SIT2", "version": "4.4" },
+        { "env": "PROD", "version": "4.4" }
+      ],
+      "confidence": "low",
+      "needsReview": true,
+      "reviewNote": "Redis entry (30 Nov 2026) appears only in the reference table, not clearly in the environment/version block - version 4.4 is a guess based on proximity"
+    },
+    {
+      "id": "camel",
+      "name": "Red Hat build of Apache Camel",
+      "eolDate": "2028-10-30",
+      "reference": null,
+      "environments": [
+        { "env": "DEV", "version": "7.4.7" },
+        { "env": "ST", "version": "7.4.7" },
+        { "env": "SIT2", "version": "7.4.7" },
+        { "env": "SIT3", "version": "7.4.7" },
+        { "env": "PROD", "version": "7.4.7" }
+      ],
+      "confidence": "high",
+      "needsReview": false
+    }
+  ],
+  "metadata": {
+    "sourceDocument": "Software End of Life Tracker",
+    "extractedAt": "2026-08-04",
+    "extractionMethod": "manual-reconstruction-from-jumbled-pdf-text",
+    "itemsNeedingReview": 8
+  }
+}
