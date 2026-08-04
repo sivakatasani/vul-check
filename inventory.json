@@ -4,7 +4,7 @@
       "id": "neodps",
       "name": "NeoDPS",
       "eolDate": "2025-11-01",
-      "reference": null,
+      "reference": "",
       "environments": [
         {
           "env": "DEV",
