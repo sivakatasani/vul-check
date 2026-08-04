@@ -3,7 +3,7 @@
     {
       "id": "neodps",
       "name": "NeoDPS",
-      "eolDate": "2025-11-05",
+      "eolDate": "2025-11-09",
       "reference": "",
       "environments": [
         {
@@ -313,7 +313,7 @@
           {
             "id": "CVE-2019-14852",
             "source": "nvd",
-            "description": "A flaw was found in 3scale’s APIcast gateway that enabled the TLS 1.0 protocol. An attacker could target traffic using this weaker protocol and break its encryption, gaining access to unauthorized information. Version shipped in Red Hat 3scale API Management Platform is vulnerable to this issue.",
+            "description": "A flaw was found in 3scaleâs APIcast gateway that enabled the TLS 1.0 protocol. An attacker could target traffic using this weaker protocol and break its encryption, gaining access to unauthorized information. Version shipped in Red Hat 3scale API Management Platform is vulnerable to this issue.",
             "cvssScore": 7.5,
             "cvssSeverity": "HIGH",
             "published": "2021-03-18T20:15:12.660",
@@ -352,7 +352,7 @@
           {
             "id": "CVE-2020-25634",
             "source": "nvd",
-            "description": "A flaw was found in Red Hat 3scale’s API docs URL, where it is accessible without credentials. This flaw allows an attacker to view sensitive information or modify service APIs. Versions before 3scale-2.10.0-ER1 are affected.",
+            "description": "A flaw was found in Red Hat 3scaleâs API docs URL, where it is accessible without credentials. This flaw allows an attacker to view sensitive information or modify service APIs. Versions before 3scale-2.10.0-ER1 are affected.",
             "cvssScore": 5.4,
             "cvssSeverity": "MEDIUM",
             "published": "2021-05-26T21:15:08.070",
@@ -371,7 +371,7 @@
     {
       "id": "elasticsearch",
       "name": "Elasticsearch",
-      "eolDate": "2026-04-30",
+      "eolDate": "2026-04-08",
       "reference": "OpenShift Operator Life Cycles - Red Hat Customer Portal",
       "environments": [
         {
@@ -1772,7 +1772,7 @@
           {
             "id": "CVE-2019-14852",
             "source": "nvd",
-            "description": "A flaw was found in 3scale’s APIcast gateway that enabled the TLS 1.0 protocol. An attacker could target traffic using this weaker protocol and break its encryption, gaining access to unauthorized information. Version shipped in Red Hat 3scale API Management Platform is vulnerable to this issue.",
+            "description": "A flaw was found in 3scaleâs APIcast gateway that enabled the TLS 1.0 protocol. An attacker could target traffic using this weaker protocol and break its encryption, gaining access to unauthorized information. Version shipped in Red Hat 3scale API Management Platform is vulnerable to this issue.",
             "cvssScore": 7.5,
             "cvssSeverity": "HIGH",
             "published": "2021-03-18T20:15:12.660",
@@ -1811,7 +1811,7 @@
           {
             "id": "CVE-2020-25634",
             "source": "nvd",
-            "description": "A flaw was found in Red Hat 3scale’s API docs URL, where it is accessible without credentials. This flaw allows an attacker to view sensitive information or modify service APIs. Versions before 3scale-2.10.0-ER1 are affected.",
+            "description": "A flaw was found in Red Hat 3scaleâs API docs URL, where it is accessible without credentials. This flaw allows an attacker to view sensitive information or modify service APIs. Versions before 3scale-2.10.0-ER1 are affected.",
             "cvssScore": 5.4,
             "cvssSeverity": "MEDIUM",
             "published": "2021-05-26T21:15:08.070",
