@@ -403,13 +403,14 @@
       <table>
         <thead>
           <tr>
-            <th style="width:20%">Software</th>
-            <th style="width:10%">EOL date</th>
-            <th style="width:11%">Vulnerable?</th>
-            <th style="width:10%">Severity</th>
-            <th style="width:13%">Source</th>
-            <th style="width:15%">Last scanned</th>
-            <th style="width:11%">Trend</th>
+            <th style="width:17%">Software</th>
+            <th style="width:13%">Version</th>
+            <th style="width:9%">EOL date</th>
+            <th style="width:10%">Vulnerable?</th>
+            <th style="width:9%">Severity</th>
+            <th style="width:12%">Source</th>
+            <th style="width:13%">Last scanned</th>
+            <th style="width:10%">Trend</th>
             <th style="width:10%"></th>
           </tr>
         </thead>
@@ -503,7 +504,7 @@ async function loadInventory() {
     loadTrends(); // fire-and-forget, fills in real sparklines once ready
   } catch (err) {
     document.getElementById('table-body').innerHTML = `
-      <tr><td colspan="8"><div class="empty-state">
+      <tr><td colspan="9"><div class="empty-state">
         Couldn't load inventory.<br>${escapeHtml(err.message)}<br>
         <button class="btn btn-secondary btn-sm" style="margin-top:10px" onclick="loadInventory()">Retry</button>
       </div></td></tr>`;
@@ -632,7 +633,7 @@ function renderTable() {
 
   const tbody = document.getElementById('table-body');
   if (items.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="8"><div class="empty-state">No software matches these filters.</div></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="9"><div class="empty-state">No software matches these filters.</div></td></tr>`;
     return;
   }
 
@@ -667,6 +668,21 @@ function renderTable() {
         </div>`
       : '<span class="no-data">—</span>';
 
+    // Summarize the version(s) actually used for this item's last scan.
+    // Most items run one version everywhere; a few (NeoDPS, Axway) run
+    // different versions per environment, so show that plainly instead of
+    // picking one arbitrarily and hiding the rest.
+    const envList = item.environments || [];
+    const distinctVersions = [...new Set(envList.map(e => e.version).filter(v => v && v !== 'Not applicable'))];
+    let versionHtml;
+    if (distinctVersions.length === 0) {
+      versionHtml = '<span class="no-data">No version on file</span>';
+    } else if (distinctVersions.length === 1) {
+      versionHtml = `<span class="mono version-value">${escapeHtml(distinctVersions[0])}</span>`;
+    } else {
+      versionHtml = `<span class="mono version-value" title="${escapeHtml(distinctVersions.join(', '))}">${distinctVersions.length} versions</span>`;
+    }
+
     const lastScannedHtml = hasScanned
       ? `<div class="last-scanned-cell">
           <span class="mono">${new Date(item.scan.lastScanned).toLocaleDateString()}</span>
@@ -680,6 +696,7 @@ function renderTable() {
           <span class="sw-name">${escapeHtml(item.name)}</span>
           ${item.needsReview ? '<span class="review-flag">REVIEW</span>' : ''}
         </td>
+        <td>${versionHtml}</td>
         <td><span class="eol-date ${eolClass}">${item.eolDate || '—'}</span></td>
         <td>${vulnFlagHtml}</td>
         <td>${status ? `<span class="badge ${status}">${status}</span>` : '<span class="no-data">—</span>'}</td>
@@ -694,7 +711,7 @@ function renderTable() {
         </td>
       </tr>
       <tr class="detail-row" id="detail-${item.id}" style="display:none">
-        <td colspan="8">
+        <td colspan="9">
           <div class="detail-panel">
             <div class="detail-grid">
               <div class="detail-block">
