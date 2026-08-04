@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "vul-check",
+  "main": "./src/index.js",
+  "compatibility_date": "2026-08-04",
+  "assets": {
+    "directory": "./dashboard",
+    "binding": "ASSETS"
+  }
+}
