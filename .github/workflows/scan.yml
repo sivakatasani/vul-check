@@ -1,0 +1,48 @@
+name: Vulnerability Scan
+
+on:
+  schedule:
+    # Runs once a day at 00:00 UTC. Adjust as needed.
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}       # allows manual trigger from Actions tab
+  repository_dispatch:
+    types: [inventory-updated] # allows Cloudflare Function to trigger on edit
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vuln-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          # Pull latest main in case a dispatch fired right after an edit commit
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run vulnerability scan
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        run: node scripts/scan.js
+
+      - name: Commit and push results
+        run: |
+          git config user.name "vuln-scan-bot"
+          git config user.email "actions@github.com"
+          git add inventory.json runs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Automated vulnerability scan - $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
