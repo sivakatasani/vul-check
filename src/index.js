@@ -3,7 +3,10 @@
 //
 // Required environment variables (set in Cloudflare dashboard →
 // Workers & Pages → vul-check → Settings → Variables and Secrets):
-//   GITHUB_TOKEN  - fine-grained PAT scoped to this repo, "Contents: Read and write" (mark as Secret/Encrypt)
+//   GITHUB_TOKEN  - fine-grained PAT scoped to this repo, with:
+//                     - "Contents: Read and write" (commits inventory.json + runs/)
+//                     - "Actions: Read" (lets the dashboard poll scan run status)
+//                   mark as Secret/Encrypt
 //   GITHUB_REPO   - e.g. "sivakatasani/vul-check"
 //   GITHUB_BRANCH - e.g. "main"
 
@@ -41,9 +44,16 @@ function isValidInventory(body) {
   return true;
 }
 
+function checkConfig(env) {
+  const missing = ["GITHUB_TOKEN", "GITHUB_REPO", "GITHUB_BRANCH"].filter((k) => !env[k]);
+  return missing.length ? `Server not configured: missing ${missing.join(", ")}` : null;
+}
+
 async function handleGetInventory(env) {
+  const configErr = checkConfig(env);
+  if (configErr) return jsonResponse({ error: configErr }, 500);
   const res = await githubRequest(env, `/contents/${INVENTORY_PATH}?ref=${env.GITHUB_BRANCH}`);
-  if (!res.ok) return jsonResponse({ error: `GitHub read failed: ${res.status}` }, 502);
+  if (!res.ok) return jsonResponse({ error: `GitHub read failed: ${res.status} (repo=${env.GITHUB_REPO}, branch=${env.GITHUB_BRANCH})` }, 502);
   const data = await res.json();
   const content = atob(data.content.replace(/\n/g, ""));
   return jsonResponse(JSON.parse(content));
@@ -52,6 +62,8 @@ async function handleGetInventory(env) {
 const MAX_HISTORY = 30;
 
 async function handleGetHistoryList(env) {
+  const configErr = checkConfig(env);
+  if (configErr) return jsonResponse({ error: configErr }, 500);
   const res = await githubRequest(env, `/contents/runs?ref=${env.GITHUB_BRANCH}`);
   if (!res.ok) return jsonResponse({ error: `GitHub read failed: ${res.status}` }, 502);
   const files = await res.json();
@@ -64,6 +76,8 @@ async function handleGetHistoryList(env) {
 }
 
 async function handleGetHistorySnapshot(env, filename) {
+  const configErr = checkConfig(env);
+  if (configErr) return jsonResponse({ error: configErr }, 500);
   // filename comes from the URL path - keep it strictly alphanumeric/dash/colon to avoid path traversal
   if (!/^[\w-]+\.json$/.test(filename)) {
     return jsonResponse({ error: "Invalid snapshot name" }, 400);
@@ -80,6 +94,8 @@ async function handleGetHistorySnapshot(env, filename) {
 const TREND_RUNS = 8;
 
 async function handleGetTrends(env) {
+  const configErr = checkConfig(env);
+  if (configErr) return jsonResponse({ error: configErr }, 500);
   const listRes = await githubRequest(env, `/contents/runs?ref=${env.GITHUB_BRANCH}`);
   if (!listRes.ok) return jsonResponse({ error: `GitHub read failed: ${listRes.status}` }, 502);
   const files = await listRes.json();
@@ -110,12 +126,8 @@ async function handleGetTrends(env) {
 }
 
 async function handlePostInventory(request, env) {
-  if (!env.GITHUB_TOKEN || !env.GITHUB_REPO || !env.GITHUB_BRANCH) {
-    return jsonResponse(
-      { error: "Server not configured: missing GITHUB_TOKEN, GITHUB_REPO, or GITHUB_BRANCH" },
-      500
-    );
-  }
+  const configErr = checkConfig(env);
+  if (configErr) return jsonResponse({ error: configErr }, 500);
 
   let body;
   try {
@@ -164,7 +176,37 @@ async function handlePostInventory(request, env) {
     success: true,
     committed: true,
     rescanTriggered: dispatchRes.ok,
+    dispatchedAt: new Date().toISOString(),
     warning: dispatchRes.ok ? null : `Commit succeeded but rescan trigger failed: ${dispatchRes.status}`
+  });
+}
+
+// Lets the dashboard poll whether the scan triggered at `since` has finished,
+// by checking GitHub Actions run history for scan.yml.
+async function handleGetScanStatus(env, since) {
+  const configErr = checkConfig(env);
+  if (configErr) return jsonResponse({ error: configErr }, 500);
+
+  const res = await githubRequest(env, `/actions/workflows/scan.yml/runs?per_page=5`);
+  if (!res.ok) return jsonResponse({ error: `GitHub read failed: ${res.status}` }, 502);
+  const data = await res.json();
+  const runs = data.workflow_runs || [];
+
+  // Find the most relevant run: the newest one created at/after the moment we dispatched.
+  const sinceTime = since ? new Date(since).getTime() : 0;
+  const relevant = runs.find((r) => new Date(r.created_at).getTime() >= sinceTime - 5000) || runs[0];
+
+  if (!relevant) {
+    return jsonResponse({ found: false });
+  }
+
+  return jsonResponse({
+    found: true,
+    status: relevant.status,       // "queued" | "in_progress" | "completed"
+    conclusion: relevant.conclusion, // "success" | "failure" | null while running
+    createdAt: relevant.created_at,
+    updatedAt: relevant.updated_at,
+    url: relevant.html_url
   });
 }
 
@@ -191,6 +233,11 @@ export default {
 
     if (url.pathname === "/api/trends") {
       if (request.method === "GET") return handleGetTrends(env);
+      return jsonResponse({ error: "Method not allowed" }, 405);
+    }
+
+    if (url.pathname === "/api/scan-status") {
+      if (request.method === "GET") return handleGetScanStatus(env, url.searchParams.get("since"));
       return jsonResponse({ error: "Method not allowed" }, 405);
     }
 
