@@ -331,6 +331,26 @@ async function getEpssScores(cveIds) {
   return scores;
 }
 
+// OSV entries sometimes carry a CVSS vector string in severity[], and
+// sometimes a database_specific.severity word (e.g. Debian's "important"/
+// "moderate"). Neither is consistently present, so this is best-effort -
+// an OSV finding with no score anywhere still returns null and sorts low,
+// but at least the cases where OSV *does* tell us won't be wasted.
+const OSV_WORD_SEVERITY_SCORE = { critical: 9.5, high: 7.5, moderate: 5, low: 2 };
+
+function extractOsvScore(vuln) {
+  const cvssEntry = (vuln.severity || []).find((s) => s.type?.startsWith("CVSS"));
+  if (cvssEntry?.score) {
+    // score is a vector string like "CVSS:3.1/AV:N/AC:L/..." on some
+    // entries, or a bare number on others - only use it if it parses as
+    // a plain number, otherwise fall through to the word-based estimate.
+    const asNumber = parseFloat(cvssEntry.score);
+    if (!Number.isNaN(asNumber) && asNumber <= 10) return asNumber;
+  }
+  const word = vuln.database_specific?.severity?.toLowerCase();
+  return OSV_WORD_SEVERITY_SCORE[word] || null;
+}
+
 async function queryOsv(ecosystem, packageName) {
   if (!ecosystem || !packageName) return [];
   const url = "https://api.osv.dev/v1/query";
@@ -340,13 +360,23 @@ async function queryOsv(ecosystem, packageName) {
     body: JSON.stringify({ package: { name: packageName, ecosystem } })
   });
   if (!data?.vulns) return [];
-  return data.vulns.map((v) => ({
-    id: v.id,
-    source: "osv",
-    description: v.summary || v.details?.slice(0, 300) || "",
-    published: v.published
-  }));
+  return data.vulns.map((v) => {
+    const score = extractOsvScore(v);
+    return {
+      id: v.id,
+      source: "osv",
+      description: v.summary || v.details?.slice(0, 300) || "",
+      cvssScore: score,
+      cvssSeverity: score ? null : v.database_specific?.severity?.toUpperCase() || null,
+      published: v.published
+    };
+  });
 }
+
+// Red Hat's severity is a word ("critical" / "important" / "moderate" /
+// "low"), not a CVSS number. Map it onto the same 0-10 scale NVD uses so it
+// competes fairly in sorting/truncation instead of silently scoring 0.
+const REDHAT_SEVERITY_SCORE = { critical: 9.5, important: 7.5, moderate: 5, low: 2 };
 
 async function queryRedHat(productName) {
   if (!productName) return [];
@@ -360,6 +390,8 @@ async function queryRedHat(productName) {
     source: "redhat",
     description: v.bugzilla_description || "",
     severity: v.severity,
+    cvssScore: REDHAT_SEVERITY_SCORE[(v.severity || "").toLowerCase()] || null,
+    cvssSeverity: v.severity ? v.severity.toUpperCase() : null,
     published: v.public_date
   }));
 }
