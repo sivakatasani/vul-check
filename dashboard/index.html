@@ -283,6 +283,8 @@
   }
   .scan-banner-left { display: flex; align-items: center; gap: 12px; }
   .scan-banner-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--status-clear); flex-shrink: 0; }
+  .scan-banner-dot.pending { background: var(--teal); animation: pulse-dot 1.2s ease-in-out infinite; }
+  @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
   .scan-banner-dot.stale { background: var(--status-medium); }
   .scan-banner-dot.critical { background: var(--status-critical); }
   .scan-banner-title { font-size: 13.5px; font-weight: 600; }
@@ -996,11 +998,15 @@ async function saveInventory() {
     if (result.warning) {
       showToast(`Saved, but: ${result.warning}`, true);
     } else {
-      showToast('All changes saved to GitHub — rescan triggered');
+      showToast('All changes saved to GitHub — scan starting…');
     }
     // New baseline: further edits are tracked against this saved state
     originalSnapshot = JSON.parse(JSON.stringify(inventory));
     markDirty();
+
+    if (result.rescanTriggered && result.dispatchedAt) {
+      pollScanStatus(result.dispatchedAt);
+    }
   } catch (err) {
     showToast(`Save failed: ${err.message}`, true);
   } finally {
@@ -1042,6 +1048,51 @@ document.getElementById('filter-status').addEventListener('change', renderTable)
 document.getElementById('filter-review').addEventListener('change', renderTable);
 
 if (!API_BASE) document.getElementById('config-banner').classList.add('show');
+async function pollScanStatus(dispatchedAt) {
+  const dot = document.getElementById('scan-banner-dot');
+  const title = document.getElementById('scan-banner-title');
+  const sub = document.getElementById('scan-banner-sub');
+
+  dot.className = 'scan-banner-dot pending';
+  title.textContent = 'Scan running in the background — feel free to leave this page';
+  sub.textContent = 'Checking status automatically…';
+
+  const POLL_INTERVAL_MS = 6000;
+  const MAX_POLLS = 40; // ~4 minutes ceiling
+  let polls = 0;
+
+  const interval = setInterval(async () => {
+    polls++;
+    try {
+      const data = await fetchWithRetry(`${API_BASE}/scan-status?since=${encodeURIComponent(dispatchedAt)}`, {}, 0);
+
+      if (!data.found) {
+        sub.textContent = 'Waiting for the scan to start…';
+      } else if (data.status === 'queued' || data.status === 'in_progress') {
+        sub.textContent = `Scan ${data.status.replace('_', ' ')} — started ${relativeTime(data.createdAt)}`;
+      } else if (data.status === 'completed') {
+        clearInterval(interval);
+        if (data.conclusion === 'success') {
+          showToast('Scan complete — dashboard refreshed with latest results');
+        } else {
+          showToast(`Scan finished with status: ${data.conclusion}. Check the Actions tab for details.`, true);
+        }
+        await loadInventory(); // pulls fresh inventory + trends, also resets the banner via renderScanBanner()
+        return;
+      }
+    } catch (err) {
+      // Transient errors while polling aren't fatal - just try again next tick
+      console.warn('Poll error:', err.message);
+    }
+
+    if (polls >= MAX_POLLS) {
+      clearInterval(interval);
+      sub.textContent = 'Taking longer than expected — refresh the page later to see results, or check the Actions tab on GitHub';
+      dot.className = 'scan-banner-dot stale';
+    }
+  }, POLL_INTERVAL_MS);
+}
+
 window.loadInventory = loadInventory;
 window.loadHistoryList = loadHistoryList;
 
