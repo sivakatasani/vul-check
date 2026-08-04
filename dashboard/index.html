@@ -389,7 +389,12 @@
           <option value="review">Needs review</option>
         </select>
       </div>
-      <button class="btn btn-primary" id="add-btn">+ Add software</button>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <span class="no-data" id="pending-indicator" style="display:none; color:var(--status-high); font-weight:600;"></span>
+        <button class="btn btn-secondary" id="discard-btn" style="display:none;">Discard changes</button>
+        <button class="btn btn-primary" id="save-all-btn" style="display:none;">Save all changes &amp; rescan</button>
+        <button class="btn btn-primary" id="add-btn">+ Add software</button>
+      </div>
     </div>
 
     <div class="table-wrap">
@@ -413,7 +418,8 @@
 
   <!-- HISTORY TAB -->
   <div id="tab-history" style="display:none">
-    <h3 style="font-size:14px; margin-bottom:12px;">Previous scan runs</h3>
+    <h3 style="font-size:14px; margin-bottom:2px;">Previous scan runs</h3>
+    <p class="no-data" style="margin-top:0; margin-bottom:12px;">Showing the last 30 runs — older snapshots are automatically pruned to keep the repo lean.</p>
     <div class="history-list" id="history-list"></div>
   </div>
 
@@ -446,9 +452,9 @@
       </div>
     </div>
     <div class="modal-footer">
-      <span class="no-data" style="margin-right:auto; align-self:center;">Saving triggers an immediate re-scan</span>
+      <span class="no-data" style="margin-right:auto; align-self:center;">Changes are staged — use "Save all changes" when done editing</span>
       <button class="btn btn-secondary" id="modal-cancel">Cancel</button>
-      <button class="btn btn-primary" id="modal-save">Save &amp; rescan</button>
+      <button class="btn btn-primary" id="modal-save">Apply change</button>
     </div>
   </div>
 </div>
@@ -459,38 +465,77 @@
 // ---------------------------------------------------------------------
 // Configuration
 // ---------------------------------------------------------------------
-const REPO = "sivakatasani/vul-check";
-const BRANCH = "main";
-const RAW_BASE = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`;
-const API_BASE = "/api"; // Cloudflare Pages Function endpoint - handles writes to GitHub
+const API_BASE = "/api"; // Worker-hosted endpoints - all GitHub calls go through here, server-side token, no client rate limits
 
 let inventory = null;
 let editingId = null;
+let trendData = {}; // { itemId: ['clear','high',...] } oldest -> newest, from /api/trends
 
 // ---------------------------------------------------------------------
 // Data loading
 // ---------------------------------------------------------------------
+async function fetchWithRetry(url, options = {}, retries = 2) {
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, options);
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || `HTTP ${res.status}`);
+      }
+      return await res.json();
+    } catch (err) {
+      lastErr = err;
+      if (attempt < retries) await new Promise(r => setTimeout(r, 600 * (attempt + 1)));
+    }
+  }
+  throw lastErr;
+}
+
 async function loadInventory() {
+  setLoadingState(true);
   try {
-    const res = await fetch(`${RAW_BASE}/inventory.json?t=${Date.now()}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    inventory = await res.json();
+    inventory = await fetchWithRetry(`${API_BASE}/inventory`);
+    originalSnapshot = JSON.parse(JSON.stringify(inventory));
     render();
+    loadTrends(); // fire-and-forget, fills in real sparklines once ready
   } catch (err) {
-    document.getElementById('table-body').innerHTML =
-      `<tr><td colspan="8"><div class="empty-state">Couldn't load inventory.json from GitHub.<br>${err.message}</div></td></tr>`;
+    document.getElementById('table-body').innerHTML = `
+      <tr><td colspan="8"><div class="empty-state">
+        Couldn't load inventory.<br>${escapeHtml(err.message)}<br>
+        <button class="btn btn-secondary btn-sm" style="margin-top:10px" onclick="loadInventory()">Retry</button>
+      </div></td></tr>`;
+  } finally {
+    setLoadingState(false);
+  }
+}
+
+async function loadTrends() {
+  try {
+    const data = await fetchWithRetry(`${API_BASE}/trends`);
+    trendData = data.trends || {};
+    renderTable(); // re-render rows now that real trend data is available
+  } catch (err) {
+    // Non-fatal - sparklines just stay empty if this fails
+    console.warn('Trend data unavailable:', err.message);
+  }
+}
+
+function setLoadingState(isLoading) {
+  const dot = document.getElementById('scan-banner-dot');
+  const title = document.getElementById('scan-banner-title');
+  if (isLoading) {
+    dot.className = 'scan-banner-dot stale';
+    title.textContent = 'Loading…';
   }
 }
 
 async function loadHistoryList() {
   const listEl = document.getElementById('history-list');
+  listEl.innerHTML = `<div class="empty-state">Loading…</div>`;
   try {
-    const res = await fetch(`https://api.github.com/repos/${REPO}/contents/runs`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const files = await res.json();
-    const runs = files
-      .filter(f => f.name.endsWith('.json'))
-      .sort((a, b) => b.name.localeCompare(a.name));
+    const data = await fetchWithRetry(`${API_BASE}/history`);
+    const runs = data.runs || [];
 
     if (runs.length === 0) {
       listEl.innerHTML = `<div class="empty-state">No scan runs yet.</div>`;
@@ -498,28 +543,29 @@ async function loadHistoryList() {
     }
 
     listEl.innerHTML = runs.map(f => `
-      <div class="history-item" data-url="${f.download_url}">
-        <span class="ts mono">${f.name.replace('.json','')}</span>
+      <div class="history-item" data-name="${escapeHtml(f.name)}">
+        <span class="ts mono">${escapeHtml(f.name)}</span>
         <span class="meta">${(f.size/1024).toFixed(1)} KB · click to view</span>
       </div>
     `).join('');
 
     listEl.querySelectorAll('.history-item').forEach(el => {
-      el.addEventListener('click', () => viewHistoryRun(el.dataset.url));
+      el.addEventListener('click', () => viewHistoryRun(el.dataset.name));
     });
   } catch (err) {
-    listEl.innerHTML = `<div class="empty-state">Couldn't load run history.<br>${err.message}</div>`;
+    listEl.innerHTML = `
+      <div class="empty-state">Couldn't load run history.<br>${escapeHtml(err.message)}<br>
+      <button class="btn btn-secondary btn-sm" style="margin-top:10px" onclick="loadHistoryList()">Retry</button></div>`;
   }
 }
 
-async function viewHistoryRun(url) {
+async function viewHistoryRun(name) {
   try {
-    const res = await fetch(url);
-    const snapshot = await res.json();
+    const snapshot = await fetchWithRetry(`${API_BASE}/history/${encodeURIComponent(name)}.json`);
     inventory = snapshot;
     document.querySelector('[data-tab="dashboard"]').click();
     render();
-    showToast(`Viewing historical snapshot — read-only`);
+    showToast(`Viewing snapshot from ${name} — read-only, editing is disabled for historical views`);
   } catch (err) {
     showToast(`Couldn't load snapshot: ${err.message}`, true);
   }
@@ -702,13 +748,17 @@ function renderTable() {
   });
 }
 
+const SEVERITY_HEIGHT = { critical: 22, high: 18, medium: 14, low: 10, clear: 6, error: 4 };
+
 function renderSparkline(item) {
-  // Placeholder trend using current status repeated —
-  // once multiple runs/ snapshots exist for this item over time,
-  // swap this for real historical statuses per run.
-  const status = item.scan?.vulnerabilityStatus || 'clear';
-  const bars = Array(8).fill(status);
-  return `<div class="sparkline">${bars.map(s => `<div class="bar ${s}" style="height:${6 + Math.random()*14}px"></div>`).join('')}</div>`;
+  const history = trendData[item.id];
+  if (!history || history.length === 0) {
+    return `<span class="no-data">Building history…</span>`;
+  }
+  const bars = history.map(s =>
+    `<div class="bar ${s}" style="height:${SEVERITY_HEIGHT[s] || 6}px" title="${s}"></div>`
+  ).join('');
+  return `<div class="sparkline">${bars}</div>`;
 }
 
 function escapeHtml(str) {
@@ -846,7 +896,7 @@ function closeModal() {
 document.getElementById('modal-close').addEventListener('click', closeModal);
 document.getElementById('modal-cancel').addEventListener('click', closeModal);
 
-document.getElementById('modal-save').addEventListener('click', async () => {
+document.getElementById('modal-save').addEventListener('click', () => {
   const name = document.getElementById('field-name').value.trim();
   const eolDate = document.getElementById('field-eol').value.trim();
   const reference = document.getElementById('field-reference').value.trim();
@@ -865,22 +915,76 @@ document.getElementById('modal-save').addEventListener('click', async () => {
     });
   }
 
-  await saveInventory();
+  markDirty();
   closeModal();
   render();
 });
 
 function deleteItem(id) {
-  if (!confirm('Delete this software entry? This cannot be undone.')) return;
+  if (!confirm('Delete this software entry? This will be staged until you save all changes.')) return;
   inventory.software = inventory.software.filter(i => i.id !== id);
-  saveInventory().then(render);
+  markDirty();
+  render();
 }
+
+// ---------------------------------------------------------------------
+// Staged-edit / batch-save tracking
+// ---------------------------------------------------------------------
+let originalSnapshot = null; // set once inventory first loads, used for Discard
+
+function markDirty() {
+  const isDirty = JSON.stringify(inventory) !== JSON.stringify(originalSnapshot);
+  const indicator = document.getElementById('pending-indicator');
+  const saveBtn = document.getElementById('save-all-btn');
+  const discardBtn = document.getElementById('discard-btn');
+
+  if (isDirty) {
+    const changeCount = countChanges();
+    indicator.textContent = `${changeCount} unsaved change${changeCount === 1 ? '' : 's'}`;
+    indicator.style.display = 'inline';
+    saveBtn.style.display = 'inline-flex';
+    discardBtn.style.display = 'inline-flex';
+  } else {
+    indicator.style.display = 'none';
+    saveBtn.style.display = 'none';
+    discardBtn.style.display = 'none';
+  }
+}
+
+function countChanges() {
+  const origIds = new Set((originalSnapshot?.software || []).map(i => i.id));
+  const curIds = new Set((inventory.software || []).map(i => i.id));
+  let count = 0;
+  // added or removed
+  for (const id of curIds) if (!origIds.has(id)) count++;
+  for (const id of origIds) if (!curIds.has(id)) count++;
+  // modified
+  const origById = Object.fromEntries((originalSnapshot?.software || []).map(i => [i.id, i]));
+  for (const item of inventory.software || []) {
+    if (origById[item.id] && JSON.stringify(origById[item.id]) !== JSON.stringify(item)) count++;
+  }
+  return count || 1;
+}
+
+document.getElementById('discard-btn').addEventListener('click', () => {
+  if (!confirm('Discard all unsaved changes?')) return;
+  inventory = JSON.parse(JSON.stringify(originalSnapshot));
+  markDirty();
+  render();
+});
+
+document.getElementById('save-all-btn').addEventListener('click', async () => {
+  await saveInventory();
+});
 
 async function saveInventory() {
   if (!API_BASE) {
     showToast('Saved locally — connect the API endpoint to persist to GitHub', true);
     return;
   }
+  const saveBtn = document.getElementById('save-all-btn');
+  saveBtn.disabled = true;
+  saveBtn.textContent = 'Saving…';
   try {
     const res = await fetch(`${API_BASE}/inventory`, {
       method: 'POST',
@@ -892,12 +996,25 @@ async function saveInventory() {
     if (result.warning) {
       showToast(`Saved, but: ${result.warning}`, true);
     } else {
-      showToast('Saved to GitHub — rescan triggered');
+      showToast('All changes saved to GitHub — rescan triggered');
     }
+    // New baseline: further edits are tracked against this saved state
+    originalSnapshot = JSON.parse(JSON.stringify(inventory));
+    markDirty();
   } catch (err) {
     showToast(`Save failed: ${err.message}`, true);
+  } finally {
+    saveBtn.disabled = false;
+    saveBtn.textContent = 'Save all changes & rescan';
   }
 }
+
+window.addEventListener('beforeunload', (e) => {
+  if (originalSnapshot && JSON.stringify(inventory) !== JSON.stringify(originalSnapshot)) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
 
 function showToast(msg, isError = false) {
   const t = document.getElementById('toast');
@@ -925,6 +1042,8 @@ document.getElementById('filter-status').addEventListener('change', renderTable)
 document.getElementById('filter-review').addEventListener('change', renderTable);
 
 if (!API_BASE) document.getElementById('config-banner').classList.add('show');
+window.loadInventory = loadInventory;
+window.loadHistoryList = loadHistoryList;
 
 loadInventory();
 </script>
