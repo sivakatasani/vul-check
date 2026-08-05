@@ -44,7 +44,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Appears to be an internal/custom application - no public CVE source likely applies. Confirm before relying on scan results.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-08-05T01:44:29.744Z"
+        "lastScanned": "2026-08-05T00:52:01.725Z"
       }
     },
     {
@@ -55,7 +55,7 @@
       "environments": [
         {
           "env": "NPU",
-          "version": "13"
+          "version": "12"
         },
         {
           "env": "NPM",
@@ -187,7 +187,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:44:37.498Z"
+        "lastScanned": "2026-08-05T00:52:09.002Z"
       }
     },
     {
@@ -425,7 +425,7 @@
         "scanNeedsMapping": true,
         "scanNote": "No confirmed version for this APIM instance - structured scan skipped pending manual version entry. See needsReview in inventory.json.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-08-05T01:44:38.041Z"
+        "lastScanned": "2026-08-05T00:52:09.432Z"
       }
     },
     {
@@ -608,7 +608,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Version 2.15 in inventory.json is flagged as a likely source-data copy/paste error (shares OpenShift's reference text) - verify against Confluence before trusting scan results.",
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:44:45.427Z"
+        "lastScanned": "2026-08-05T00:52:16.377Z"
       }
     },
     {
@@ -850,7 +850,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:44:53.900Z"
+        "lastScanned": "2026-08-05T00:52:24.147Z"
       }
     },
     {
@@ -993,7 +993,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:45:01.691Z"
+        "lastScanned": "2026-08-05T00:52:31.460Z"
       }
     },
     {
@@ -1144,7 +1144,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:45:08.580Z"
+        "lastScanned": "2026-08-05T00:52:38.467Z"
       }
     },
     {
@@ -1291,7 +1291,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:45:16.107Z"
+        "lastScanned": "2026-08-05T00:52:45.535Z"
       }
     },
     {
@@ -1541,7 +1541,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:45:23.437Z"
+        "lastScanned": "2026-08-05T00:52:52.951Z"
       }
     },
     {
@@ -1792,7 +1792,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:45:30.294Z"
+        "lastScanned": "2026-08-05T00:53:00.337Z"
       }
     },
     {
@@ -1914,7 +1914,7 @@
         "scanNeedsMapping": true,
         "scanNote": "FME/Safe Software rarely appears in NVD - may need vendor security bulletins instead",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-08-05T01:45:37.326Z"
+        "lastScanned": "2026-08-05T00:53:07.296Z"
       }
     },
     {
@@ -1962,7 +1962,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-08-05T01:45:43.982Z"
+        "lastScanned": "2026-08-05T00:53:14.119Z"
       }
     },
     {
@@ -2220,7 +2220,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:45:51.340Z"
+        "lastScanned": "2026-08-05T00:53:21.520Z"
       }
     },
     {
@@ -2427,7 +2427,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:45:59.064Z"
+        "lastScanned": "2026-08-05T00:53:28.937Z"
       }
     },
     {
@@ -2481,7 +2481,7 @@
           {
             "id": "CVE-2024-23114",
             "source": "nvd",
-            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel CassandraQL Component AggregationRepository which is vulnerable to unsafe deserialization. Under specific conditions it is possible to deserialize malicious payload.This issue affects Apache Camel: from 3.0.0 before 3.21.4, from 3.22.0 before 3.22.1, from 4.0.0 before 4.0.4, from 4.1.0 before 4.4.0.\n\nUsers are recommended to upgrade to version 4.4.0, which fixes the issue. If users are on the 4.0.x LTS releases stream, then they are suggested to upgrade to 4.0.4. If users are on 3.x, they are suggested to move to 3.21.4 or 3.22.1\n\n",
+            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel CassandraQL Component AggregationRepository which is vulnerable to unsafe deserialization. Under specific conditions it is possible to deserialize malicious payload.This issue affects Apache Camel: from 3.0.0 before 3.21.4, from 3.22.0 before 3.22.1, from 4.0.0 before 4.0.4, from 4.1.0 before 4.4.0.\n\nUsers are recommended to upgrade to version 4.4.0, which fixes the issue.Â If users are on the 4.0.x LTS releases stream, then they are suggested to upgrade to 4.0.4. If users are on 3.x, they are suggested to move to 3.21.4 or 3.22.1\n\n",
             "cvssScore": 9.8,
             "cvssSeverity": "CRITICAL",
             "published": "2024-02-20T15:15:10.333",
@@ -2668,7 +2668,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-08-05T01:46:07.707Z"
+        "lastScanned": "2026-08-05T00:53:36.886Z"
       },
       "reviewNote": null
     }
@@ -2678,7 +2678,7 @@
     "extractedAt": "2026-08-04",
     "extractionMethod": "manual-reconstruction-from-jumbled-pdf-text",
     "itemsNeedingReview": 5,
-    "lastFullScan": "2026-08-05T01:46:07.707Z",
+    "lastFullScan": "2026-08-05T00:53:36.886Z",
     "lastVersionReconciliation": "2026-08-04",
     "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction. EOL dates cross-checked against the PDF's task-list table on 2026-08-04: corrected NeoDPS (2025-11-02 -> 2025-11-01) and Elasticsearch (2026-04-08 -> 2026-04-30)."
   }
