@@ -44,7 +44,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Appears to be an internal/custom application - no public CVE source likely applies. Confirm before relying on scan results.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-12T03:22:42.201Z"
+        "lastScanned": "2026-10-13T04:37:24.704Z"
       }
     },
     {
@@ -84,7 +84,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.61984
+              "percentile": 0.61999
             }
           },
           {
@@ -97,7 +97,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00324,
-              "percentile": 0.23508
+              "percentile": 0.23532
             }
           },
           {
@@ -110,7 +110,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.37574
+              "percentile": 0.37596
             }
           },
           {
@@ -123,7 +123,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.28961
+              "percentile": 0.28978
             }
           },
           {
@@ -136,7 +136,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.46939
+              "percentile": 0.46962
             }
           },
           {
@@ -149,7 +149,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.44887
+              "percentile": 0.44909
             }
           },
           {
@@ -162,7 +162,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0023,
-              "percentile": 0.1275
+              "percentile": 0.12749
             }
           },
           {
@@ -175,7 +175,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0031,
-              "percentile": 0.21949
+              "percentile": 0.21975
             }
           }
         ],
@@ -188,7 +188,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:22:56.217Z"
+        "lastScanned": "2026-10-13T04:37:39.353Z"
       }
     },
     {
@@ -217,7 +217,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0039,
-              "percentile": 0.31174
+              "percentile": 0.31196
             }
           },
           {
@@ -231,7 +231,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0035,
-              "percentile": 0.26713
+              "percentile": 0.26737
             }
           },
           {
@@ -244,8 +244,8 @@
             "published": "2026-09-18T17:51:34Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00531,
-              "percentile": 0.43231
+              "epssScore": 0.00569,
+              "percentile": 0.45545
             }
           },
           {
@@ -259,7 +259,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0063,
-              "percentile": 0.48692
+              "percentile": 0.48703
             }
           },
           {
@@ -273,7 +273,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00684,
-              "percentile": 0.51206
+              "percentile": 0.51233
             }
           },
           {
@@ -287,7 +287,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00402,
-              "percentile": 0.32509
+              "percentile": 0.32533
             }
           },
           {
@@ -301,7 +301,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00332,
-              "percentile": 0.2447
+              "percentile": 0.24489
             }
           },
           {
@@ -315,7 +315,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00641,
-              "percentile": 0.49242
+              "percentile": 0.49264
             }
           },
           {
@@ -329,7 +329,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00608,
-              "percentile": 0.47564
+              "percentile": 0.47587
             }
           },
           {
@@ -343,7 +343,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0048,
-              "percentile": 0.39555
+              "percentile": 0.39577
             }
           },
           {
@@ -357,7 +357,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00564,
-              "percentile": 0.45281
+              "percentile": 0.45307
             }
           },
           {
@@ -371,7 +371,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00326,
-              "percentile": 0.23785
+              "percentile": 0.23808
             }
           },
           {
@@ -385,7 +385,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00395,
-              "percentile": 0.31679
+              "percentile": 0.317
             }
           },
           {
@@ -399,7 +399,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00228,
-              "percentile": 0.12551
+              "percentile": 0.12554
             }
           },
           {
@@ -413,7 +413,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00362,
-              "percentile": 0.28136
+              "percentile": 0.28155
             }
           }
         ],
@@ -426,7 +426,7 @@
         "scanNeedsMapping": true,
         "scanNote": "No confirmed version for this APIM instance - structured scan skipped pending manual version entry. See needsReview in inventory.json.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-12T03:22:56.571Z"
+        "lastScanned": "2026-10-13T04:37:39.854Z"
       }
     },
     {
@@ -467,7 +467,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.02149,
-              "percentile": 0.81612
+              "percentile": 0.81621
             }
           },
           {
@@ -480,7 +480,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0205,
-              "percentile": 0.80702
+              "percentile": 0.80712
             }
           },
           {
@@ -493,7 +493,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01387,
-              "percentile": 0.71476
+              "percentile": 0.71489
             }
           },
           {
@@ -505,8 +505,8 @@
             "published": "2021-07-26T12:15:08.547",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.0218,
-              "percentile": 0.81859
+              "epssScore": 0.02442,
+              "percentile": 0.8388
             }
           },
           {
@@ -519,7 +519,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00648,
-              "percentile": 0.49577
+              "percentile": 0.49598
             }
           },
           {
@@ -532,7 +532,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00243,
-              "percentile": 0.14238
+              "percentile": 0.14248
             }
           },
           {
@@ -545,7 +545,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01008,
-              "percentile": 0.62042
+              "percentile": 0.62057
             }
           },
           {
@@ -558,7 +558,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01342,
-              "percentile": 0.70561
+              "percentile": 0.70575
             }
           },
           {
@@ -571,7 +571,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01191,
-              "percentile": 0.67142
+              "percentile": 0.67155
             }
           },
           {
@@ -584,7 +584,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01472,
-              "percentile": 0.73061
+              "percentile": 0.73074
             }
           },
           {
@@ -597,7 +597,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01085,
-              "percentile": 0.64322
+              "percentile": 0.64337
             }
           }
         ],
@@ -609,7 +609,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Version 2.15 in inventory.json is flagged as a likely source-data copy/paste error (shares OpenShift's reference text) - verify against Confluence before trusting scan results.",
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:23:03.597Z"
+        "lastScanned": "2026-10-13T04:37:47.224Z"
       }
     },
     {
@@ -649,7 +649,7 @@
             "knownExploited": true,
             "epss": {
               "epssScore": 0.03437,
-              "percentile": 0.88667
+              "percentile": 0.88672
             }
           },
           {
@@ -662,7 +662,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0011,
-              "percentile": 0.01185
+              "percentile": 0.01182
             }
           },
           {
@@ -675,7 +675,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00299,
-              "percentile": 0.2085
+              "percentile": 0.20871
             }
           },
           {
@@ -688,7 +688,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00392,
-              "percentile": 0.31356
+              "percentile": 0.31378
             }
           },
           {
@@ -701,7 +701,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00322,
-              "percentile": 0.23352
+              "percentile": 0.23376
             }
           },
           {
@@ -714,7 +714,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.08823,
-              "percentile": 0.95084
+              "percentile": 0.95086
             }
           },
           {
@@ -727,7 +727,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01367,
-              "percentile": 0.71085
+              "percentile": 0.71098
             }
           },
           {
@@ -740,7 +740,32 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01073,
-              "percentile": 0.63968
+              "percentile": 0.63984
+            }
+          },
+          {
+            "id": "CVE-2026-75888",
+            "source": "redhat",
+            "description": "openshift/console: openshift/console: Authenticated SSRF via Helm chart URL fetch",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-12T15:36:20Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-95702",
+            "source": "redhat",
+            "description": "gvisor.dev/gvisor: gVisor: Arbitrary code execution via use-after-free in VFS",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-09T14:44:35Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00084,
+              "percentile": 0.00242
             }
           },
           {
@@ -754,7 +779,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00161,
-              "percentile": 0.04695
+              "percentile": 0.04697
             }
           },
           {
@@ -768,7 +793,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00379,
-              "percentile": 0.29955
+              "percentile": 0.29974
             }
           },
           {
@@ -782,7 +807,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00568,
-              "percentile": 0.4544
+              "percentile": 0.45467
             }
           },
           {
@@ -796,7 +821,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00394,
-              "percentile": 0.31612
+              "percentile": 0.31635
             }
           },
           {
@@ -811,32 +836,6 @@
               "epssScore": 0.00168,
               "percentile": 0.05649
             }
-          },
-          {
-            "id": "CVE-2024-9676",
-            "source": "nvd",
-            "description": "A vulnerability was found in Podman, Buildah, and CRI-O. A symlink traversal vulnerability in the containers/storage library can cause Podman, Buildah, and CRI-O to hang and result in a denial of service via OOM kill when running a malicious image using an automatically assigned user namespace (`--userns=auto` in Podman and Buildah). The containers/storage library will read /etc/passwd inside the container, but does not properly validate if that file is a symlink, which can be used to cause the library to read an arbitrary file on the host.",
-            "cvssScore": 6.5,
-            "cvssSeverity": "MEDIUM",
-            "published": "2024-10-15T16:15:06.933",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.01336,
-              "percentile": 0.70422
-            }
-          },
-          {
-            "id": "CVE-2026-13757",
-            "source": "nvd",
-            "description": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services.",
-            "cvssScore": 6.2,
-            "cvssSeverity": "MEDIUM",
-            "published": "2026-06-29T19:16:40.907",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00202,
-              "percentile": 0.09318
-            }
           }
         ],
         "sourcesAttempted": [
@@ -848,7 +847,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:23:11.311Z"
+        "lastScanned": "2026-10-13T04:37:59.868Z"
       }
     },
     {
@@ -888,7 +887,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.61984
+              "percentile": 0.61999
             }
           },
           {
@@ -901,7 +900,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00324,
-              "percentile": 0.23508
+              "percentile": 0.23532
             }
           },
           {
@@ -914,7 +913,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.37574
+              "percentile": 0.37596
             }
           },
           {
@@ -927,7 +926,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.28961
+              "percentile": 0.28978
             }
           },
           {
@@ -940,7 +939,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.46939
+              "percentile": 0.46962
             }
           },
           {
@@ -953,7 +952,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.44887
+              "percentile": 0.44909
             }
           },
           {
@@ -966,7 +965,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0023,
-              "percentile": 0.1275
+              "percentile": 0.12749
             }
           },
           {
@@ -979,7 +978,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0031,
-              "percentile": 0.21949
+              "percentile": 0.21975
             }
           }
         ],
@@ -991,7 +990,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:23:18.292Z"
+        "lastScanned": "2026-10-13T04:38:07.647Z"
       }
     },
     {
@@ -1039,7 +1038,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.61984
+              "percentile": 0.61999
             }
           },
           {
@@ -1052,7 +1051,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00324,
-              "percentile": 0.23508
+              "percentile": 0.23532
             }
           },
           {
@@ -1065,7 +1064,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.37574
+              "percentile": 0.37596
             }
           },
           {
@@ -1078,7 +1077,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.28961
+              "percentile": 0.28978
             }
           },
           {
@@ -1091,7 +1090,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.46939
+              "percentile": 0.46962
             }
           },
           {
@@ -1104,7 +1103,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.44887
+              "percentile": 0.44909
             }
           },
           {
@@ -1117,7 +1116,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0023,
-              "percentile": 0.1275
+              "percentile": 0.12749
             }
           },
           {
@@ -1130,7 +1129,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0031,
-              "percentile": 0.21949
+              "percentile": 0.21975
             }
           }
         ],
@@ -1142,7 +1141,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:23:25.263Z"
+        "lastScanned": "2026-10-13T04:38:15.919Z"
       }
     },
     {
@@ -1186,7 +1185,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.61984
+              "percentile": 0.61999
             }
           },
           {
@@ -1199,7 +1198,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00324,
-              "percentile": 0.23508
+              "percentile": 0.23532
             }
           },
           {
@@ -1212,7 +1211,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.37574
+              "percentile": 0.37596
             }
           },
           {
@@ -1225,7 +1224,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.28961
+              "percentile": 0.28978
             }
           },
           {
@@ -1238,7 +1237,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.46939
+              "percentile": 0.46962
             }
           },
           {
@@ -1251,7 +1250,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.44887
+              "percentile": 0.44909
             }
           },
           {
@@ -1264,7 +1263,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0023,
-              "percentile": 0.1275
+              "percentile": 0.12749
             }
           },
           {
@@ -1277,7 +1276,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0031,
-              "percentile": 0.21949
+              "percentile": 0.21975
             }
           }
         ],
@@ -1289,7 +1288,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:23:32.160Z"
+        "lastScanned": "2026-10-13T04:38:25.016Z"
       }
     },
     {
@@ -1330,7 +1329,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00173,
-              "percentile": 0.06236
+              "percentile": 0.06231
             }
           },
           {
@@ -1344,7 +1343,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00238,
-              "percentile": 0.13678
+              "percentile": 0.13686
             }
           },
           {
@@ -1358,7 +1357,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00168,
-              "percentile": 0.05596
+              "percentile": 0.05595
             }
           },
           {
@@ -1372,7 +1371,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00173,
-              "percentile": 0.06236
+              "percentile": 0.06231
             }
           },
           {
@@ -1400,7 +1399,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00571,
-              "percentile": 0.45609
+              "percentile": 0.45635
             }
           },
           {
@@ -1414,7 +1413,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00315,
-              "percentile": 0.22502
+              "percentile": 0.22526
             }
           },
           {
@@ -1428,7 +1427,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00528,
-              "percentile": 0.43001
+              "percentile": 0.43024
             }
           },
           {
@@ -1442,21 +1441,32 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00528,
-              "percentile": 0.43001
+              "percentile": 0.43023
             }
           },
           {
-            "id": "CVE-2026-102276",
+            "id": "CVE-2026-93879",
             "source": "redhat",
-            "description": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-09-28T20:50:59Z",
+            "description": "org.hibernate.validator:hibernate-validator: Hibernate Validator - unescaped {duplicates} message parameter is re-evaluated as  Expression Language (unauthenticated DoS)",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-12T16:18:43Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109082",
+            "source": "redhat",
+            "description": "keycloak-services: keycloak-services: CIBA confidential-only contract not enforced for public clients",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-09T18:42:43Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.0035,
-              "percentile": 0.26713
+              "epssScore": 0.00248,
+              "percentile": 0.14809
             }
           },
           {
@@ -1470,7 +1480,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00268,
-              "percentile": 0.17503
+              "percentile": 0.17517
             }
           },
           {
@@ -1484,7 +1494,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00244,
-              "percentile": 0.14349
+              "percentile": 0.14359
             }
           },
           {
@@ -1498,7 +1508,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00158,
-              "percentile": 0.04386
+              "percentile": 0.04385
             }
           },
           {
@@ -1512,21 +1522,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00084,
-              "percentile": 0.00257
-            }
-          },
-          {
-            "id": "CVE-2026-105305",
-            "source": "redhat",
-            "description": "keycloak-services: keycloak-services: Device Authorization Grant bypasses per-client minimum.acr.value enforcement",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-06T06:51:34Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00189,
-              "percentile": 0.07818
+              "percentile": 0.00256
             }
           }
         ],
@@ -1539,7 +1535,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:23:39.197Z"
+        "lastScanned": "2026-10-13T04:38:32.177Z"
       }
     },
     {
@@ -1581,7 +1577,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0039,
-              "percentile": 0.31174
+              "percentile": 0.31196
             }
           },
           {
@@ -1595,7 +1591,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0035,
-              "percentile": 0.26713
+              "percentile": 0.26737
             }
           },
           {
@@ -1608,8 +1604,8 @@
             "published": "2026-09-18T17:51:34Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00531,
-              "percentile": 0.43231
+              "epssScore": 0.00569,
+              "percentile": 0.45545
             }
           },
           {
@@ -1623,7 +1619,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0063,
-              "percentile": 0.48692
+              "percentile": 0.48703
             }
           },
           {
@@ -1637,7 +1633,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00684,
-              "percentile": 0.51206
+              "percentile": 0.51233
             }
           },
           {
@@ -1651,7 +1647,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00402,
-              "percentile": 0.32509
+              "percentile": 0.32533
             }
           },
           {
@@ -1665,7 +1661,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00332,
-              "percentile": 0.2447
+              "percentile": 0.24489
             }
           },
           {
@@ -1679,7 +1675,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00641,
-              "percentile": 0.49242
+              "percentile": 0.49264
             }
           },
           {
@@ -1693,7 +1689,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00608,
-              "percentile": 0.47564
+              "percentile": 0.47587
             }
           },
           {
@@ -1707,7 +1703,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0048,
-              "percentile": 0.39555
+              "percentile": 0.39577
             }
           },
           {
@@ -1721,7 +1717,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00564,
-              "percentile": 0.45281
+              "percentile": 0.45307
             }
           },
           {
@@ -1735,7 +1731,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00326,
-              "percentile": 0.23785
+              "percentile": 0.23808
             }
           },
           {
@@ -1749,7 +1745,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00395,
-              "percentile": 0.31679
+              "percentile": 0.317
             }
           },
           {
@@ -1763,7 +1759,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00228,
-              "percentile": 0.12551
+              "percentile": 0.12554
             }
           },
           {
@@ -1777,7 +1773,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00362,
-              "percentile": 0.28136
+              "percentile": 0.28155
             }
           }
         ],
@@ -1790,7 +1786,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:23:45.999Z"
+        "lastScanned": "2026-10-13T04:38:39.153Z"
       }
     },
     {
@@ -1834,7 +1830,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00575,
-              "percentile": 0.45842
+              "percentile": 0.45868
             }
           },
           {
@@ -1847,7 +1843,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01352,
-              "percentile": 0.70772
+              "percentile": 0.70784
             }
           },
           {
@@ -1860,7 +1856,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01035,
-              "percentile": 0.62875
+              "percentile": 0.62891
             }
           },
           {
@@ -1873,7 +1869,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00603,
-              "percentile": 0.47334
+              "percentile": 0.47355
             }
           },
           {
@@ -1886,7 +1882,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01464,
-              "percentile": 0.72921
+              "percentile": 0.72935
             }
           },
           {
@@ -1899,7 +1895,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00615,
-              "percentile": 0.47987
+              "percentile": 0.48007
             }
           }
         ],
@@ -1912,7 +1908,7 @@
         "scanNeedsMapping": true,
         "scanNote": "FME/Safe Software rarely appears in NVD - may need vendor security bulletins instead",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-12T03:23:52.955Z"
+        "lastScanned": "2026-10-13T04:38:46.656Z"
       }
     },
     {
@@ -1960,7 +1956,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-12T03:23:59.620Z"
+        "lastScanned": "2026-10-13T04:38:53.280Z"
       }
     },
     {
@@ -2009,7 +2005,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0039,
-              "percentile": 0.31068
+              "percentile": 0.3109
             }
           },
           {
@@ -2023,7 +2019,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0064,
-              "percentile": 0.49202
+              "percentile": 0.49225
             }
           },
           {
@@ -2037,7 +2033,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00411,
-              "percentile": 0.33451
+              "percentile": 0.33473
             }
           },
           {
@@ -2051,7 +2047,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00497,
-              "percentile": 0.40797
+              "percentile": 0.40819
             }
           },
           {
@@ -2065,7 +2061,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00383,
-              "percentile": 0.30289
+              "percentile": 0.30308
             }
           },
           {
@@ -2079,7 +2075,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0035,
-              "percentile": 0.26713
+              "percentile": 0.26737
             }
           },
           {
@@ -2093,7 +2089,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00259,
-              "percentile": 0.16184
+              "percentile": 0.16191
             }
           },
           {
@@ -2121,7 +2117,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00241,
-              "percentile": 0.1399
+              "percentile": 0.13998
             }
           },
           {
@@ -2157,7 +2153,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00387,
-              "percentile": 0.30812
+              "percentile": 0.30832
             }
           },
           {
@@ -2171,7 +2167,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00124,
-              "percentile": 0.01888
+              "percentile": 0.01875
             }
           },
           {
@@ -2185,7 +2181,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00256,
-              "percentile": 0.15871
+              "percentile": 0.15879
             }
           },
           {
@@ -2199,7 +2195,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00301,
-              "percentile": 0.21066
+              "percentile": 0.21086
             }
           }
         ],
@@ -2212,7 +2208,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:24:06.653Z"
+        "lastScanned": "2026-10-13T04:39:00.420Z"
       }
     },
     {
@@ -2260,7 +2256,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01506,
-              "percentile": 0.73664
+              "percentile": 0.73677
             }
           },
           {
@@ -2273,7 +2269,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.03663,
-              "percentile": 0.89369
+              "percentile": 0.89374
             }
           },
           {
@@ -2286,7 +2282,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.02805,
-              "percentile": 0.86111
+              "percentile": 0.86119
             }
           },
           {
@@ -2419,7 +2415,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:24:14.219Z"
+        "lastScanned": "2026-10-13T04:39:08.612Z"
       }
     },
     {
@@ -2467,7 +2463,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01889,
-              "percentile": 0.7898
+              "percentile": 0.78987
             }
           },
           {
@@ -2480,7 +2476,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01273,
-              "percentile": 0.69087
+              "percentile": 0.69104
             }
           },
           {
@@ -2493,7 +2489,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01534,
-              "percentile": 0.74106
+              "percentile": 0.74118
             }
           },
           {
@@ -2506,7 +2502,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01605,
-              "percentile": 0.75192
+              "percentile": 0.75205
             }
           },
           {
@@ -2519,7 +2515,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00827,
-              "percentile": 0.56291
+              "percentile": 0.56306
             }
           },
           {
@@ -2532,7 +2528,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00791,
-              "percentile": 0.55046
+              "percentile": 0.55062
             }
           },
           {
@@ -2555,7 +2551,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01034,
-              "percentile": 0.62842
+              "percentile": 0.62858
             }
           },
           {
@@ -2568,7 +2564,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00889,
-              "percentile": 0.58211
+              "percentile": 0.58224
             }
           },
           {
@@ -2581,7 +2577,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01148,
-              "percentile": 0.65902
+              "percentile": 0.65919
             }
           },
           {
@@ -2594,7 +2590,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01224,
-              "percentile": 0.67967
+              "percentile": 0.67982
             }
           },
           {
@@ -2607,7 +2603,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01135,
-              "percentile": 0.65586
+              "percentile": 0.65604
             }
           },
           {
@@ -2620,7 +2616,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00886,
-              "percentile": 0.58134
+              "percentile": 0.58147
             }
           },
           {
@@ -2633,7 +2629,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00984,
-              "percentile": 0.61271
+              "percentile": 0.61286
             }
           },
           {
@@ -2646,7 +2642,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00749,
-              "percentile": 0.53615
+              "percentile": 0.53636
             }
           }
         ],
@@ -2660,7 +2656,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:24:21.873Z"
+        "lastScanned": "2026-10-13T04:39:18.218Z"
       },
       "reviewNote": null
     },
@@ -2690,7 +2686,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-12T03:24:21.873Z"
+        "lastScanned": "2026-10-13T04:39:18.218Z"
       }
     }
   ],
@@ -2699,7 +2695,7 @@
     "extractedAt": "2026-08-04",
     "extractionMethod": "manual-reconstruction-from-jumbled-pdf-text",
     "itemsNeedingReview": 5,
-    "lastFullScan": "2026-10-12T03:24:21.874Z",
+    "lastFullScan": "2026-10-13T04:39:18.218Z",
     "lastVersionReconciliation": "2026-08-04",
     "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction. EOL dates cross-checked against the PDF's task-list table on 2026-08-04: corrected NeoDPS (2025-11-02 -> 2025-11-01) and Elasticsearch (2026-04-08 -> 2026-04-30)."
   }
