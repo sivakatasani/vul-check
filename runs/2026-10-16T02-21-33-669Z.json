@@ -1,0 +1,2667 @@
+{
+  "software": [
+    {
+      "id": "neodps",
+      "name": "NeoDPS",
+      "eolDate": "2025-11-09",
+      "reference": "",
+      "environments": [
+        {
+          "env": "DEV",
+          "version": "ausdps-v2024.11.2"
+        },
+        {
+          "env": "ST",
+          "version": "ausdps-v2024.11.2"
+        },
+        {
+          "env": "SIT2",
+          "version": "audps_bom_v2024.08.0"
+        },
+        {
+          "env": "SIT3",
+          "version": "audps_bom_v2024.08.0"
+        },
+        {
+          "env": "PROD",
+          "version": "audps_bom_v2024.08.0"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "reviewNote": "Confirmed from source PDF: DEV/ST run a newer BOM (2024.11.2) than SIT2/SIT3/PROD (2024.08.0) - this is real, not ambiguous",
+      "scan": {
+        "vulnerabilityStatus": "clear",
+        "vulnerabilityCount": 0,
+        "highestCvssScore": null,
+        "hasKnownExploited": false,
+        "findings": [],
+        "sourcesAttempted": [
+          "websearch:skipped",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": true,
+        "scanNote": "Appears to be an internal/custom application - no public CVE source likely applies. Confirm before relying on scan results.",
+        "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
+        "lastScanned": "2026-10-16T02:19:32.414Z"
+      }
+    },
+    {
+      "id": "postgresql-apim",
+      "name": "PostgreSQL Cluster - APIM",
+      "eolDate": "2025-11-15",
+      "reference": "PostgreSQL: Versioning Policy",
+      "environments": [
+        {
+          "env": "NPU",
+          "version": "12"
+        },
+        {
+          "env": "NPM",
+          "version": "13"
+        },
+        {
+          "env": "PROD",
+          "version": "13"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 8,
+        "highestCvssScore": 8.8,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-6473",
+            "source": "nvd",
+            "description": "Integer wraparound in multiple PostgreSQL server features allows an unprivileged database user to cause the server to undersize an allocation and write out-of-bounds.  This may execute arbitrary code as the operating system user running the database.  In applications that pass gigabyte-scale user inputs to the relevant database functions, the application input provider may achieve a segmentation fault.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:24.883",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01006,
+              "percentile": 0.62302
+            }
+          },
+          {
+            "id": "CVE-2026-6475",
+            "source": "nvd",
+            "description": "Symlink following in PostgreSQL pg_basebackup plain format and in pg_rewind allows an origin superuser to overwrite local files, e.g. /var/lib/postgres/.bashrc, that hijack the operating system account.  It will remain the case that starting the server after these commands implicitly trusts the origin superuser, due to features like shared_preload_libraries.  Hence, the attack has practical implications only if one takes relevant action between these commands and server start, like moving the files to a different VM or snapshotting the VM.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.113",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00324,
+              "percentile": 0.238
+            }
+          },
+          {
+            "id": "CVE-2026-6477",
+            "source": "nvd",
+            "description": "Use of inherently dangerous function PQfn(..., result_is_int=0, ...) in PostgreSQL libpq lo_export(), lo_read(), lo_lseek64(), and lo_tell64() functions allows the server superuser to overwrite a client stack buffer with an arbitrarily-large response.  Like gets(), PQfn(..., result_is_int=0, ...) stores arbitrary-length, server-determined data into a buffer of unspecified size.  Because both the \\lo_export command in psql and pg_dump call lo_read(), the server superuser can overwrite pg_dump or psql stack memory.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.347",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00454,
+              "percentile": 0.37933
+            }
+          },
+          {
+            "id": "CVE-2026-6637",
+            "source": "nvd",
+            "description": "Stack buffer overflow in PostgreSQL module \"refint\" allows an unprivileged database user to execute arbitrary code as the operating system user running the database.  A distinct attack is possible if the application declares a user-controlled column as a \"refint\" cascade primary key and facilitates user-controlled updates to that column.  In that case, a SQL injection allows a primary key update value provider to execute arbitrary SQL as the database user performing the primary key update.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.820",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0037,
+              "percentile": 0.29304
+            }
+          },
+          {
+            "id": "CVE-2026-6479",
+            "source": "nvd",
+            "description": "Uncontrolled recursion in PostgreSQL SSL and GSS negotiation allows an attacker able to connect to a PostgreSQL AF_UNIX socket to achieve sustained denial of service.  If SSL and GSS are both disabled, an attacker can do the same via access to a PostgreSQL TCP socket.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.583",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00595,
+              "percentile": 0.47296
+            }
+          },
+          {
+            "id": "CVE-2026-6478",
+            "source": "nvd",
+            "description": "Covert timing channel in comparison of MD5-hashed password in PostgreSQL authentication allows an attacker to recover user credentials sufficient to authenticate.  This does not affect scram-sha-256 passwords, the default in all supported releases.  However, current databases may have MD5-hashed passwords originating in upgrades from PostgreSQL 13 or earlier.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 6.5,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:25.463",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00558,
+              "percentile": 0.45252
+            }
+          },
+          {
+            "id": "CVE-2026-6472",
+            "source": "nvd",
+            "description": "Missing authorization in PostgreSQL CREATE TYPE allows an object creator to hijack other queries that use search_path to find user-defined types, including extension-defined types.  That is to say, the victim will execute arbitrary SQL functions of the attacker's choice.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 5.4,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:24.757",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0023,
+              "percentile": 0.12849
+            }
+          },
+          {
+            "id": "CVE-2026-6474",
+            "source": "nvd",
+            "description": "Externally-controlled format string in PostgreSQL timeofday() function allows an attacker to retrieve portions of server memory, via crafted timezone zones.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 4.3,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:24.997",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0031,
+              "percentile": 0.22216
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:12",
+          "nvd:cpe:13",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:19:56.977Z"
+      }
+    },
+    {
+      "id": "apim-1",
+      "name": "APIM (3scale)",
+      "eolDate": "2026-04-30",
+      "reference": "3scale API Management Life Cycle - Red Hat Customer Portal",
+      "environments": [],
+      "confidence": "low",
+      "needsReview": true,
+      "reviewNote": "No environment/version row exists for this APIM instance in the source PDF (EOL 30 Apr 2026 entry) - task-tracker-only entry, verify manually",
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 20,
+        "highestCvssScore": 7.5,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-84782",
+            "source": "redhat",
+            "description": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-29T00:00:00Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0039,
+              "percentile": 0.31522
+            }
+          },
+          {
+            "id": "CVE-2026-102278",
+            "source": "redhat",
+            "description": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-28T20:57:09Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0035,
+              "percentile": 0.27039
+            }
+          },
+          {
+            "id": "CVE-2026-102276",
+            "source": "redhat",
+            "description": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-28T20:50:59Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0035,
+              "percentile": 0.27041
+            }
+          },
+          {
+            "id": "CVE-2026-93748",
+            "source": "redhat",
+            "description": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-18T17:51:34Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00569,
+              "percentile": 0.45889
+            }
+          },
+          {
+            "id": "CVE-2026-93749",
+            "source": "redhat",
+            "description": "source-map-js: source-map-js: Denial of Service via malformed indexed source maps",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-18T17:51:34Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00346,
+              "percentile": 0.26498
+            }
+          },
+          {
+            "id": "CVE-2026-93690",
+            "source": "redhat",
+            "description": "uri-js: uri-js: Denial of Service via malformed path segments",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-18T15:06:04Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00684,
+              "percentile": 0.51553
+            }
+          },
+          {
+            "id": "CVE-2026-92925",
+            "source": "redhat",
+            "description": "redis: Redis: Out-of-bounds read via crafted cluster bus packets",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-17T11:48:04Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00402,
+              "percentile": 0.32872
+            }
+          },
+          {
+            "id": "CVE-2026-90711",
+            "source": "redhat",
+            "description": "proxy-addr: proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-15T06:19:46Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00332,
+              "percentile": 0.24769
+            }
+          },
+          {
+            "id": "CVE-2026-84445",
+            "source": "redhat",
+            "description": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-14T16:11:41Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00641,
+              "percentile": 0.49598
+            }
+          },
+          {
+            "id": "CVE-2026-87776",
+            "source": "redhat",
+            "description": "compression: compression: Denial of Service via memory leak on premature response close",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-11T11:24:55Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00608,
+              "percentile": 0.47916
+            }
+          },
+          {
+            "id": "CVE-2026-88031",
+            "source": "redhat",
+            "description": "go.mongodb.org/mongo-driver: go.mongodb.org/mongo-driver/v2: MongoDB Go Driver: Data deletion via query-operator injection in GridFS file IDs",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-10T17:59:35Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0048,
+              "percentile": 0.3992
+            }
+          },
+          {
+            "id": "CVE-2026-85396",
+            "source": "redhat",
+            "description": "rubyzip: rubyzip: Arbitrary file write via path traversal",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-03T18:54:27Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00564,
+              "percentile": 0.45651
+            }
+          },
+          {
+            "id": "CVE-2026-107715",
+            "source": "redhat",
+            "description": "mechanize: mechanize: Information disclosure via cross-domain HTTP redirect",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-08T21:27:24Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00395,
+              "percentile": 0.32025
+            }
+          },
+          {
+            "id": "CVE-2026-107714",
+            "source": "redhat",
+            "description": "mechanize: mechanize: Information disclosure via improper redirect scheme and port handling",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-08T21:26:16Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00228,
+              "percentile": 0.12642
+            }
+          },
+          {
+            "id": "CVE-2026-107399",
+            "source": "redhat",
+            "description": "mechanize: mechanize: Information disclosure via cross-origin meta refresh",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-08T21:24:46Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00362,
+              "percentile": 0.2847
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "redhat",
+          "websearch:skipped",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": true,
+        "scanNote": "No confirmed version for this APIM instance - structured scan skipped pending manual version entry. See needsReview in inventory.json.",
+        "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
+        "lastScanned": "2026-10-16T02:19:57.778Z"
+      }
+    },
+    {
+      "id": "elasticsearch",
+      "name": "Elasticsearch",
+      "eolDate": "2026-04-30",
+      "reference": "OpenShift Operator Life Cycles - Red Hat Customer Portal",
+      "environments": [
+        {
+          "env": "NPU",
+          "version": "2.15"
+        },
+        {
+          "env": "NPM",
+          "version": "2.15"
+        },
+        {
+          "env": "PROD",
+          "version": "2.15"
+        }
+      ],
+      "confidence": "low",
+      "needsReview": true,
+      "reviewNote": "Source PDF row for Elasticsearch reuses OpenShift's reference text verbatim and shows version 2.15 (same as APIM) - this appears to be a data entry error in the source Confluence table itself, not an extraction issue. Verify against the live Confluence page.",
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 11,
+        "highestCvssScore": 8.1,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2019-7611",
+            "source": "nvd",
+            "description": "A permission issue was found in Elasticsearch versions before 5.6.15 and 6.6.1 when Field Level Security and Document Level Security are disabled and the _aliases, _shrink, or _split endpoints are used . If the elasticsearch.yml file has xpack.security.dls_fls.enabled set to false, certain permission checks are skipped when users perform one of the actions mentioned above, to make existing data available under a new index/alias name. This could result in an attacker gaining additional permissions against a restricted index.",
+            "cvssScore": 8.1,
+            "cvssSeverity": "HIGH",
+            "published": "2019-03-25T19:29:02.257",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.02149,
+              "percentile": 0.81778
+            }
+          },
+          {
+            "id": "CVE-2023-31418",
+            "source": "nvd",
+            "description": "An issue has been identified with how Elasticsearch handled incoming requests on the HTTP layer. An unauthenticated user could force an Elasticsearch node to exit with an OutOfMemory error by sending a moderate number of malformed HTTP requests. The issue was identified by Elastic Engineering and we have no indication that the issue is known or that it is being exploited in the wild.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2023-10-26T18:15:08.587",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0205,
+              "percentile": 0.80875
+            }
+          },
+          {
+            "id": "CVE-2020-7019",
+            "source": "nvd",
+            "description": "In Elasticsearch before 7.9.0 and 6.8.12 a field disclosure flaw was found when running a scrolling search with Field Level Security. If a user runs the same query another more privileged user recently ran, the scrolling search can leak fields that should be hidden. This could result in an attacker gaining additional permissions against a restricted index.",
+            "cvssScore": 6.5,
+            "cvssSeverity": "MEDIUM",
+            "published": "2020-08-18T17:15:11.677",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01404,
+              "percentile": 0.7206
+            }
+          },
+          {
+            "id": "CVE-2021-22144",
+            "source": "nvd",
+            "description": "In Elasticsearch versions before 7.13.3 and 6.8.17 an uncontrolled recursion vulnerability that could lead to a denial of service attack was identified in the Elasticsearch Grok parser. A user with the ability to submit arbitrary queries to Elasticsearch could create a malicious Grok query that will crash the Elasticsearch node.",
+            "cvssScore": 6.5,
+            "cvssSeverity": "MEDIUM",
+            "published": "2021-07-26T12:15:08.547",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.02442,
+              "percentile": 0.84021
+            }
+          },
+          {
+            "id": "CVE-2024-52979",
+            "source": "nvd",
+            "description": "Uncontrolled Resource Consumption in Elasticsearch while evaluating specifically crafted search templates with Mustache functions can lead to Denial of Service by causing the Elasticsearch node to crash.",
+            "cvssScore": 6.5,
+            "cvssSeverity": "MEDIUM",
+            "published": "2025-05-01T14:15:35.690",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00648,
+              "percentile": 0.49934
+            }
+          },
+          {
+            "id": "CVE-2023-46674",
+            "source": "nvd",
+            "description": "An issue was identified that allowed the unsafe deserialization of java objects from hadoop or spark configuration properties that could have been modified by authenticated users. Elastic would like to thank Yakov Shafranovich, with Amazon Web Services for reporting this issue.\n",
+            "cvssScore": 6,
+            "cvssSeverity": "MEDIUM",
+            "published": "2023-12-05T18:15:12.380",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00243,
+              "percentile": 0.14348
+            }
+          },
+          {
+            "id": "CVE-2019-7614",
+            "source": "nvd",
+            "description": "A race condition flaw was found in the response headers Elasticsearch versions before 7.2.1 and 6.8.2 returns to a request. On a system with multiple users submitting requests, it could be possible for an attacker to gain access to response header containing sensitive data from another user.",
+            "cvssScore": 5.9,
+            "cvssSeverity": "MEDIUM",
+            "published": "2019-07-30T22:15:12.443",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01008,
+              "percentile": 0.62361
+            }
+          },
+          {
+            "id": "CVE-2021-22135",
+            "source": "nvd",
+            "description": "Elasticsearch versions before 7.11.2 and 6.8.15 contain a document disclosure flaw was found in the Elasticsearch suggester and profile API when Document and Field Level Security are enabled. The suggester and profile API are normally disabled for an index when document level security is enabled on the index. Certain queries are able to enable the profiler and suggester which could lead to disclosing the existence of documents and fields the attacker should not be able to view.",
+            "cvssScore": 5.3,
+            "cvssSeverity": "MEDIUM",
+            "published": "2021-05-13T18:15:08.957",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01342,
+              "percentile": 0.70821
+            }
+          },
+          {
+            "id": "CVE-2021-22137",
+            "source": "nvd",
+            "description": "In Elasticsearch versions before 7.11.2 and 6.8.15 a document disclosure flaw was found when Document or Field Level Security is used. Search queries do not properly preserve security permissions when executing certain cross-cluster search queries. This could result in the search disclosing the existence of documents the attacker should not be able to view. This could result in an attacker gaining additional insight into potentially sensitive indices.",
+            "cvssScore": 5.3,
+            "cvssSeverity": "MEDIUM",
+            "published": "2021-05-13T18:15:09.033",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01187,
+              "percentile": 0.67321
+            }
+          },
+          {
+            "id": "CVE-2020-7021",
+            "source": "nvd",
+            "description": "Elasticsearch versions before 7.10.0 and 6.8.14 have an information disclosure issue when audit logging and the emit_request_body option is enabled. The Elasticsearch audit log could contain sensitive information such as password hashes or authentication tokens. This could allow an Elasticsearch administrator to view these details.",
+            "cvssScore": 4.9,
+            "cvssSeverity": "MEDIUM",
+            "published": "2021-02-10T19:15:11.870",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01472,
+              "percentile": 0.733
+            }
+          },
+          {
+            "id": "CVE-2020-7020",
+            "source": "nvd",
+            "description": "Elasticsearch versions before 6.8.13 and 7.9.2 contain a document disclosure flaw when Document or Field Level Security is used. Search queries do not properly preserve security permissions when executing certain complex queries. This could result in the search disclosing the existence of documents the attacker should not be able to view. This could result in an attacker gaining additional insight into potentially sensitive indices.",
+            "cvssScore": 3.1,
+            "cvssSeverity": "LOW",
+            "published": "2020-10-22T17:15:12.693",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01085,
+              "percentile": 0.64626
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:2.15",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": true,
+        "scanNote": "Version 2.15 in inventory.json is flagged as a likely source-data copy/paste error (shares OpenShift's reference text) - verify against Confluence before trusting scan results.",
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:20:05.598Z"
+      }
+    },
+    {
+      "id": "openshift",
+      "name": "OpenShift Container Platform",
+      "eolDate": "2026-06-25",
+      "reference": "OpenShift Operator Life Cycles - Red Hat Customer Portal",
+      "environments": [
+        {
+          "env": "NPU",
+          "version": "4.16"
+        },
+        {
+          "env": "NPM",
+          "version": "4.16"
+        },
+        {
+          "env": "PROD",
+          "version": "4.16"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "scan": {
+        "vulnerabilityStatus": "critical",
+        "vulnerabilityCount": 33,
+        "highestCvssScore": 8.8,
+        "hasKnownExploited": true,
+        "findings": [
+          {
+            "id": "CVE-2026-31431",
+            "source": "nvd",
+            "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: algif_aead - Revert to operating out-of-place\n\nThis mostly reverts commit 72548b093ee3 except for the copying of\nthe associated data.\n\nThere is no benefit in operating in-place in algif_aead since the\nsource and destination come from different mappings.  Get rid of\nall the complexity added for in-place operation and just copy the\nAD directly.",
+            "cvssScore": 7.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-04-22T09:16:21.270",
+            "knownExploited": true,
+            "epss": {
+              "epssScore": 0.03437,
+              "percentile": 0.88776
+            }
+          },
+          {
+            "id": "CVE-2026-54099",
+            "source": "nvd",
+            "description": "A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. The WICD CSR auto-approver validates that a Certificate Signing Request contains the organization system:wicd-nodes but does not reject additional organization values such as system:masters. A compromised Windows worker node that holds WICD credentials can submit a CSR that is auto-approved and signed by the cluster, yielding a client certificate that grants cluster-administrator privileges and enabling full cluster takeover.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-06-22T14:17:40.820",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00116,
+              "percentile": 0.01512
+            }
+          },
+          {
+            "id": "CVE-2026-54100",
+            "source": "nvd",
+            "description": "A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. WMCO establishes SSH connections to Windows worker nodes without verifying the remote server host key. An adjacent-network attacker who can intercept or redirect WMCO's SSH session can capture WICD and kubelet bootstrap credentials transferred during node configuration, enabling compromise of Windows node identities in the cluster.",
+            "cvssScore": 8.3,
+            "cvssSeverity": "HIGH",
+            "published": "2026-06-22T14:17:40.950",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00303,
+              "percentile": 0.21439
+            }
+          },
+          {
+            "id": "CVE-2024-9675",
+            "source": "nvd",
+            "description": "A vulnerability was found in Buildah. Cache mounts do not properly validate that user-specified paths for the cache are within our cache directory, allowing a `RUN` instruction in a Container file to mount an arbitrary directory from the host (read/write) into the container as long as those files can be accessed by the user running Buildah.",
+            "cvssScore": 7.8,
+            "cvssSeverity": "HIGH",
+            "published": "2024-10-09T15:15:17.837",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00392,
+              "percentile": 0.31701
+            }
+          },
+          {
+            "id": "CVE-2025-13601",
+            "source": "nvd",
+            "description": "A heap-based buffer overflow problem was found in glib through an incorrect calculation of buffer size in the g_escape_uri_string() function. If the string to escape contains a very large number of unacceptable characters (which would need escaping), the calculation of the length of the escaped string could overflow, leading to a potential write off the end of the newly allocated string.",
+            "cvssScore": 7.7,
+            "cvssSeverity": "HIGH",
+            "published": "2025-11-26T15:15:51.723",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00322,
+              "percentile": 0.23644
+            }
+          },
+          {
+            "id": "CVE-2024-12085",
+            "source": "nvd",
+            "description": "A flaw was found in rsync which could be triggered when rsync compares file checksums. This flaw allows an attacker to manipulate the checksum length (s2length) to cause a comparison between a checksum and uninitialized memory and leak one byte of uninitialized stack data at a time.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2025-01-14T18:15:25.123",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.08823,
+              "percentile": 0.95129
+            }
+          },
+          {
+            "id": "CVE-2025-6021",
+            "source": "nvd",
+            "description": "A flaw was found in libxml2's xmlBuildQName function, where integer overflows in buffer size calculations can lead to a stack-based buffer overflow. This issue can result in memory corruption or a denial of service when processing crafted input.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2025-06-12T13:15:25.590",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01367,
+              "percentile": 0.71337
+            }
+          },
+          {
+            "id": "CVE-2026-4424",
+            "source": "nvd",
+            "description": "A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2026-03-19T15:16:28.300",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01073,
+              "percentile": 0.64275
+            }
+          },
+          {
+            "id": "CVE-2026-87018",
+            "source": "redhat",
+            "description": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T18:38:25Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109383",
+            "source": "redhat",
+            "description": "undici: undici: Certificate validation bypass via dropped TLS options in Agent",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T18:34:01Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109829",
+            "source": "redhat",
+            "description": "undici: undici: Cache poisoning and information disclosure via improper cross-origin redirect caching",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T18:28:04Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109869",
+            "source": "redhat",
+            "description": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T18:08:31Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-92982",
+            "source": "redhat",
+            "description": "ansible-operator-plugins: Ansible Operator Plugins: Arbitrary Code Execution via Jinja2 Template Injection",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T13:33:42Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109855",
+            "source": "redhat",
+            "description": "undici: undici: Denial of Service via failed HTTP/2 WebSocket handshake",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T08:12:51Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00278,
+              "percentile": 0.18924
+            }
+          },
+          {
+            "id": "CVE-2026-110929",
+            "source": "redhat",
+            "description": "openssh: openssh: post-authentication process retains root without file-descriptor passing",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T00:00:00Z",
+            "knownExploited": false,
+            "epss": null
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:4.16",
+          "redhat",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:20:15.250Z"
+      }
+    },
+    {
+      "id": "postgresql-mft",
+      "name": "PostgreSQL Cluster - MFT",
+      "eolDate": "2026-11-12",
+      "reference": "PostgreSQL: Versioning Policy",
+      "environments": [
+        {
+          "env": "DEV",
+          "version": "14"
+        },
+        {
+          "env": "SIT2",
+          "version": "14"
+        },
+        {
+          "env": "PROD",
+          "version": "14"
+        }
+      ],
+      "confidence": "medium",
+      "needsReview": true,
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 8,
+        "highestCvssScore": 8.8,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-6473",
+            "source": "nvd",
+            "description": "Integer wraparound in multiple PostgreSQL server features allows an unprivileged database user to cause the server to undersize an allocation and write out-of-bounds.  This may execute arbitrary code as the operating system user running the database.  In applications that pass gigabyte-scale user inputs to the relevant database functions, the application input provider may achieve a segmentation fault.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:24.883",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01006,
+              "percentile": 0.62302
+            }
+          },
+          {
+            "id": "CVE-2026-6475",
+            "source": "nvd",
+            "description": "Symlink following in PostgreSQL pg_basebackup plain format and in pg_rewind allows an origin superuser to overwrite local files, e.g. /var/lib/postgres/.bashrc, that hijack the operating system account.  It will remain the case that starting the server after these commands implicitly trusts the origin superuser, due to features like shared_preload_libraries.  Hence, the attack has practical implications only if one takes relevant action between these commands and server start, like moving the files to a different VM or snapshotting the VM.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.113",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00324,
+              "percentile": 0.238
+            }
+          },
+          {
+            "id": "CVE-2026-6477",
+            "source": "nvd",
+            "description": "Use of inherently dangerous function PQfn(..., result_is_int=0, ...) in PostgreSQL libpq lo_export(), lo_read(), lo_lseek64(), and lo_tell64() functions allows the server superuser to overwrite a client stack buffer with an arbitrarily-large response.  Like gets(), PQfn(..., result_is_int=0, ...) stores arbitrary-length, server-determined data into a buffer of unspecified size.  Because both the \\lo_export command in psql and pg_dump call lo_read(), the server superuser can overwrite pg_dump or psql stack memory.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.347",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00454,
+              "percentile": 0.37933
+            }
+          },
+          {
+            "id": "CVE-2026-6637",
+            "source": "nvd",
+            "description": "Stack buffer overflow in PostgreSQL module \"refint\" allows an unprivileged database user to execute arbitrary code as the operating system user running the database.  A distinct attack is possible if the application declares a user-controlled column as a \"refint\" cascade primary key and facilitates user-controlled updates to that column.  In that case, a SQL injection allows a primary key update value provider to execute arbitrary SQL as the database user performing the primary key update.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.820",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0037,
+              "percentile": 0.29304
+            }
+          },
+          {
+            "id": "CVE-2026-6479",
+            "source": "nvd",
+            "description": "Uncontrolled recursion in PostgreSQL SSL and GSS negotiation allows an attacker able to connect to a PostgreSQL AF_UNIX socket to achieve sustained denial of service.  If SSL and GSS are both disabled, an attacker can do the same via access to a PostgreSQL TCP socket.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.583",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00595,
+              "percentile": 0.47296
+            }
+          },
+          {
+            "id": "CVE-2026-6478",
+            "source": "nvd",
+            "description": "Covert timing channel in comparison of MD5-hashed password in PostgreSQL authentication allows an attacker to recover user credentials sufficient to authenticate.  This does not affect scram-sha-256 passwords, the default in all supported releases.  However, current databases may have MD5-hashed passwords originating in upgrades from PostgreSQL 13 or earlier.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 6.5,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:25.463",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00558,
+              "percentile": 0.45252
+            }
+          },
+          {
+            "id": "CVE-2026-6472",
+            "source": "nvd",
+            "description": "Missing authorization in PostgreSQL CREATE TYPE allows an object creator to hijack other queries that use search_path to find user-defined types, including extension-defined types.  That is to say, the victim will execute arbitrary SQL functions of the attacker's choice.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 5.4,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:24.757",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0023,
+              "percentile": 0.12849
+            }
+          },
+          {
+            "id": "CVE-2026-6474",
+            "source": "nvd",
+            "description": "Externally-controlled format string in PostgreSQL timeofday() function allows an attacker to retrieve portions of server memory, via crafted timezone zones.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 4.3,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:24.997",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0031,
+              "percentile": 0.22216
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:14",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:20:24.779Z"
+      }
+    },
+    {
+      "id": "postgresql-esb-neodps",
+      "name": "PostgreSQL Cluster - ESB/NeoDPS",
+      "eolDate": "2026-11-12",
+      "reference": "PostgreSQL: Versioning Policy",
+      "environments": [
+        {
+          "env": "DEV",
+          "version": "14"
+        },
+        {
+          "env": "TEST",
+          "version": "14"
+        },
+        {
+          "env": "SIT2",
+          "version": "14"
+        },
+        {
+          "env": "SIT3",
+          "version": "14"
+        },
+        {
+          "env": "PROD",
+          "version": "14"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 8,
+        "highestCvssScore": 8.8,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-6473",
+            "source": "nvd",
+            "description": "Integer wraparound in multiple PostgreSQL server features allows an unprivileged database user to cause the server to undersize an allocation and write out-of-bounds.  This may execute arbitrary code as the operating system user running the database.  In applications that pass gigabyte-scale user inputs to the relevant database functions, the application input provider may achieve a segmentation fault.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:24.883",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01006,
+              "percentile": 0.62302
+            }
+          },
+          {
+            "id": "CVE-2026-6475",
+            "source": "nvd",
+            "description": "Symlink following in PostgreSQL pg_basebackup plain format and in pg_rewind allows an origin superuser to overwrite local files, e.g. /var/lib/postgres/.bashrc, that hijack the operating system account.  It will remain the case that starting the server after these commands implicitly trusts the origin superuser, due to features like shared_preload_libraries.  Hence, the attack has practical implications only if one takes relevant action between these commands and server start, like moving the files to a different VM or snapshotting the VM.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.113",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00324,
+              "percentile": 0.238
+            }
+          },
+          {
+            "id": "CVE-2026-6477",
+            "source": "nvd",
+            "description": "Use of inherently dangerous function PQfn(..., result_is_int=0, ...) in PostgreSQL libpq lo_export(), lo_read(), lo_lseek64(), and lo_tell64() functions allows the server superuser to overwrite a client stack buffer with an arbitrarily-large response.  Like gets(), PQfn(..., result_is_int=0, ...) stores arbitrary-length, server-determined data into a buffer of unspecified size.  Because both the \\lo_export command in psql and pg_dump call lo_read(), the server superuser can overwrite pg_dump or psql stack memory.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.347",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00454,
+              "percentile": 0.37933
+            }
+          },
+          {
+            "id": "CVE-2026-6637",
+            "source": "nvd",
+            "description": "Stack buffer overflow in PostgreSQL module \"refint\" allows an unprivileged database user to execute arbitrary code as the operating system user running the database.  A distinct attack is possible if the application declares a user-controlled column as a \"refint\" cascade primary key and facilitates user-controlled updates to that column.  In that case, a SQL injection allows a primary key update value provider to execute arbitrary SQL as the database user performing the primary key update.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.820",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0037,
+              "percentile": 0.29304
+            }
+          },
+          {
+            "id": "CVE-2026-6479",
+            "source": "nvd",
+            "description": "Uncontrolled recursion in PostgreSQL SSL and GSS negotiation allows an attacker able to connect to a PostgreSQL AF_UNIX socket to achieve sustained denial of service.  If SSL and GSS are both disabled, an attacker can do the same via access to a PostgreSQL TCP socket.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.583",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00595,
+              "percentile": 0.47296
+            }
+          },
+          {
+            "id": "CVE-2026-6478",
+            "source": "nvd",
+            "description": "Covert timing channel in comparison of MD5-hashed password in PostgreSQL authentication allows an attacker to recover user credentials sufficient to authenticate.  This does not affect scram-sha-256 passwords, the default in all supported releases.  However, current databases may have MD5-hashed passwords originating in upgrades from PostgreSQL 13 or earlier.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 6.5,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:25.463",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00558,
+              "percentile": 0.45252
+            }
+          },
+          {
+            "id": "CVE-2026-6472",
+            "source": "nvd",
+            "description": "Missing authorization in PostgreSQL CREATE TYPE allows an object creator to hijack other queries that use search_path to find user-defined types, including extension-defined types.  That is to say, the victim will execute arbitrary SQL functions of the attacker's choice.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 5.4,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:24.757",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0023,
+              "percentile": 0.12849
+            }
+          },
+          {
+            "id": "CVE-2026-6474",
+            "source": "nvd",
+            "description": "Externally-controlled format string in PostgreSQL timeofday() function allows an attacker to retrieve portions of server memory, via crafted timezone zones.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 4.3,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:24.997",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0031,
+              "percentile": 0.22216
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:14",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:20:32.369Z"
+      }
+    },
+    {
+      "id": "postgresql-fme",
+      "name": "PostgreSQL Cluster - FME",
+      "eolDate": "2026-11-12",
+      "reference": "PostgreSQL: Versioning Policy",
+      "environments": [
+        {
+          "env": "TEST",
+          "version": "14"
+        },
+        {
+          "env": "SIT2",
+          "version": "14"
+        },
+        {
+          "env": "SIT3",
+          "version": "14"
+        },
+        {
+          "env": "PROD",
+          "version": "14"
+        }
+      ],
+      "confidence": "medium",
+      "needsReview": true,
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 8,
+        "highestCvssScore": 8.8,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-6473",
+            "source": "nvd",
+            "description": "Integer wraparound in multiple PostgreSQL server features allows an unprivileged database user to cause the server to undersize an allocation and write out-of-bounds.  This may execute arbitrary code as the operating system user running the database.  In applications that pass gigabyte-scale user inputs to the relevant database functions, the application input provider may achieve a segmentation fault.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:24.883",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01006,
+              "percentile": 0.62302
+            }
+          },
+          {
+            "id": "CVE-2026-6475",
+            "source": "nvd",
+            "description": "Symlink following in PostgreSQL pg_basebackup plain format and in pg_rewind allows an origin superuser to overwrite local files, e.g. /var/lib/postgres/.bashrc, that hijack the operating system account.  It will remain the case that starting the server after these commands implicitly trusts the origin superuser, due to features like shared_preload_libraries.  Hence, the attack has practical implications only if one takes relevant action between these commands and server start, like moving the files to a different VM or snapshotting the VM.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.113",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00324,
+              "percentile": 0.238
+            }
+          },
+          {
+            "id": "CVE-2026-6477",
+            "source": "nvd",
+            "description": "Use of inherently dangerous function PQfn(..., result_is_int=0, ...) in PostgreSQL libpq lo_export(), lo_read(), lo_lseek64(), and lo_tell64() functions allows the server superuser to overwrite a client stack buffer with an arbitrarily-large response.  Like gets(), PQfn(..., result_is_int=0, ...) stores arbitrary-length, server-determined data into a buffer of unspecified size.  Because both the \\lo_export command in psql and pg_dump call lo_read(), the server superuser can overwrite pg_dump or psql stack memory.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.347",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00454,
+              "percentile": 0.37933
+            }
+          },
+          {
+            "id": "CVE-2026-6637",
+            "source": "nvd",
+            "description": "Stack buffer overflow in PostgreSQL module \"refint\" allows an unprivileged database user to execute arbitrary code as the operating system user running the database.  A distinct attack is possible if the application declares a user-controlled column as a \"refint\" cascade primary key and facilitates user-controlled updates to that column.  In that case, a SQL injection allows a primary key update value provider to execute arbitrary SQL as the database user performing the primary key update.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.820",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0037,
+              "percentile": 0.29304
+            }
+          },
+          {
+            "id": "CVE-2026-6479",
+            "source": "nvd",
+            "description": "Uncontrolled recursion in PostgreSQL SSL and GSS negotiation allows an attacker able to connect to a PostgreSQL AF_UNIX socket to achieve sustained denial of service.  If SSL and GSS are both disabled, an attacker can do the same via access to a PostgreSQL TCP socket.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-14T14:16:25.583",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00595,
+              "percentile": 0.47296
+            }
+          },
+          {
+            "id": "CVE-2026-6478",
+            "source": "nvd",
+            "description": "Covert timing channel in comparison of MD5-hashed password in PostgreSQL authentication allows an attacker to recover user credentials sufficient to authenticate.  This does not affect scram-sha-256 passwords, the default in all supported releases.  However, current databases may have MD5-hashed passwords originating in upgrades from PostgreSQL 13 or earlier.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 6.5,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:25.463",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00558,
+              "percentile": 0.45252
+            }
+          },
+          {
+            "id": "CVE-2026-6472",
+            "source": "nvd",
+            "description": "Missing authorization in PostgreSQL CREATE TYPE allows an object creator to hijack other queries that use search_path to find user-defined types, including extension-defined types.  That is to say, the victim will execute arbitrary SQL functions of the attacker's choice.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 5.4,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:24.757",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0023,
+              "percentile": 0.12849
+            }
+          },
+          {
+            "id": "CVE-2026-6474",
+            "source": "nvd",
+            "description": "Externally-controlled format string in PostgreSQL timeofday() function allows an attacker to retrieve portions of server memory, via crafted timezone zones.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+            "cvssScore": 4.3,
+            "cvssSeverity": "MEDIUM",
+            "published": "2026-05-14T14:16:24.997",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0031,
+              "percentile": 0.22216
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:14",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:20:40.556Z"
+      }
+    },
+    {
+      "id": "redhat-sso",
+      "name": "Red Hat SSO (Keycloak)",
+      "eolDate": "2026-11-13",
+      "reference": "Red Hat build of Keycloak Life Cycle and Support Policies",
+      "environments": [
+        {
+          "env": "NPU",
+          "version": "7.6.6"
+        },
+        {
+          "env": "NPM",
+          "version": "7.6.6"
+        },
+        {
+          "env": "PROD",
+          "version": "7.6.6"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 20,
+        "highestCvssScore": 7.5,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-85634",
+            "source": "redhat",
+            "description": "wildfly-core: wildfly-core: Deployer RBAC role privilege escalation via path traversal in deployment name",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T00:00:00Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-102554",
+            "source": "redhat",
+            "description": "com.google.guava/guava: Google Guava: Denial of Service via unthrottled memory allocation during deserialization",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-09T15:07:16Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00352,
+              "percentile": 0.27184
+            }
+          },
+          {
+            "id": "CVE-2026-108039",
+            "source": "redhat",
+            "description": "org.apache.cxf/cxf-core: Apache CXF: Denial of Service via unrestricted XML parsing",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-09T10:22:35Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00173,
+              "percentile": 0.06336
+            }
+          },
+          {
+            "id": "CVE-2026-107937",
+            "source": "redhat",
+            "description": "org.apache.cxf/cxf-core: Apache CXF: Denial of Service via large multipart attachment headers",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-09T10:19:53Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00238,
+              "percentile": 0.13787
+            }
+          },
+          {
+            "id": "CVE-2026-97791",
+            "source": "redhat",
+            "description": "org.apache.cxf/cxf-rt-ws-security: Apache CXF: Authentication bypass via shared token validation state",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-09T10:19:26Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00168,
+              "percentile": 0.05702
+            }
+          },
+          {
+            "id": "CVE-2026-97468",
+            "source": "redhat",
+            "description": "org.apache.cxf/cxf-rt-ws-security: org.apache.cxf/cxf-services-sts-core: Apache CXF: Authentication bypass via hash collision in token cache",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-09T10:18:56Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00173,
+              "percentile": 0.06336
+            }
+          },
+          {
+            "id": "CVE-2026-78384",
+            "source": "redhat",
+            "description": "org.apache.cxf/cxf-core: Apache CXF: Denial of Service via uncontrolled data decompression",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-09T10:18:00Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00159,
+              "percentile": 0.04555
+            }
+          },
+          {
+            "id": "CVE-2026-71888",
+            "source": "redhat",
+            "description": "bouncycastle: bouncycastle-fips: Bouncy Castle: Security bypass via unvalidated attributes in CMS AuthenticatedData parser",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-03T08:36:12Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00112,
+              "percentile": 0.01295
+            }
+          },
+          {
+            "id": "CVE-2026-71889",
+            "source": "redhat",
+            "description": "org.bouncycastle/bcpkix-jdk18on: org.bouncycastle/bcpkix-fips: org.bouncycastle/bcpkix-jdk15on: org.bouncycastle/bcpkix-lts8on: bouncycastle: Bouncy Castle: Certificate validation bypass via missing name constraint checks",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-03T08:31:01Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00167,
+              "percentile": 0.05528
+            }
+          },
+          {
+            "id": "CVE-2026-93879",
+            "source": "redhat",
+            "description": "org.hibernate.validator:hibernate-validator: Hibernate Validator - unescaped {duplicates} message parameter is re-evaluated as  Expression Language (unauthenticated DoS)",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-12T16:18:43Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109082",
+            "source": "redhat",
+            "description": "keycloak-services: keycloak-services: CIBA confidential-only contract not enforced for public clients",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-09T18:42:43Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00248,
+              "percentile": 0.14918
+            }
+          },
+          {
+            "id": "CVE-2026-107889",
+            "source": "redhat",
+            "description": "keycloak-services: keycloak-services: Stored XSS on login page via kcSanitize bypass",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-08T15:38:13Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00268,
+              "percentile": 0.17673
+            }
+          },
+          {
+            "id": "CVE-2026-107604",
+            "source": "redhat",
+            "description": "keycloak-services: keycloak-services: view-clients role allows retrieval of active client secrets via installation provider endpoints",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-07T14:53:58Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00244,
+              "percentile": 0.14459
+            }
+          },
+          {
+            "id": "CVE-2026-107623",
+            "source": "redhat",
+            "description": "keycloak-services: keycloak-services: OIDC DCR read-modify-write silently disables offline token revocation",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-07T12:39:27Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00158,
+              "percentile": 0.04484
+            }
+          },
+          {
+            "id": "CVE-2026-107121",
+            "source": "redhat",
+            "description": "keycloak-services: keycloak-services: SMTP STARTTLS plaintext credential and message downgrade",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-06T16:28:37Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00084,
+              "percentile": 0.00254
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:7.6.6",
+          "redhat",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:20:47.880Z"
+      }
+    },
+    {
+      "id": "apim-2",
+      "name": "APIM (instance 2)",
+      "eolDate": "2026-11-15",
+      "reference": "3scale API Management Life Cycle - Red Hat Customer Portal",
+      "environments": [
+        {
+          "env": "NPU",
+          "version": "2.15"
+        },
+        {
+          "env": "NPM",
+          "version": "2.15"
+        },
+        {
+          "env": "PROD",
+          "version": "2.15"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "reviewNote": null,
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 20,
+        "highestCvssScore": 7.5,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-84782",
+            "source": "redhat",
+            "description": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-29T00:00:00Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0039,
+              "percentile": 0.31522
+            }
+          },
+          {
+            "id": "CVE-2026-102278",
+            "source": "redhat",
+            "description": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-28T20:57:09Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0035,
+              "percentile": 0.27039
+            }
+          },
+          {
+            "id": "CVE-2026-102276",
+            "source": "redhat",
+            "description": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-28T20:50:59Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0035,
+              "percentile": 0.27041
+            }
+          },
+          {
+            "id": "CVE-2026-93748",
+            "source": "redhat",
+            "description": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-18T17:51:34Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00569,
+              "percentile": 0.45889
+            }
+          },
+          {
+            "id": "CVE-2026-93749",
+            "source": "redhat",
+            "description": "source-map-js: source-map-js: Denial of Service via malformed indexed source maps",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-18T17:51:34Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00346,
+              "percentile": 0.26498
+            }
+          },
+          {
+            "id": "CVE-2026-93690",
+            "source": "redhat",
+            "description": "uri-js: uri-js: Denial of Service via malformed path segments",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-18T15:06:04Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00684,
+              "percentile": 0.51553
+            }
+          },
+          {
+            "id": "CVE-2026-92925",
+            "source": "redhat",
+            "description": "redis: Redis: Out-of-bounds read via crafted cluster bus packets",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-17T11:48:04Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00402,
+              "percentile": 0.32872
+            }
+          },
+          {
+            "id": "CVE-2026-90711",
+            "source": "redhat",
+            "description": "proxy-addr: proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-15T06:19:46Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00332,
+              "percentile": 0.24769
+            }
+          },
+          {
+            "id": "CVE-2026-84445",
+            "source": "redhat",
+            "description": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-14T16:11:41Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00641,
+              "percentile": 0.49598
+            }
+          },
+          {
+            "id": "CVE-2026-87776",
+            "source": "redhat",
+            "description": "compression: compression: Denial of Service via memory leak on premature response close",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-11T11:24:55Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00608,
+              "percentile": 0.47916
+            }
+          },
+          {
+            "id": "CVE-2026-88031",
+            "source": "redhat",
+            "description": "go.mongodb.org/mongo-driver: go.mongodb.org/mongo-driver/v2: MongoDB Go Driver: Data deletion via query-operator injection in GridFS file IDs",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-10T17:59:35Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0048,
+              "percentile": 0.3992
+            }
+          },
+          {
+            "id": "CVE-2026-85396",
+            "source": "redhat",
+            "description": "rubyzip: rubyzip: Arbitrary file write via path traversal",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-09-03T18:54:27Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00564,
+              "percentile": 0.45651
+            }
+          },
+          {
+            "id": "CVE-2026-107715",
+            "source": "redhat",
+            "description": "mechanize: mechanize: Information disclosure via cross-domain HTTP redirect",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-08T21:27:24Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00395,
+              "percentile": 0.32025
+            }
+          },
+          {
+            "id": "CVE-2026-107714",
+            "source": "redhat",
+            "description": "mechanize: mechanize: Information disclosure via improper redirect scheme and port handling",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-08T21:26:16Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00228,
+              "percentile": 0.12642
+            }
+          },
+          {
+            "id": "CVE-2026-107399",
+            "source": "redhat",
+            "description": "mechanize: mechanize: Information disclosure via cross-origin meta refresh",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-08T21:24:46Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00362,
+              "percentile": 0.2847
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:2.15",
+          "redhat",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:20:54.825Z"
+      }
+    },
+    {
+      "id": "fme-safe-software",
+      "name": "FME (Safe Software)",
+      "eolDate": "2026-12-05",
+      "reference": "FME Support Center",
+      "environments": [
+        {
+          "env": "ST",
+          "version": "FME Flow 2023.2.1 Build 23774-win64"
+        },
+        {
+          "env": "SIT2",
+          "version": "FME Flow 2023.2.1 Build 23774-win64"
+        },
+        {
+          "env": "SIT3",
+          "version": "FME Flow 2023.2.1 Build 23774-win64"
+        },
+        {
+          "env": "PROD",
+          "version": "FME Flow 2023.2.1 Build 23774-win64"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "scan": {
+        "vulnerabilityStatus": "critical",
+        "vulnerabilityCount": 6,
+        "highestCvssScore": 9.6,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2022-38339",
+            "source": "nvd",
+            "description": "Safe Software FME Server v2021.2.5, v2022.0.0.2 and below contains a cross-site scripting (XSS) vulnerability which allows attackers to execute arbitrary web scripts or HTML via a crafted payload injected into the login page.",
+            "cvssScore": 9.6,
+            "cvssSeverity": "CRITICAL",
+            "published": "2022-09-19T22:15:11.407",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00575,
+              "percentile": 0.46214
+            }
+          },
+          {
+            "id": "CVE-2022-38340",
+            "source": "nvd",
+            "description": "Safe Software FME Server v2021.2.5, v2022.0.0.2 and below was discovered to contain a Path Traversal vulnerability via the component fmedataupload.",
+            "cvssScore": 9.1,
+            "cvssSeverity": "CRITICAL",
+            "published": "2022-09-20T18:15:10.310",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01352,
+              "percentile": 0.71027
+            }
+          },
+          {
+            "id": "CVE-2018-20402",
+            "source": "nvd",
+            "description": "Safe Software FME Server through 2018.1 creates and enables three additional accounts in addition to the initial administrator account. The passwords to the three accounts are the same as the usernames, which are guest, user, and author. Logging in with these accounts will grant any user the default privilege roles that were also created for each of the accounts.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2018-12-23T21:29:01.623",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01035,
+              "percentile": 0.63189
+            }
+          },
+          {
+            "id": "CVE-2022-38342",
+            "source": "nvd",
+            "description": "Safe Software FME Server v2021.2.5, v2022.0.0.2 and below was discovered to contain a XML External Entity (XXE) vulnerability which allows authenticated attackers to perform data exfiltration or Server-Side Request Forgery (SSRF) attacks.",
+            "cvssScore": 8.5,
+            "cvssSeverity": "HIGH",
+            "published": "2022-09-13T20:15:09.833",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00603,
+              "percentile": 0.47687
+            }
+          },
+          {
+            "id": "CVE-2023-35801",
+            "source": "nvd",
+            "description": "A directory traversal vulnerability in Safe Software FME Server before 2022.2.5 allows an attacker to bypass validation when editing a network-based resource connection, resulting in the unauthorized reading and writing of arbitrary files. Successful exploitation requires an attacker to have access to a user account with write privileges. FME Flow 2023.0 is also a fixed version.",
+            "cvssScore": 8.1,
+            "cvssSeverity": "HIGH",
+            "published": "2023-06-23T06:15:11.767",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01464,
+              "percentile": 0.73162
+            }
+          },
+          {
+            "id": "CVE-2022-38341",
+            "source": "nvd",
+            "description": "Safe Software FME Server v2021.2.5 and below does not employ server-side validation.",
+            "cvssScore": 7.1,
+            "cvssSeverity": "HIGH",
+            "published": "2022-09-19T14:15:11.110",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00615,
+              "percentile": 0.4834
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:keyword",
+          "websearch:skipped",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": true,
+        "scanNote": "FME/Safe Software rarely appears in NVD - may need vendor security bulletins instead",
+        "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
+        "lastScanned": "2026-10-16T02:21:01.914Z"
+      }
+    },
+    {
+      "id": "axway",
+      "name": "Axway Secure Transport",
+      "eolDate": "2027-02-27",
+      "reference": "https://support.axway.com/en/products/view/id/86",
+      "environments": [
+        {
+          "env": "DEV",
+          "version": "5.5 20240725"
+        },
+        {
+          "env": "ST",
+          "version": "5.5 20240725"
+        },
+        {
+          "env": "SIT2",
+          "version": "5.5 20240725"
+        },
+        {
+          "env": "SIT3",
+          "version": "5.5 20240125"
+        },
+        {
+          "env": "PROD",
+          "version": "5.5 20240125"
+        }
+      ],
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewNote": "Two build dates (20240725 / 20240125) appear - unclear which environments map to which build",
+      "scan": {
+        "vulnerabilityStatus": "clear",
+        "vulnerabilityCount": 0,
+        "highestCvssScore": null,
+        "hasKnownExploited": false,
+        "findings": [],
+        "sourcesAttempted": [
+          "nvd:keyword",
+          "websearch:skipped",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
+        "lastScanned": "2026-10-16T02:21:08.855Z"
+      }
+    },
+    {
+      "id": "amq",
+      "name": "Red Hat AMQ",
+      "eolDate": "2027-06-30",
+      "reference": "Red Hat Application Services Product Update and Support Policy",
+      "environments": [
+        {
+          "env": "DEV",
+          "version": "7.12.1"
+        },
+        {
+          "env": "ST",
+          "version": "7.12.1"
+        },
+        {
+          "env": "SIT2",
+          "version": "7.12.1"
+        },
+        {
+          "env": "SIT3",
+          "version": "7.12.1"
+        },
+        {
+          "env": "PROD",
+          "version": "7.12.1"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 20,
+        "highestCvssScore": 7.5,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-87018",
+            "source": "redhat",
+            "description": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T18:38:25Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109383",
+            "source": "redhat",
+            "description": "undici: undici: Certificate validation bypass via dropped TLS options in Agent",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T18:34:01Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109829",
+            "source": "redhat",
+            "description": "undici: undici: Cache poisoning and information disclosure via improper cross-origin redirect caching",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T18:28:04Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109869",
+            "source": "redhat",
+            "description": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T18:08:31Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109855",
+            "source": "redhat",
+            "description": "undici: undici: Denial of Service via failed HTTP/2 WebSocket handshake",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-15T08:12:51Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00278,
+              "percentile": 0.18924
+            }
+          },
+          {
+            "id": "CVE-2026-102554",
+            "source": "redhat",
+            "description": "com.google.guava/guava: Google Guava: Denial of Service via unthrottled memory allocation during deserialization",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-09T15:07:16Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00352,
+              "percentile": 0.27184
+            }
+          },
+          {
+            "id": "CVE-2026-106446",
+            "source": "redhat",
+            "description": "handlebars: Handlebars: JavaScript Injection via AST Type Confusion in compile (Program.blockParams)",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-06T19:41:55Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0064,
+              "percentile": 0.4956
+            }
+          },
+          {
+            "id": "CVE-2026-106445",
+            "source": "redhat",
+            "description": "handlebars: Handlebars: JavaScript Injection via Own Property Check Bypass",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-06T19:39:08Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00411,
+              "percentile": 0.33809
+            }
+          },
+          {
+            "id": "CVE-2026-71888",
+            "source": "redhat",
+            "description": "bouncycastle: bouncycastle-fips: Bouncy Castle: Security bypass via unvalidated attributes in CMS AuthenticatedData parser",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-03T08:36:12Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00112,
+              "percentile": 0.01295
+            }
+          },
+          {
+            "id": "CVE-2026-71889",
+            "source": "redhat",
+            "description": "org.bouncycastle/bcpkix-jdk18on: org.bouncycastle/bcpkix-fips: org.bouncycastle/bcpkix-jdk15on: org.bouncycastle/bcpkix-lts8on: bouncycastle: Bouncy Castle: Certificate validation bypass via missing name constraint checks",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-03T08:31:01Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00167,
+              "percentile": 0.05528
+            }
+          },
+          {
+            "id": "CVE-2026-87029",
+            "source": "redhat",
+            "description": "undici: undici: Denial of Service via unhandled exception in decompress interceptor",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-15T18:48:36Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109932",
+            "source": "redhat",
+            "description": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-15T18:44:22Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109841",
+            "source": "redhat",
+            "description": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-15T18:22:06Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-109924",
+            "source": "redhat",
+            "description": "undici: undici: Denial of Service via memory exhaustion in EventSource client",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-15T18:16:48Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-104635",
+            "source": "redhat",
+            "description": "protobuf: protobuf: Denial of Service via deeply nested JSON input",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-09T08:17:52Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00387,
+              "percentile": 0.31163
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:7.12.1",
+          "redhat",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:21:16.344Z"
+      }
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "eolDate": "2026-11-30",
+      "reference": "Supported platforms",
+      "environments": [
+        {
+          "env": "DEV",
+          "version": "7.4.7"
+        },
+        {
+          "env": "ST",
+          "version": "7.4.7"
+        },
+        {
+          "env": "SIT2",
+          "version": "7.4.7"
+        },
+        {
+          "env": "SIT3",
+          "version": "7.4.7"
+        },
+        {
+          "env": "PROD",
+          "version": "7.4.7"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "scan": {
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 105,
+        "highestCvssScore": 8.8,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-23479",
+            "source": "nvd",
+            "description": "Redis is an in-memory data structure store. In redis-server from 7.2.0 until 8.6.3, the unblock client flow does not handle an error return from `processCommandAndResetClient` when re-executing a blocked command. If a blocked client is evicted during this flow, an authenticated attacker can trigger a use-after-free that may lead to remote code execution. This has been patched in version 8.6.3.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-05T17:17:02.577",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01506,
+              "percentile": 0.73899
+            }
+          },
+          {
+            "id": "CVE-2026-25243",
+            "source": "nvd",
+            "description": "Redis is an in-memory data structure store. In versions of redis-server up to 8.6.3, the RESTORE command does not properly validate serialized values. An authenticated attacker with permission to execute RESTORE can supply a crafted serialized payload that triggers invalid memory access and may lead to remote code execution. A workaround is to restrict access to the RESTORE command with ACL rules. This is patched in version 8.6.3.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-05T17:17:03.667",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.03663,
+              "percentile": 0.89472
+            }
+          },
+          {
+            "id": "CVE-2026-23631",
+            "source": "nvd",
+            "description": "Redis is an in-memory data structure store. In all versions of redis-server with Lua scripting, an authenticated attacker can exploit the master-replica synchronization mechanism to trigger a use-after-free on replicas where replica-read-only is disabled or can be disabled, which may lead to remote code execution. A workaround is to prevent users from executing Lua scripts or avoid using replicas where replica-read-only is disabled. This is patched in version 8.6.3.",
+            "cvssScore": 8.1,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-05T17:17:03.503",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.02805,
+              "percentile": 0.86241
+            }
+          },
+          {
+            "id": "DEBIAN-CVE-2013-0178",
+            "source": "osv",
+            "description": "Insecure temporary file vulnerability in Redis before 2.6 related to /tmp/redis-%p.vm.",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2019-11-01T19:15:10.777Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2013-0180",
+            "source": "osv",
+            "description": "Insecure temporary file vulnerability in Redis 2.6 related to /tmp/redis.ds.",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2019-11-01T19:15:10.837Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2013-7458",
+            "source": "osv",
+            "description": "linenoise, as used in Redis before 3.2.3, uses world-readable permissions for .rediscli_history, which allows local users to obtain sensitive information by reading the file.",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2016-08-10T14:59:00.143Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2015-4335",
+            "source": "osv",
+            "description": "Redis before 2.8.21 and 3.x before 3.0.2 allows remote attackers to execute arbitrary Lua bytecode via the eval command.",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2015-06-09T14:59:07.850Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2015-8080",
+            "source": "osv",
+            "description": "Integer overflow in the getnum function in lua_struct.c in Redis 2.8.x before 2.8.24 and 3.0.x before 3.0.6 allows context-dependent attackers with permission to run Lua code in a Redis session to cause a denial of service (memory corruption and application crash) or possibly bypass intended sandbox",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2016-04-13T15:59:04.257Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2016-10517",
+            "source": "osv",
+            "description": "networking.c in Redis before 3.2.7 allows \"Cross Protocol Scripting\" because it lacks a check for POST and Host: strings, which are not valid in the Redis protocol (but commonly occur when an attack triggers an HTTP request to the Redis TCP port).",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2017-10-24T18:29:00.197Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2016-2121",
+            "source": "osv",
+            "description": "A permissions flaw was found in redis, which sets weak permissions on certain files and directories that could potentially contain sensitive information. A local, unprivileged user could possibly use this flaw to access unauthorized system information.",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2018-10-31T13:29:00.287Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2016-8339",
+            "source": "osv",
+            "description": "A buffer overflow in Redis 3.2.x prior to 3.2.4 causes arbitrary code execution when a crafted command is sent. An out of bounds write vulnerability exists in the handling of the client-output-buffer-limit option during the CONFIG SET command for the Redis data structure store. A crafted CONFIG SET ",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2016-10-28T14:59:01.603Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2017-15047",
+            "source": "osv",
+            "description": "The clusterLoadConfig function in cluster.c in Redis 4.0.2 allows attackers to cause a denial of service (out-of-bounds array index and application crash) or possibly have unspecified other impact by leveraging \"limited access to the machine.\"",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2017-10-06T04:29:00.340Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2018-11218",
+            "source": "osv",
+            "description": "Memory Corruption was discovered in the cmsgpack library in the Lua subsystem in Redis before 3.2.12, 4.x before 4.0.10, and 5.x before 5.0 RC2 because of stack-based buffer overflows.",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2018-06-17T17:29:00.277Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2018-11219",
+            "source": "osv",
+            "description": "An Integer Overflow issue was discovered in the struct library in the Lua subsystem in Redis before 3.2.12, 4.x before 4.0.10, and 5.x before 5.0 RC2, leading to a failure of bounds checking.",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2018-06-17T17:29:00.337Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "DEBIAN-CVE-2018-12326",
+            "source": "osv",
+            "description": "Buffer overflow in redis-cli of Redis before 4.0.10 and 5.x before 5.0 RC3 allows an attacker to achieve code execution and escalate to higher privileges via a crafted command line. NOTE: It is unclear whether there are any common situations in which redis-cli is used with, for example, a -h (aka ho",
+            "cvssScore": null,
+            "cvssSeverity": null,
+            "published": "2018-06-17T14:29:00.260Z",
+            "knownExploited": false,
+            "epss": null
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:7.4.7",
+          "osv",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:21:24.148Z"
+      }
+    },
+    {
+      "id": "camel",
+      "name": "Red Hat build of Apache Camel",
+      "eolDate": "2028-10-30",
+      "reference": null,
+      "environments": [
+        {
+          "env": "DEV",
+          "version": "4.4"
+        },
+        {
+          "env": "ST",
+          "version": "4.4"
+        },
+        {
+          "env": "SIT2",
+          "version": "4.4"
+        },
+        {
+          "env": "SIT3",
+          "version": "4.4"
+        },
+        {
+          "env": "PROD",
+          "version": "4.4"
+        }
+      ],
+      "confidence": "high",
+      "needsReview": false,
+      "scan": {
+        "vulnerabilityStatus": "critical",
+        "vulnerabilityCount": 51,
+        "highestCvssScore": 9.9,
+        "hasKnownExploited": false,
+        "findings": [
+          {
+            "id": "CVE-2026-40453",
+            "source": "nvd",
+            "description": "The fix for CVE-2025-27636 added setLowerCase(true) to HttpHeaderFilterStrategy so that case-variant header names such as 'CAmelExecCommandExecutable' are filtered out alongside 'CamelExecCommandExecutable'. The same setLowerCase(true) call was not applied to five non-HTTP HeaderFilterStrategy implementations: JmsHeaderFilterStrategy and ClassicJmsHeaderFilterStrategy in camel-jms, SjmsHeaderFilterStrategy in camel-sjms, CoAPHeaderFilterStrategy in camel-coap, and GooglePubsubHeaderFilterStrategy in camel-google-pubsub. Because those strategies use case-sensitive String.startsWith('Camel'/'camel') filtering while the Camel Exchange stores headers in a case-insensitive map, an attacker with JMS (or equivalent) producer access to the broker consumed by a Camel route can inject case-variant Camel internal headers, which are then resolved by downstream components such as camel-exec and camel-file using their canonical casing. This enables remote code execution and arbitrary file write on routes that forward JMS messages to header-driven components.\n\nThis issue affects Apache Camel: from 3.0.0 before 4.14.6, from 4.15.0 before 4.18.2, from 4.19.0 before 4.20.0.\n\nUsers are recommended to upgrade to version 4.20.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.6. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.2.",
+            "cvssScore": 9.9,
+            "cvssSeverity": "CRITICAL",
+            "published": "2026-04-27T09:16:01.493",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01889,
+              "percentile": 0.79166
+            }
+          },
+          {
+            "id": "CVE-2024-23114",
+            "source": "nvd",
+            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel CassandraQL Component AggregationRepository which is vulnerable to unsafe deserialization. Under specific conditions it is possible to deserialize malicious payload.This issue affects Apache Camel: from 3.0.0 before 3.21.4, from 3.22.0 before 3.22.1, from 4.0.0 before 4.0.4, from 4.1.0 before 4.4.0.\n\nUsers are recommended to upgrade to version 4.4.0, which fixes the issue. If users are on the 4.0.x LTS releases stream, then they are suggested to upgrade to 4.0.4. If users are on 3.x, they are suggested to move to 3.21.4 or 3.22.1\n\n",
+            "cvssScore": 9.8,
+            "cvssSeverity": "CRITICAL",
+            "published": "2024-02-20T15:15:10.333",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01273,
+              "percentile": 0.69363
+            }
+          },
+          {
+            "id": "CVE-2026-40860",
+            "source": "nvd",
+            "description": "JmsBinding.extractBodyFromJms() in camel-jms, and the equivalent JmsBinding class in camel-sjms, deserialized the payload of incoming JMS ObjectMessage values via javax.jms.ObjectMessage.getObject() without applying any ObjectInputFilter, class allowlist or class denylist. Because this code path is reached whenever the mapJmsMessage option is enabled (the default) and Camel acts as a JMS consumer, an attacker able to publish a crafted ObjectMessage to a queue or topic consumed by a Camel application could achieve remote code execution when a deserialization gadget chain was present on the classpath. The same handling was reached transitively through camel-sjms2 (whose Sjms2Endpoint extends SjmsEndpoint) and through camel-amqp (whose AMQPJmsBinding extends JmsBinding), and by other JMS-family components built on JmsComponent such as camel-activemq and camel-activemq6.\n\nThis issue affects Apache Camel: from 3.0.0 before 4.14.7, from 4.15.0 before 4.18.2, from 4.19.0 before 4.20.0.\n\nUsers are recommended to upgrade to version 4.20.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.7. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.2.",
+            "cvssScore": 9.8,
+            "cvssSeverity": "CRITICAL",
+            "published": "2026-04-27T09:16:01.770",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01534,
+              "percentile": 0.74339
+            }
+          },
+          {
+            "id": "CVE-2026-47323",
+            "source": "nvd",
+            "description": "Camel-CXF and Camel-Knative Message Header Injection via Missing Inbound Filtering\n\nThe CXF and Knative HeaderFilterStrategy implementations (CxfRsHeaderFilterStrategy in camel-cxf-rest, CxfHeaderFilterStrategy in camel-cxf-transport, and KnativeHttpHeaderFilterStrategy in camel-knative-http) only filter outbound Camel-internal headers via setOutFilterStartsWith, while not configuring inbound filtering via setInFilterStartsWith. As a result, an unauthenticated attacker can inject Camel-internal headers (e.g. CamelExecCommandExecutable, CamelFileName) via HTTP requests to CXF-RS or CXF-SOAP endpoints. When a route forwards messages from these endpoints to header-driven components such as camel-exec or camel-file, the injected headers override configured values, enabling remote code execution or arbitrary file writes. This is the same pattern that was previously addressed in camel-undertow (CVE-2025-30177), the broader incoming-header filter (CVE-2025-27636 and CVE-2025-29891), and non-HTTP strategies (CVE-2026-40453).\n\n\nThis issue affects Apache Camel: from 3.18.0 before 4.14.6, from 4.15.0 before 4.18.2.\n\nUsers are recommended to upgrade to version 4.19.0, which fixes the issue. If users are on the 4.18.x LTS releases stream, then they are suggested to upgrade to 4.18.2. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.6.",
+            "cvssScore": 9.8,
+            "cvssSeverity": "CRITICAL",
+            "published": "2026-05-19T14:16:48.653",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01605,
+              "percentile": 0.75414
+            }
+          },
+          {
+            "id": "CVE-2026-46454",
+            "source": "nvd",
+            "description": "Improper Input Validation vulnerability in Apache Camel Cometd Component.\n\nThe camel-cometd component maps inbound Bayeux (CometD) message headers into the Camel Exchange without applying a HeaderFilterStrategy. CometdBinding.populateExchangeFromMessage copies the entire ext.CamelHeaders map supplied by the CometD client directly onto the Camel message (message.setHeaders), so any header name - including Camel-internal control headers such as CamelHttpUri, CamelFileName or CamelJmsDestinationName - is accepted unmodified. Because a CometdComponent installs no Bayeux SecurityPolicy by default, any client that can complete the Bayeux handshake against the CometD endpoint can publish such a message without authentication. An attacker can therefore inject arbitrary Camel control headers that influence the behaviour of downstream producers in the route (for example redirecting an HTTP producer, changing a file name, or overriding a JMS destination); the injected headers also persist across internal direct, seda and vm hops. The concrete downstream impact depends on which producers the route uses.\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. The fix implements a HeaderFilterStrategy in the camel-cometd binding (a long-standing TODO in the code) that filters the Camel header namespace case-insensitively on inbound mapping, so client-supplied Camel* / camel* headers are no longer copied into the Exchange. For deployments that cannot upgrade immediately, strip the Camel control headers from inbound CometD messages before they reach any downstream producer (for example removeHeaders('Camel*') and removeHeaders('camel*') at the start of the route), and install an explicit Bayeux SecurityPolicy on the CometdComponent so that only authenticated clients can publish.",
+            "cvssScore": 9.8,
+            "cvssSeverity": "CRITICAL",
+            "published": "2026-07-06T09:16:36.457",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00827,
+              "percentile": 0.56622
+            }
+          },
+          {
+            "id": "CVE-2026-46456",
+            "source": "nvd",
+            "description": "Improper Input Validation vulnerability in Apache Camel AWS2-SQS Component.\n\n\nThe camel-aws2-sqs component map inbound message attributes into the Camel Exchange through a component-specific HeaderFilterStrategy. Sqs2HeaderFilterStrategy configured only an outbound filter (setOutFilterPattern, which blocks Camel*, breadcrumbId and org.apache.camel.* headers being written to the broker) but did not configure an inbound filter. As a result, when Sqs2Consumer copies each SQS MessageAttribute into the Exchange via HeaderFilterStrategy.applyFilterToExternalHeaders, DefaultHeaderFilterStrategy applied no inbound rule and treated every header name as not filtered - including Camel-internal control headers such as CamelHttpUri, CamelFileName or CamelSqlQuery - copying them unmodified onto the Camel message. Any principal able to send messages to the consumed SQS queue (for example a cross-account sender or a lower-privileged in-account component holding sqs:SendMessage) could therefore set arbitrary Camel control headers that influence the behaviour of downstream producers in the route (for example redirecting an HTTP producer, changing a file name, or overriding a query); the injected headers also persist across internal direct, seda and vm hops. The concrete downstream impact depends on which producers the route uses.\n\n\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. The fix adds an inbound HeaderFilterStrategy rule to Sqs2HeaderFilterStrategy that filters the Camel header namespace case-insensitively on inbound mapping, so sender-supplied Camel* / camel* headers are no longer copied into the Exchange. For deployments that cannot upgrade immediately, strip the Camel control headers from inbound messages before they reach any downstream producer (for example removeHeaders('Camel*') and removeHeaders('camel*') at the start of the route), and restrict who may send to the consumed SQS queue by applying least-privilege sqs:SendMessage permissions on the queue resource policy.",
+            "cvssScore": 9.8,
+            "cvssSeverity": "CRITICAL",
+            "published": "2026-07-06T09:16:36.683",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00791,
+              "percentile": 0.55382
+            }
+          },
+          {
+            "id": "GHSA-8vfm-4388-6rpc",
+            "source": "osv",
+            "description": "Apache is vulnerable to XXE in XSD validation processor",
+            "cvssScore": 9.5,
+            "cvssSeverity": null,
+            "published": "2018-10-16T23:06:25Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-33454",
+            "source": "nvd",
+            "description": "The Camel-Mail component is vulnerable to Camel message header injection. The custom header filter strategy used by the component (MailHeaderFilterStrategy) only filters the 'out' direction via setOutFilterStartsWith, while it does not configure the 'in' direction via setInFilterStartsWith. As a result, when a Camel application consumes mail through camel-mail (for example via from(\\\"imap://...\\\") or from(\\\"pop3://...\\\")) the inbound filter check is skipped and Camel-prefixed MIME headers are mapped unfiltered into the Exchange. An attacker who can deliver an email to a mailbox monitored by such a consumer can inject Camel-specific headers that, for some Camel components downstream of the mail consumer (such as camel-bean, camel-exec, or camel-sql), can alter the behaviour of the route. This is the same pattern that was previously addressed in camel-undertow (CVE-2025-30177) and the broader incoming-header filter (CVE-2025-27636 and CVE-2025-29891).\n\nThis issue affects Apache Camel: from 3.0.0 before 4.14.6, from 4.15.0 before 4.18.1.\n\nUsers are recommended to upgrade to version 4.19.0, which fixes the issue. If users are on the 4.18.x LTS releases stream, then they are suggested to upgrade to 4.18.1. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.6.",
+            "cvssScore": 9.4,
+            "cvssSeverity": "CRITICAL",
+            "published": "2026-04-27T10:16:07.853",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01034,
+              "percentile": 0.63155
+            }
+          },
+          {
+            "id": "CVE-2026-25747",
+            "source": "nvd",
+            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel LevelDB component.\n\nThe Camel-LevelDB DefaultLevelDBSerializer class deserializes data read from the LevelDB aggregation repository using java.io.ObjectInputStream without applying any ObjectInputFilter or class-loading restrictions. An attacker who can write to the LevelDB database files used by a Camel application can inject a crafted serialized Java object that, when deserialized during normal aggregation repository operations, results in arbitrary code execution in the context of the application.\nThis issue affects Apache Camel: from 4.10.0 before 4.10.8, from 4.14.0 before 4.14.5, from 4.15.0 before 4.18.0.\n\nUsers are recommended to upgrade to version 4.18.0, which fixes the issue. For the 4.10.x LTS releases, users are recommended to upgrade to 4.10.9, while for 4.14.x LTS releases, users are recommended to upgrade to 4.14.5",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-02-23T09:17:01.043",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00889,
+              "percentile": 0.58551
+            }
+          },
+          {
+            "id": "CVE-2026-40473",
+            "source": "nvd",
+            "description": "The camel-mina component's MinaConverter.toObjectInput(IoBuffer) type converter wraps an IoBuffer in a java.io.ObjectInputStream without applying any ObjectInputFilter or class-loading restrictions. When a Camel route uses camel-mina as a TCP or UDP consumer and requests conversion to ObjectInput (for example via getBody(ObjectInput.class) or @Body ObjectInput), an attacker sending a crafted serialized Java object over the network to the MINA consumer port can trigger arbitrary code execution in the context of the application during readObject().\n\nThis issue affects Apache Camel: from 3.0.0 before 4.14.6, from 4.15.0 before 4.18.2, from 4.19.0 before 4.20.0.\n\nUsers are recommended to upgrade to version 4.20.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.6. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.2.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-04-27T09:16:01.640",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01148,
+              "percentile": 0.66196
+            }
+          },
+          {
+            "id": "CVE-2026-40858",
+            "source": "nvd",
+            "description": "The camel-infinispan component's ProtoStream-based remote aggregation repository deserializes data read from a remote Infinispan cache using java.io.ObjectInputStream without applying any ObjectInputFilter. An attacker who can write to the Infinispan cache used by a Camel application can inject a crafted serialized Java object that, when read during normal aggregation repository operations such as get or recover, results in arbitrary code execution in the context of the application.\n\nThis issue affects Apache Camel: from 4.0.0 before 4.14.7, from 4.15.0 before 4.18.2, from 4.19.0 before 4.20.0.\n\nUsers are recommended to upgrade to version 4.20.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.7. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.2.\n\nThe JIRA ticket:  https://issues.apache.org/jira/browse/CAMEL-23322  refers to the various commits that resolved the issue, and have more details. This issue follows the same class of vulnerability previously addressed in CVE-2024-22369, CVE-2024-23114 and CVE-2026-25747.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-04-27T10:16:09.627",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01224,
+              "percentile": 0.68255
+            }
+          },
+          {
+            "id": "CVE-2026-27172",
+            "source": "nvd",
+            "description": "The ConsulRegistry in the camel-consul component (class org.apache.camel.component.consul.ConsulRegistry and its inner ConsulRegistryUtils.deserialize method) read Java-serialized values from the Consul KV store and passed them to ObjectInputStream.readObject() without configuring an ObjectInputFilter. An attacker who can write to the Consul KV store backing a Camel ConsulRegistry instance could inject a malicious serialized Java object that is deserialized the next time Camel performs a lookup against that registry, leading to arbitrary code execution in the Camel process. The issue mirrors the class of vulnerability already addressed for other Camel components in CVE-2024-22369, CVE-2024-23114 and CVE-2026-25747, and was overlooked during the original remediation of those CVEs.\n\nThis issue affects Apache Camel: from 3.0.0 before 4.14.6, from 4.15.0 before 4.18.1.\n\nUsers are recommended to upgrade to version 4.19.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.6. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.1.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-04-27T11:16:01.650",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01135,
+              "percentile": 0.65886
+            }
+          },
+          {
+            "id": "CVE-2026-40859",
+            "source": "nvd",
+            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel.\n\nThe camel-vertx-http component deserializes HTTP response bodies carrying the Content-Type application/x-java-serialized-object using a raw java.io.ObjectInputStream, without applying any ObjectInputFilter (VertxHttpHelper.deserializeJavaObjectFromStream) This deserialization path is reached only when the producer endpoint is configured with transferException=true (or the component-level allowJavaSerializedObject=true) and throwExceptionOnFailure is left at its default value of true; in that case a backend HTTP response with a 5xx status and the application/x-java-serialized-object content type has its body deserialized with no class restrictions. An attacker who controls the backend the Camel producer talks to - through a man-in-the-middle position on an unencrypted (plain HTTP) connection, or by compromising the backend service - can return a crafted serialized Java object and, if a suitable gadget chain is present on the classpath, achieve remote code execution on the Camel application host. The path is not reachable in the default configuration, where transferException is false.\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.20.0.\n\nUsers are recommended to upgrade to version 4.20.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. After upgrading, the deserialization performed by both helper utilities is constrained by a default ObjectInputFilter (allow-list java.**;javax.**;org.apache.camel.**;!*), which can be customised through the new deserializationFilter endpoint option or the JVM-wide -Djdk.serialFilter system property. For deployments that cannot upgrade immediately: do not enable transferException=true (or allowJavaSerializedObject=true) on producers that talk to untrusted or network-reachable backends; ensure producer connections use TLS (https) so that a response cannot be substituted by a man-in-the-middle; and, where the option is required, set an explicit -Djdk.serialFilter allow-list (for example java.**;org.apache.camel.**;!*) to constrain deserialization.",
+            "cvssScore": 8.1,
+            "cvssSeverity": "HIGH",
+            "published": "2026-07-06T09:16:35.520",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00886,
+              "percentile": 0.58472
+            }
+          },
+          {
+            "id": "CVE-2026-43865",
+            "source": "nvd",
+            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel Hazelcast component.\n\nThe camel-hazelcast component creates and manages Hazelcast instances using a default configuration that applies no Java deserialization filter. When Camel builds the Hazelcast Config itself - that is, when no user-supplied HazelcastInstance, hazelcastConfigUri, or referenced Config bean is provided - neither Hazelcast's JavaSerializationFilterConfig nor a Camel-side ObjectInputFilter is configured, so objects received over the Hazelcast cluster protocol are deserialized inside Hazelcast's own serialization layer (ObjectInputStream.readObject) before Camel ever processes them. An attacker who can join or otherwise reach the Hazelcast cluster can publish a crafted serialized Java object that is then deserialized on every Camel node, resulting in remote code execution. The exposure is present by default and requires no opt-in endpoint configuration: any route using a hazelcast consumer (hazelcast-topic, hazelcast-queue, hazelcast-seda, hazelcast-map, hazelcast-multimap, hazelcast-replicatedmap, hazelcast-list, hazelcast-set), as well as the HazelcastAggregationRepository and HazelcastIdempotentRepository, is affected whenever the managed instance is created from Camel's default configuration.\nThis issue affects Apache Camel: from 4.0.0 before 4.14.8, from 4.15.0 before 4.18.3, from 4.19.0 before 4.21.0.\n\nUsers are recommended to upgrade to version 4.21.0, which fixes the issue. If users are on the 4.14.x LTS releases stream, then they are suggested to upgrade to 4.14.8. If users are on the 4.18.x releases stream, then they are suggested to upgrade to 4.18.3. The fix makes Camel apply a default Hazelcast JavaSerializationFilterConfig (whitelisting the java., javax. and org.apache.camel. class-name prefixes and blacklisting java.net.) to instances it creates from its own default configuration, while leaving any user-supplied Config or HazelcastInstance untouched. For deployments that cannot upgrade immediately, configure a deserialization filter on the Hazelcast instance (Hazelcast JavaSerializationFilterConfig, or the JVM-wide system property -Djdk.serialFilter=!java.net.**;java.**;javax.**;org.apache.camel.**;!*) and enable Hazelcast cluster authentication and TLS to restrict who can reach the cluster.",
+            "cvssScore": 8.1,
+            "cvssSeverity": "HIGH",
+            "published": "2026-07-06T09:16:35.787",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00984,
+              "percentile": 0.61595
+            }
+          },
+          {
+            "id": "CVE-2024-22369",
+            "source": "nvd",
+            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel SQL ComponentThis issue affects Apache Camel: from 3.0.0 before 3.21.4, from 3.22.0 before 3.22.1, from 4.0.0 before 4.0.4, from 4.1.0 before 4.4.0.\n\nUsers are recommended to upgrade to version 4.4.0, which fixes the issue. If users are on the 4.0.x LTS releases stream, then they are suggested to upgrade to 4.0.4. If users are on 3.x, they are suggested to move to 3.21.4 or 3.22.1\n\n",
+            "cvssScore": 7.8,
+            "cvssSeverity": "HIGH",
+            "published": "2024-02-20T15:15:10.113",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00749,
+              "percentile": 0.53956
+            }
+          }
+        ],
+        "sourcesAttempted": [
+          "nvd:cpe:4.4",
+          "osv",
+          "redhat",
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:21:33.667Z"
+      },
+      "reviewNote": null
+    },
+    {
+      "id": "mulesoft",
+      "name": "Mulesoft",
+      "eolDate": "2028-02-25",
+      "reference": "",
+      "environments": [
+        {
+          "env": "PROD",
+          "version": "4.9"
+        }
+      ],
+      "needsReview": false,
+      "confidence": "user-entered",
+      "scan": {
+        "vulnerabilityStatus": "clear",
+        "vulnerabilityCount": 0,
+        "highestCvssScore": null,
+        "hasKnownExploited": false,
+        "findings": [],
+        "sourcesAttempted": [
+          "kev",
+          "epss"
+        ],
+        "scanNeedsMapping": false,
+        "scanNote": null,
+        "webSearchNote": null,
+        "lastScanned": "2026-10-16T02:21:33.667Z"
+      }
+    }
+  ],
+  "metadata": {
+    "sourceDocument": "Software End of Life Tracker",
+    "extractedAt": "2026-08-04",
+    "extractionMethod": "manual-reconstruction-from-jumbled-pdf-text",
+    "itemsNeedingReview": 5,
+    "lastFullScan": "2026-10-16T02:21:33.667Z",
+    "lastVersionReconciliation": "2026-08-04",
+    "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction. EOL dates cross-checked against the PDF's task-list table on 2026-08-04: corrected NeoDPS (2025-11-02 -> 2025-11-01) and Elasticsearch (2026-04-08 -> 2026-04-30)."
+  }
+}
