@@ -44,7 +44,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Appears to be an internal/custom application - no public CVE source likely applies. Confirm before relying on scan results.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-17T02:12:11.072Z"
+        "lastScanned": "2026-10-18T02:12:12.325Z"
       }
     },
     {
@@ -188,7 +188,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:12:26.352Z"
+        "lastScanned": "2026-10-18T02:12:26.241Z"
       }
     },
     {
@@ -426,7 +426,7 @@
         "scanNeedsMapping": true,
         "scanNote": "No confirmed version for this APIM instance - structured scan skipped pending manual version entry. See needsReview in inventory.json.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-17T02:12:26.751Z"
+        "lastScanned": "2026-10-18T02:12:26.675Z"
       }
     },
     {
@@ -609,7 +609,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Version 2.15 in inventory.json is flagged as a likely source-data copy/paste error (shares OpenShift's reference text) - verify against Confluence before trusting scan results.",
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:12:35.596Z"
+        "lastScanned": "2026-10-18T02:12:33.944Z"
       }
     },
     {
@@ -851,7 +851,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:12:47.595Z"
+        "lastScanned": "2026-10-18T02:12:41.347Z"
       }
     },
     {
@@ -994,7 +994,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:12:55.472Z"
+        "lastScanned": "2026-10-18T02:12:48.536Z"
       }
     },
     {
@@ -1145,7 +1145,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:13:03.331Z"
+        "lastScanned": "2026-10-18T02:12:55.414Z"
       }
     },
     {
@@ -1292,7 +1292,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:13:10.273Z"
+        "lastScanned": "2026-10-18T02:13:02.282Z"
       }
     },
     {
@@ -1539,7 +1539,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:13:17.625Z"
+        "lastScanned": "2026-10-18T02:13:09.560Z"
       }
     },
     {
@@ -1790,7 +1790,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:13:24.343Z"
+        "lastScanned": "2026-10-18T02:13:16.391Z"
       }
     },
     {
@@ -1912,7 +1912,7 @@
         "scanNeedsMapping": true,
         "scanNote": "FME/Safe Software rarely appears in NVD - may need vendor security bulletins instead",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-17T02:13:31.969Z"
+        "lastScanned": "2026-10-18T02:13:23.152Z"
       }
     },
     {
@@ -1960,7 +1960,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-17T02:13:38.625Z"
+        "lastScanned": "2026-10-18T02:13:29.809Z"
       }
     },
     {
@@ -2218,7 +2218,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:13:46.008Z"
+        "lastScanned": "2026-10-18T02:13:36.886Z"
       }
     },
     {
@@ -2425,7 +2425,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:13:53.580Z"
+        "lastScanned": "2026-10-18T02:13:44.317Z"
       }
     },
     {
@@ -2666,7 +2666,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:14:02.453Z"
+        "lastScanned": "2026-10-18T02:13:51.861Z"
       },
       "reviewNote": null
     },
@@ -2696,7 +2696,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-17T02:14:02.453Z"
+        "lastScanned": "2026-10-18T02:13:51.861Z"
       }
     }
   ],
@@ -2705,7 +2705,7 @@
     "extractedAt": "2026-08-04",
     "extractionMethod": "manual-reconstruction-from-jumbled-pdf-text",
     "itemsNeedingReview": 5,
-    "lastFullScan": "2026-10-17T02:14:02.453Z",
+    "lastFullScan": "2026-10-18T02:13:51.861Z",
     "lastVersionReconciliation": "2026-08-04",
     "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction. EOL dates cross-checked against the PDF's task-list table on 2026-08-04: corrected NeoDPS (2025-11-02 -> 2025-11-01) and Elasticsearch (2026-04-08 -> 2026-04-30)."
   }
