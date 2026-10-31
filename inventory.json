@@ -44,7 +44,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Appears to be an internal/custom application - no public CVE source likely applies. Confirm before relying on scan results.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-30T03:36:58.208Z"
+        "lastScanned": "2026-10-31T03:21:19.286Z"
       }
     },
     {
@@ -84,7 +84,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.62931
+              "percentile": 0.62978
             }
           },
           {
@@ -97,7 +97,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0041,
-              "percentile": 0.35175
+              "percentile": 0.35225
             }
           },
           {
@@ -110,7 +110,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.39391
+              "percentile": 0.39448
             }
           },
           {
@@ -123,7 +123,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.30862
+              "percentile": 0.30914
             }
           },
           {
@@ -136,7 +136,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.48383
+              "percentile": 0.48447
             }
           },
           {
@@ -149,7 +149,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.46446
+              "percentile": 0.46505
             }
           },
           {
@@ -162,7 +162,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00159,
-              "percentile": 0.04986
+              "percentile": 0.05002
             }
           },
           {
@@ -175,7 +175,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00214,
-              "percentile": 0.11706
+              "percentile": 0.11735
             }
           }
         ],
@@ -188,7 +188,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:37:12.993Z"
+        "lastScanned": "2026-10-31T03:21:33.751Z"
       }
     },
     {
@@ -207,6 +207,28 @@
         "hasKnownExploited": false,
         "findings": [
           {
+            "id": "CVE-2026-61847",
+            "source": "redhat",
+            "description": "crass: crass: Denial of Service via excessive recursion when processing comments",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-30T18:44:22Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-61845",
+            "source": "redhat",
+            "description": "crass: crass: Denial of Service via crafted scientific notation in CSS",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-30T18:41:58Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
             "id": "CVE-2026-113872",
             "source": "redhat",
             "description": "multer: multer: Denial of Service via aborted request during asynchronous file filtering",
@@ -217,7 +239,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00442,
-              "percentile": 0.38325
+              "percentile": 0.38381
             }
           },
           {
@@ -231,7 +253,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00614,
-              "percentile": 0.49318
+              "percentile": 0.49381
             }
           },
           {
@@ -245,7 +267,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00831,
-              "percentile": 0.57496
+              "percentile": 0.57553
             }
           },
           {
@@ -258,8 +280,8 @@
             "published": "2026-09-28T20:57:09Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00455,
-              "percentile": 0.39458
+              "epssScore": 0.00491,
+              "percentile": 0.42189
             }
           },
           {
@@ -273,7 +295,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00455,
-              "percentile": 0.39458
+              "percentile": 0.39516
             }
           },
           {
@@ -287,7 +309,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00514,
-              "percentile": 0.43728
+              "percentile": 0.43788
             }
           },
           {
@@ -301,7 +323,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00569,
-              "percentile": 0.47067
+              "percentile": 0.47128
             }
           },
           {
@@ -315,50 +337,30 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00455,
-              "percentile": 0.39458
+              "percentile": 0.39516
             }
           },
           {
-            "id": "CVE-2026-93690",
+            "id": "CVE-2026-61848",
             "source": "redhat",
-            "description": "uri-js: uri-js: Denial of Service via malformed path segments",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-09-18T15:06:04Z",
+            "description": "crass: crass: Denial of Service via crafted non-ASCII CSS input",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-30T18:45:20Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00451,
-              "percentile": 0.39124
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-92925",
+            "id": "CVE-2026-61846",
             "source": "redhat",
-            "description": "redis: Redis: Out-of-bounds read via crafted cluster bus packets",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-09-17T11:48:04Z",
+            "description": "crass: crass: Denial of Service via deeply nested CSS structures",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-30T18:43:25Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00707,
-              "percentile": 0.53342
-            }
-          },
-          {
-            "id": "CVE-2026-90711",
-            "source": "redhat",
-            "description": "proxy-addr: proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-09-15T06:19:46Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.0026,
-              "percentile": 0.17673
-            }
+            "epss": null
           },
           {
             "id": "CVE-2026-116695",
@@ -371,7 +373,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00353,
-              "percentile": 0.2897
+              "percentile": 0.29018
             }
           },
           {
@@ -385,7 +387,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00425,
-              "percentile": 0.36764
+              "percentile": 0.36821
             }
           },
           {
@@ -399,21 +401,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00501,
-              "percentile": 0.42834
-            }
-          },
-          {
-            "id": "CVE-2026-107714",
-            "source": "redhat",
-            "description": "mechanize: mechanize: Information disclosure via improper redirect scheme and port handling",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-08T21:26:16Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00229,
-              "percentile": 0.1368
+              "percentile": 0.42897
             }
           }
         ],
@@ -426,7 +414,7 @@
         "scanNeedsMapping": true,
         "scanNote": "No confirmed version for this APIM instance - structured scan skipped pending manual version entry. See needsReview in inventory.json.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-30T03:37:13.506Z"
+        "lastScanned": "2026-10-31T03:21:34.151Z"
       }
     },
     {
@@ -467,7 +455,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.02149,
-              "percentile": 0.82075
+              "percentile": 0.82101
             }
           },
           {
@@ -480,7 +468,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0205,
-              "percentile": 0.81192
+              "percentile": 0.81221
             }
           },
           {
@@ -493,7 +481,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01404,
-              "percentile": 0.72496
+              "percentile": 0.72536
             }
           },
           {
@@ -506,7 +494,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.02442,
-              "percentile": 0.84274
+              "percentile": 0.84298
             }
           },
           {
@@ -519,7 +507,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00648,
-              "percentile": 0.50955
+              "percentile": 0.51017
             }
           },
           {
@@ -532,7 +520,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00243,
-              "percentile": 0.15451
+              "percentile": 0.15488
             }
           },
           {
@@ -545,7 +533,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01008,
-              "percentile": 0.6299
+              "percentile": 0.63036
             }
           },
           {
@@ -558,7 +546,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01342,
-              "percentile": 0.71272
+              "percentile": 0.71315
             }
           },
           {
@@ -571,7 +559,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01187,
-              "percentile": 0.67807
+              "percentile": 0.67855
             }
           },
           {
@@ -584,7 +572,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01472,
-              "percentile": 0.73714
+              "percentile": 0.73753
             }
           },
           {
@@ -597,7 +585,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01085,
-              "percentile": 0.65175
+              "percentile": 0.65222
             }
           }
         ],
@@ -609,7 +597,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Version 2.15 in inventory.json is flagged as a likely source-data copy/paste error (shares OpenShift's reference text) - verify against Confluence before trusting scan results.",
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:37:20.497Z"
+        "lastScanned": "2026-10-31T03:21:41.248Z"
       }
     },
     {
@@ -635,8 +623,8 @@
       "needsReview": false,
       "scan": {
         "vulnerabilityStatus": "critical",
-        "vulnerabilityCount": 35,
-        "highestCvssScore": 8.8,
+        "vulnerabilityCount": 36,
+        "highestCvssScore": 9.8,
         "hasKnownExploited": true,
         "findings": [
           {
@@ -661,8 +649,21 @@
             "published": "2026-05-23T12:17:02.660",
             "knownExploited": true,
             "epss": {
-              "epssScore": 0.15719,
-              "percentile": 0.96854
+              "epssScore": 0.1613,
+              "percentile": 0.96923
+            }
+          },
+          {
+            "id": "CVE-2026-29063",
+            "source": "nvd",
+            "description": "Immutable.js provides many Persistent Immutable data structures. Prior to versions 3.8.3, 4.3.7, and 5.1.5, Prototype Pollution is possible in immutable via the mergeDeep(), mergeDeepWith(), merge(), Map.toJS(), and Map.toObject() APIs. This issue has been patched in versions 3.8.3, 4.3.7, and 5.1.5.",
+            "cvssScore": 9.8,
+            "cvssSeverity": "CRITICAL",
+            "published": "2026-03-06T19:16:21.557",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01015,
+              "percentile": 0.63247
             }
           },
           {
@@ -675,7 +676,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00116,
-              "percentile": 0.0161
+              "percentile": 0.01611
             }
           },
           {
@@ -688,7 +689,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00303,
-              "percentile": 0.22978
+              "percentile": 0.23028
             }
           },
           {
@@ -701,7 +702,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00392,
-              "percentile": 0.3331
+              "percentile": 0.33359
             }
           },
           {
@@ -714,7 +715,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00346,
-              "percentile": 0.28089
+              "percentile": 0.28132
             }
           },
           {
@@ -727,7 +728,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.08641,
-              "percentile": 0.95093
+              "percentile": 0.95099
             }
           },
           {
@@ -740,7 +741,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01367,
-              "percentile": 0.7178
+              "percentile": 0.7182
             }
           },
           {
@@ -753,84 +754,71 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01259,
-              "percentile": 0.69521
+              "percentile": 0.69562
             }
           },
           {
-            "id": "CVE-2026-92092",
+            "id": "CVE-2026-119586",
             "source": "redhat",
-            "description": "openshift-ansible: openshift-ansible: Installer container downloads and executes remote inventory script without integrity verification",
+            "description": "sqlite: sqlite: Arbitrary command execution via .recover command",
             "severity": "important",
             "cvssScore": 7.5,
             "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-28T16:55:18Z",
+            "published": "2026-10-30T11:31:15Z",
             "knownExploited": false,
             "epss": null
           },
           {
-            "id": "CVE-2026-99148",
+            "id": "CVE-2026-119373",
             "source": "redhat",
-            "description": "kernel: kernel: amdgpu: memory corruption via premature eviction fence detachment",
+            "description": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5",
             "severity": "important",
             "cvssScore": 7.5,
             "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-28T10:35:04Z",
+            "published": "2026-10-30T11:30:39Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-119197",
+            "source": "redhat",
+            "description": "pyasn1: pyasn1: Denial of Service via quadratic complexity in binary REAL decoding",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-29T19:48:52Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00167,
-              "percentile": 0.05894
+              "epssScore": 0.00425,
+              "percentile": 0.36798
             }
           },
           {
-            "id": "CVE-2026-13595",
-            "source": "nvd",
-            "description": "A flaw was found in the libblkid library of util-linux. During nested partition probing, the BSD, Minix, Solaris x86, and UnixWare partition probers cache a raw pointer to a parent partition entry in a dynamically allocated array. When subsequent partition additions cause the array to be reallocated, this pointer becomes stale, leading to a heap use-after-free read. An attacker who can present a crafted block device image (for example, via USB insertion or a loop-mounted disk image) can trigger this flaw without user interaction, as libblkid is invoked automatically by udev/udisks as root on block-device hot-plug events. This could lead to limited information disclosure or denial of service.",
-            "cvssScore": 6.8,
-            "cvssSeverity": "MEDIUM",
-            "published": "2026-06-29T09:16:28.303",
+            "id": "CVE-2026-119196",
+            "source": "redhat",
+            "description": "pyasn1: pyasn1: Denial of Service via constructed bit string decoding",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-29T19:44:46Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00144,
-              "percentile": 0.0371
+              "epssScore": 0.00425,
+              "percentile": 0.36799
             }
           },
           {
-            "id": "CVE-2024-9676",
-            "source": "nvd",
-            "description": "A vulnerability was found in Podman, Buildah, and CRI-O. A symlink traversal vulnerability in the containers/storage library can cause Podman, Buildah, and CRI-O to hang and result in a denial of service via OOM kill when running a malicious image using an automatically assigned user namespace (`--userns=auto` in Podman and Buildah). The containers/storage library will read /etc/passwd inside the container, but does not properly validate if that file is a symlink, which can be used to cause the library to read an arbitrary file on the host.",
-            "cvssScore": 6.5,
-            "cvssSeverity": "MEDIUM",
-            "published": "2024-10-15T16:15:06.933",
+            "id": "CVE-2026-119195",
+            "source": "redhat",
+            "description": "pyasn1: pyasn1: Denial of Service via quadratic processing of fragmented ASN.1 data",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-29T19:41:37Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.01336,
-              "percentile": 0.71137
-            }
-          },
-          {
-            "id": "CVE-2026-39979",
-            "source": "nvd",
-            "description": "jq is a command-line JSON processor. In commits before 2f09060afab23fe9390cce7cb860b10416e1bf5f, the jv_parse_sized() API in libjq accepts a counted buffer with an explicit length parameter, but its error-handling path formats the input buffer using %s in jv_string_fmt(), which reads until a NUL terminator is found rather than respecting the caller-supplied length. This means that when malformed JSON is passed in a non-NUL-terminated buffer, the error construction logic performs an out-of-bounds read past the end of the buffer. The vulnerability is reachable by any libjq consumer calling jv_parse_sized() with untrusted input, and depending on memory layout, can result in memory disclosure or process termination. The issue has been patched in commit 2f09060afab23fe9390cce7cb860b10416e1bf5f.",
-            "cvssScore": 6.5,
-            "cvssSeverity": "MEDIUM",
-            "published": "2026-04-13T23:16:27.823",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.0056,
-              "percentile": 0.46542
-            }
-          },
-          {
-            "id": "CVE-2026-13757",
-            "source": "nvd",
-            "description": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaustion and crashing the p11-kit server process and its dependent services.",
-            "cvssScore": 6.2,
-            "cvssSeverity": "MEDIUM",
-            "published": "2026-06-29T19:16:40.907",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00154,
-              "percentile": 0.04462
+              "epssScore": 0.00527,
+              "percentile": 0.44611
             }
           }
         ],
@@ -843,7 +831,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:37:27.833Z"
+        "lastScanned": "2026-10-31T03:21:48.897Z"
       }
     },
     {
@@ -883,7 +871,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.62931
+              "percentile": 0.62978
             }
           },
           {
@@ -896,7 +884,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0041,
-              "percentile": 0.35175
+              "percentile": 0.35225
             }
           },
           {
@@ -909,7 +897,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.39391
+              "percentile": 0.39448
             }
           },
           {
@@ -922,7 +910,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.30862
+              "percentile": 0.30914
             }
           },
           {
@@ -935,7 +923,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.48383
+              "percentile": 0.48447
             }
           },
           {
@@ -948,7 +936,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.46446
+              "percentile": 0.46505
             }
           },
           {
@@ -961,7 +949,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00159,
-              "percentile": 0.04986
+              "percentile": 0.05002
             }
           },
           {
@@ -974,7 +962,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00214,
-              "percentile": 0.11706
+              "percentile": 0.11735
             }
           }
         ],
@@ -986,7 +974,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:37:34.912Z"
+        "lastScanned": "2026-10-31T03:21:56.087Z"
       }
     },
     {
@@ -1034,7 +1022,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.62931
+              "percentile": 0.62978
             }
           },
           {
@@ -1047,7 +1035,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0041,
-              "percentile": 0.35175
+              "percentile": 0.35225
             }
           },
           {
@@ -1060,7 +1048,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.39391
+              "percentile": 0.39448
             }
           },
           {
@@ -1073,7 +1061,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.30862
+              "percentile": 0.30914
             }
           },
           {
@@ -1086,7 +1074,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.48383
+              "percentile": 0.48447
             }
           },
           {
@@ -1099,7 +1087,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.46446
+              "percentile": 0.46505
             }
           },
           {
@@ -1112,7 +1100,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00159,
-              "percentile": 0.04986
+              "percentile": 0.05002
             }
           },
           {
@@ -1125,7 +1113,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00214,
-              "percentile": 0.11706
+              "percentile": 0.11735
             }
           }
         ],
@@ -1137,7 +1125,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:37:41.916Z"
+        "lastScanned": "2026-10-31T03:22:02.790Z"
       }
     },
     {
@@ -1181,7 +1169,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.62931
+              "percentile": 0.62978
             }
           },
           {
@@ -1194,7 +1182,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0041,
-              "percentile": 0.35175
+              "percentile": 0.35225
             }
           },
           {
@@ -1207,7 +1195,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.39391
+              "percentile": 0.39448
             }
           },
           {
@@ -1220,7 +1208,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.30862
+              "percentile": 0.30914
             }
           },
           {
@@ -1233,7 +1221,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.48383
+              "percentile": 0.48447
             }
           },
           {
@@ -1246,7 +1234,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.46446
+              "percentile": 0.46505
             }
           },
           {
@@ -1259,7 +1247,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00159,
-              "percentile": 0.04986
+              "percentile": 0.05002
             }
           },
           {
@@ -1272,7 +1260,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00214,
-              "percentile": 0.11706
+              "percentile": 0.11735
             }
           }
         ],
@@ -1284,7 +1272,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:37:48.873Z"
+        "lastScanned": "2026-10-31T03:22:09.672Z"
       }
     },
     {
@@ -1315,6 +1303,34 @@
         "hasKnownExploited": false,
         "findings": [
           {
+            "id": "CVE-2026-118764",
+            "source": "redhat",
+            "description": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-29T17:07:11Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00291,
+              "percentile": 0.21741
+            }
+          },
+          {
+            "id": "CVE-2026-118664",
+            "source": "redhat",
+            "description": "decode-uri-component: decode-uri-component: Denial of Service via malformed percent-encoded input",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-28T20:37:19Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00318,
+              "percentile": 0.24799
+            }
+          },
+          {
             "id": "CVE-2026-110879",
             "source": "redhat",
             "description": "jackson-databind: com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: Jackson-databind: PolymorphicTypeValidator bypass via generic type arguments and array element types in jackson-databind allows arbitrary class instantiation (incomplete fix for CV",
@@ -1325,7 +1341,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01196,
-              "percentile": 0.68012
+              "percentile": 0.68059
             }
           },
           {
@@ -1339,7 +1355,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00652,
-              "percentile": 0.5114
+              "percentile": 0.51203
             }
           },
           {
@@ -1353,49 +1369,35 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00414,
-              "percentile": 0.35601
+              "percentile": 0.35654
             }
           },
           {
-            "id": "CVE-2026-102554",
+            "id": "CVE-2026-118773",
             "source": "redhat",
-            "description": "com.google.guava/guava: Google Guava: Denial of Service via unthrottled memory allocation during deserialization",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-09T15:07:16Z",
+            "description": "glob: glob: Denial of Service (DoS) via incomplete traversal cancellation",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-29T18:27:47Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00352,
-              "percentile": 0.28794
+              "epssScore": 0.0035,
+              "percentile": 0.28686
             }
           },
           {
-            "id": "CVE-2026-108039",
+            "id": "CVE-2026-91920",
             "source": "redhat",
-            "description": "org.apache.cxf/cxf-core: Apache CXF: Denial of Service via unrestricted XML parsing",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-09T10:22:35Z",
+            "description": "undertow: undertow: ChunkReader message length permits chunk-size overflow",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-29T12:11:57Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00458,
-              "percentile": 0.39665
-            }
-          },
-          {
-            "id": "CVE-2026-107937",
-            "source": "redhat",
-            "description": "org.apache.cxf/cxf-core: Apache CXF: Denial of Service via large multipart attachment headers",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-09T10:19:53Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00556,
-              "percentile": 0.4629
+              "epssScore": 0.00235,
+              "percentile": 0.14545
             }
           },
           {
@@ -1407,7 +1409,10 @@
             "cvssSeverity": "MODERATE",
             "published": "2026-10-28T20:58:24Z",
             "knownExploited": false,
-            "epss": null
+            "epss": {
+              "epssScore": 0.00198,
+              "percentile": 0.09618
+            }
           },
           {
             "id": "CVE-2026-118959",
@@ -1418,7 +1423,10 @@
             "cvssSeverity": "MODERATE",
             "published": "2026-10-28T14:45:28Z",
             "knownExploited": false,
-            "epss": null
+            "epss": {
+              "epssScore": 0.00195,
+              "percentile": 0.09188
+            }
           },
           {
             "id": "CVE-2026-118425",
@@ -1429,7 +1437,10 @@
             "cvssSeverity": "MODERATE",
             "published": "2026-10-27T22:34:19Z",
             "knownExploited": false,
-            "epss": null
+            "epss": {
+              "epssScore": 0.00228,
+              "percentile": 0.13696
+            }
           },
           {
             "id": "CVE-2026-117627",
@@ -1442,7 +1453,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00246,
-              "percentile": 0.15963
+              "percentile": 0.15998
             }
           },
           {
@@ -1456,7 +1467,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00275,
-              "percentile": 0.19882
+              "percentile": 0.19918
             }
           },
           {
@@ -1470,7 +1481,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00338,
-              "percentile": 0.27154
+              "percentile": 0.27197
             }
           },
           {
@@ -1484,7 +1495,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00209,
-              "percentile": 0.10998
+              "percentile": 0.11029
             }
           },
           {
@@ -1498,21 +1509,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00193,
-              "percentile": 0.08997
-            }
-          },
-          {
-            "id": "CVE-2026-118030",
-            "source": "redhat",
-            "description": "keycloak-services: keycloak-services: HOTP race condition allows single OTP code reuse across concurrent logins",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-26T13:54:35Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00163,
-              "percentile": 0.05459
+              "percentile": 0.09027
             }
           }
         ],
@@ -1525,7 +1522,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:37:55.978Z"
+        "lastScanned": "2026-10-31T03:22:16.910Z"
       }
     },
     {
@@ -1557,6 +1554,28 @@
         "hasKnownExploited": false,
         "findings": [
           {
+            "id": "CVE-2026-61847",
+            "source": "redhat",
+            "description": "crass: crass: Denial of Service via excessive recursion when processing comments",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-30T18:44:22Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-61845",
+            "source": "redhat",
+            "description": "crass: crass: Denial of Service via crafted scientific notation in CSS",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-30T18:41:58Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
             "id": "CVE-2026-113872",
             "source": "redhat",
             "description": "multer: multer: Denial of Service via aborted request during asynchronous file filtering",
@@ -1567,7 +1586,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00442,
-              "percentile": 0.38325
+              "percentile": 0.38381
             }
           },
           {
@@ -1581,7 +1600,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00614,
-              "percentile": 0.49318
+              "percentile": 0.49381
             }
           },
           {
@@ -1595,7 +1614,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00831,
-              "percentile": 0.57496
+              "percentile": 0.57553
             }
           },
           {
@@ -1608,8 +1627,8 @@
             "published": "2026-09-28T20:57:09Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00455,
-              "percentile": 0.39458
+              "epssScore": 0.00491,
+              "percentile": 0.42189
             }
           },
           {
@@ -1623,7 +1642,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00455,
-              "percentile": 0.39458
+              "percentile": 0.39516
             }
           },
           {
@@ -1637,7 +1656,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00514,
-              "percentile": 0.43728
+              "percentile": 0.43788
             }
           },
           {
@@ -1651,7 +1670,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00569,
-              "percentile": 0.47067
+              "percentile": 0.47128
             }
           },
           {
@@ -1665,50 +1684,30 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00455,
-              "percentile": 0.39458
+              "percentile": 0.39516
             }
           },
           {
-            "id": "CVE-2026-93690",
+            "id": "CVE-2026-61848",
             "source": "redhat",
-            "description": "uri-js: uri-js: Denial of Service via malformed path segments",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-09-18T15:06:04Z",
+            "description": "crass: crass: Denial of Service via crafted non-ASCII CSS input",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-30T18:45:20Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00451,
-              "percentile": 0.39124
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-92925",
+            "id": "CVE-2026-61846",
             "source": "redhat",
-            "description": "redis: Redis: Out-of-bounds read via crafted cluster bus packets",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-09-17T11:48:04Z",
+            "description": "crass: crass: Denial of Service via deeply nested CSS structures",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-30T18:43:25Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00707,
-              "percentile": 0.53342
-            }
-          },
-          {
-            "id": "CVE-2026-90711",
-            "source": "redhat",
-            "description": "proxy-addr: proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-09-15T06:19:46Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.0026,
-              "percentile": 0.17673
-            }
+            "epss": null
           },
           {
             "id": "CVE-2026-116695",
@@ -1721,7 +1720,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00353,
-              "percentile": 0.2897
+              "percentile": 0.29018
             }
           },
           {
@@ -1735,7 +1734,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00425,
-              "percentile": 0.36764
+              "percentile": 0.36821
             }
           },
           {
@@ -1749,21 +1748,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00501,
-              "percentile": 0.42834
-            }
-          },
-          {
-            "id": "CVE-2026-107714",
-            "source": "redhat",
-            "description": "mechanize: mechanize: Information disclosure via improper redirect scheme and port handling",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-08T21:26:16Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00229,
-              "percentile": 0.1368
+              "percentile": 0.42897
             }
           }
         ],
@@ -1776,7 +1761,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:38:03.017Z"
+        "lastScanned": "2026-10-31T03:22:23.857Z"
       }
     },
     {
@@ -1820,7 +1805,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00575,
-              "percentile": 0.47391
+              "percentile": 0.47452
             }
           },
           {
@@ -1833,7 +1818,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01352,
-              "percentile": 0.71473
+              "percentile": 0.71515
             }
           },
           {
@@ -1846,7 +1831,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01035,
-              "percentile": 0.63794
+              "percentile": 0.63841
             }
           },
           {
@@ -1859,7 +1844,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00603,
-              "percentile": 0.48752
+              "percentile": 0.48817
             }
           },
           {
@@ -1872,7 +1857,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01477,
-              "percentile": 0.73799
+              "percentile": 0.73836
             }
           },
           {
@@ -1885,7 +1870,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00615,
-              "percentile": 0.49389
+              "percentile": 0.49452
             }
           }
         ],
@@ -1898,7 +1883,7 @@
         "scanNeedsMapping": true,
         "scanNote": "FME/Safe Software rarely appears in NVD - may need vendor security bulletins instead",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-30T03:38:09.975Z"
+        "lastScanned": "2026-10-31T03:22:31.188Z"
       }
     },
     {
@@ -1946,7 +1931,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-10-30T03:38:16.644Z"
+        "lastScanned": "2026-10-31T03:22:37.814Z"
       }
     },
     {
@@ -1985,6 +1970,48 @@
         "hasKnownExploited": false,
         "findings": [
           {
+            "id": "CVE-2026-119188",
+            "source": "redhat",
+            "description": "node-forge: node-forge: Denial of Service via interleaved record during fragmented TLS handshake",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-29T19:21:27Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00411,
+              "percentile": 0.35398
+            }
+          },
+          {
+            "id": "CVE-2026-119187",
+            "source": "redhat",
+            "description": "node-forge: node-forge: Denial of Service via call stack exhaustion in TLS record processing",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-29T19:19:36Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00411,
+              "percentile": 0.35398
+            }
+          },
+          {
+            "id": "CVE-2026-118764",
+            "source": "redhat",
+            "description": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-10-29T17:07:11Z",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00291,
+              "percentile": 0.21741
+            }
+          },
+          {
             "id": "CVE-2026-110879",
             "source": "redhat",
             "description": "jackson-databind: com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: Jackson-databind: PolymorphicTypeValidator bypass via generic type arguments and array element types in jackson-databind allows arbitrary class instantiation (incomplete fix for CV",
@@ -1995,7 +2022,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01196,
-              "percentile": 0.68012
+              "percentile": 0.68059
             }
           },
           {
@@ -2009,49 +2036,35 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00652,
-              "percentile": 0.5114
+              "percentile": 0.51203
             }
           },
           {
-            "id": "CVE-2026-87018",
+            "id": "CVE-2026-119189",
             "source": "redhat",
-            "description": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-15T18:38:25Z",
+            "description": "node-forge: node-forge: Certificate validation bypass via unenforced path length constraints",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-29T19:23:25Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00187,
-              "percentile": 0.08337
+              "epssScore": 0.00165,
+              "percentile": 0.05759
             }
           },
           {
-            "id": "CVE-2026-109383",
+            "id": "CVE-2026-118773",
             "source": "redhat",
-            "description": "undici: undici: Certificate validation bypass via dropped TLS options in Agent",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-15T18:34:01Z",
+            "description": "glob: glob: Denial of Service (DoS) via incomplete traversal cancellation",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-10-29T18:27:47Z",
             "knownExploited": false,
             "epss": {
-              "epssScore": 0.00184,
-              "percentile": 0.08
-            }
-          },
-          {
-            "id": "CVE-2026-109829",
-            "source": "redhat",
-            "description": "undici: undici: Cache poisoning and information disclosure via improper cross-origin redirect caching",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-15T18:28:04Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00149,
-              "percentile": 0.04057
+              "epssScore": 0.0035,
+              "percentile": 0.28686
             }
           },
           {
@@ -2065,7 +2078,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00336,
-              "percentile": 0.26985
+              "percentile": 0.27028
             }
           },
           {
@@ -2079,7 +2092,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.004,
-              "percentile": 0.34233
+              "percentile": 0.34285
             }
           },
           {
@@ -2093,7 +2106,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00502,
-              "percentile": 0.42892
+              "percentile": 0.42956
             }
           },
           {
@@ -2107,7 +2120,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00672,
-              "percentile": 0.51972
+              "percentile": 0.52036
             }
           },
           {
@@ -2121,7 +2134,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0025,
-              "percentile": 0.16324
+              "percentile": 0.16358
             }
           },
           {
@@ -2135,7 +2148,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00255,
-              "percentile": 0.17091
+              "percentile": 0.17122
             }
           },
           {
@@ -2149,35 +2162,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0026,
-              "percentile": 0.17773
-            }
-          },
-          {
-            "id": "CVE-2026-109932",
-            "source": "redhat",
-            "description": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-15T18:44:22Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00321,
-              "percentile": 0.25061
-            }
-          },
-          {
-            "id": "CVE-2026-109841",
-            "source": "redhat",
-            "description": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-15T18:22:06Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00252,
-              "percentile": 0.1666
+              "percentile": 0.17804
             }
           },
           {
@@ -2191,7 +2176,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0028,
-              "percentile": 0.20522
+              "percentile": 0.20564
             }
           }
         ],
@@ -2204,7 +2189,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:38:23.745Z"
+        "lastScanned": "2026-10-31T03:22:44.952Z"
       }
     },
     {
@@ -2252,7 +2237,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.02612,
-              "percentile": 0.85375
+              "percentile": 0.85397
             }
           },
           {
@@ -2265,7 +2250,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.04033,
-              "percentile": 0.90573
+              "percentile": 0.90588
             }
           },
           {
@@ -2278,7 +2263,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.03088,
-              "percentile": 0.87679
+              "percentile": 0.87696
             }
           },
           {
@@ -2411,7 +2396,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:38:31.258Z"
+        "lastScanned": "2026-10-31T03:22:52.746Z"
       }
     },
     {
@@ -2447,22 +2432,8 @@
         "vulnerabilityStatus": "critical",
         "vulnerabilityCount": 51,
         "highestCvssScore": 9.9,
-        "hasKnownExploited": true,
+        "hasKnownExploited": false,
         "findings": [
-          {
-            "id": "CVE-2026-111497",
-            "source": "redhat",
-            "description": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-22T13:35:41Z",
-            "knownExploited": true,
-            "epss": {
-              "epssScore": 0.82641,
-              "percentile": 0.99665
-            }
-          },
           {
             "id": "CVE-2026-40453",
             "source": "nvd",
@@ -2473,7 +2444,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.02104,
-              "percentile": 0.81691
+              "percentile": 0.81714
             }
           },
           {
@@ -2486,7 +2457,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01273,
-              "percentile": 0.69811
+              "percentile": 0.69854
             }
           },
           {
@@ -2499,7 +2470,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01739,
-              "percentile": 0.7766
+              "percentile": 0.77694
             }
           },
           {
@@ -2512,7 +2483,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.19563,
-              "percentile": 0.97374
+              "percentile": 0.97378
             }
           },
           {
@@ -2525,7 +2496,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00827,
-              "percentile": 0.57399
+              "percentile": 0.57457
             }
           },
           {
@@ -2538,7 +2509,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00791,
-              "percentile": 0.56207
+              "percentile": 0.56263
             }
           },
           {
@@ -2561,7 +2532,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01492,
-              "percentile": 0.74068
+              "percentile": 0.74106
             }
           },
           {
@@ -2574,7 +2545,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01257,
-              "percentile": 0.69477
+              "percentile": 0.69519
             }
           },
           {
@@ -2587,7 +2558,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01188,
-              "percentile": 0.67824
+              "percentile": 0.67872
             }
           },
           {
@@ -2600,7 +2571,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01305,
-              "percentile": 0.70465
+              "percentile": 0.70508
             }
           },
           {
@@ -2613,7 +2584,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01225,
-              "percentile": 0.68739
+              "percentile": 0.68782
             }
           },
           {
@@ -2626,7 +2597,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00886,
-              "percentile": 0.59192
+              "percentile": 0.59242
             }
           },
           {
@@ -2639,7 +2610,20 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00984,
-              "percentile": 0.62247
+              "percentile": 0.62293
+            }
+          },
+          {
+            "id": "CVE-2024-22369",
+            "source": "nvd",
+            "description": "Deserialization of Untrusted Data vulnerability in Apache Camel SQL ComponentThis issue affects Apache Camel: from 3.0.0 before 3.21.4, from 3.22.0 before 3.22.1, from 4.0.0 before 4.0.4, from 4.1.0 before 4.4.0.\n\nUsers are recommended to upgrade to version 4.4.0, which fixes the issue. If users are on the 4.0.x LTS releases stream, then they are suggested to upgrade to 4.0.4. If users are on 3.x, they are suggested to move to 3.21.4 or 3.22.1\n\n",
+            "cvssScore": 7.8,
+            "cvssSeverity": "HIGH",
+            "published": "2024-02-20T15:15:10.113",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00749,
+              "percentile": 0.54882
             }
           }
         ],
@@ -2653,7 +2637,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:38:38.642Z"
+        "lastScanned": "2026-10-31T03:23:00.869Z"
       },
       "reviewNote": null
     },
@@ -2683,7 +2667,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-10-30T03:38:38.643Z"
+        "lastScanned": "2026-10-31T03:23:00.869Z"
       }
     }
   ],
@@ -2692,7 +2676,7 @@
     "extractedAt": "2026-08-04",
     "extractionMethod": "manual-reconstruction-from-jumbled-pdf-text",
     "itemsNeedingReview": 5,
-    "lastFullScan": "2026-10-30T03:38:38.643Z",
+    "lastFullScan": "2026-10-31T03:23:00.869Z",
     "lastVersionReconciliation": "2026-08-04",
     "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction. EOL dates cross-checked against the PDF's task-list table on 2026-08-04: corrected NeoDPS (2025-11-02 -> 2025-11-01) and Elasticsearch (2026-04-08 -> 2026-04-30)."
   }
