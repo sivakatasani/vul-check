@@ -44,7 +44,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Appears to be an internal/custom application - no public CVE source likely applies. Confirm before relying on scan results.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-11-11T03:50:08.944Z"
+        "lastScanned": "2026-11-12T04:57:41.859Z"
       }
     },
     {
@@ -188,7 +188,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:50:22.514Z"
+        "lastScanned": "2026-11-12T04:57:55.488Z"
       }
     },
     {
@@ -207,6 +207,39 @@
         "hasKnownExploited": false,
         "findings": [
           {
+            "id": "CVE-2026-126186",
+            "source": "redhat",
+            "description": "activestorage: Active Storage: Remote code execution via unsafe file extension handling in media processing",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-11-10T21:14:22Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-126083",
+            "source": "redhat",
+            "description": "actionpack: actionpack: IP address spoofing via crafted Forwarded header",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-11-10T21:09:33Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-126080",
+            "source": "redhat",
+            "description": "activesupport: Active Support: Denial of Service via unescaped regular expressions in safe_constantize",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-11-10T21:04:44Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
             "id": "CVE-2026-122006",
             "source": "redhat",
             "description": "activestorage: activestorage: arbitrary file read and write via ImageMagick attachment analysis",
@@ -221,116 +254,92 @@
             }
           },
           {
-            "id": "CVE-2026-61847",
+            "id": "CVE-2026-126085",
             "source": "redhat",
-            "description": "crass: crass: Denial of Service via excessive recursion when processing comments",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-30T18:44:22Z",
+            "description": "activestorage: Active Storage: File size validation bypass via missing direct-upload content length constraints",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T21:12:44Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00486,
-              "percentile": 0.42146
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-61845",
+            "id": "CVE-2026-126076",
             "source": "redhat",
-            "description": "crass: crass: Denial of Service via crafted scientific notation in CSS",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-30T18:41:58Z",
+            "description": "actionpack: actionpack: Session retention across logout via race condition in CacheStore",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:57:07Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00386,
-              "percentile": 0.33045
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-119191",
+            "id": "CVE-2026-126075",
             "source": "redhat",
-            "description": "node-forge: node-forge: Denial of Service via nested ASN.1 BIT STRING decoding",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-29T19:26:29Z",
+            "description": "activesupport: Active Support: Cross-site scripting via MessagePack deserialization",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:50:44Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00429,
-              "percentile": 0.37427
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-119188",
+            "id": "CVE-2026-126074",
             "source": "redhat",
-            "description": "node-forge: node-forge: Denial of Service via interleaved record during fragmented TLS handshake",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-29T19:21:27Z",
+            "description": "activestorage: activestorage: Denial of Service via filenames containing null bytes",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:48:25Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00411,
-              "percentile": 0.35741
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-119025",
+            "id": "CVE-2026-126073",
             "source": "redhat",
-            "description": "open: open: Arbitrary code execution via crafted URLs",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-29T11:24:18Z",
+            "description": "actionpack: Action Pack: Web cache poisoning via improper Vary header generation during content negotiation",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:46:43Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.01446,
-              "percentile": 0.73511
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-78661",
+            "id": "CVE-2026-126071",
             "source": "redhat",
-            "description": "golang.org/x/net/html: golang.org/x/net/html: Denial of Service via crafted HTML input",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-27T21:38:56Z",
+            "description": "activestorage: Active Storage: Denial of Service via thread exhaustion from streaming storage errors",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:40:37Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00409,
-              "percentile": 0.35481
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-113872",
+            "id": "CVE-2026-125333",
             "source": "redhat",
-            "description": "multer: multer: Denial of Service via aborted request during asynchronous file filtering",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-22T14:20:18Z",
+            "description": "node-forge: node-forge: Denial of Service via inefficient regular expression in HTTP header parsing",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T18:48:26Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00442,
-              "percentile": 0.38687
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-78667",
+            "id": "CVE-2026-125332",
             "source": "redhat",
-            "description": "net/http: golang: golang: Denial of Service via crafted HTTP Range headers",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-08T22:53:59Z",
+            "description": "node-forge: node-forge: Denial of Service via unsupported TLS ServerHello compression method",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T18:47:10Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00663,
-              "percentile": 0.52044
-            }
+            "epss": null
           },
           {
             "id": "CVE-2026-125110",
@@ -361,60 +370,15 @@
             }
           },
           {
-            "id": "CVE-2026-61848",
+            "id": "CVE-2026-126068",
             "source": "redhat",
-            "description": "crass: crass: Denial of Service via crafted non-ASCII CSS input",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-30T18:45:20Z",
+            "description": "actionmailbox: Action Mailbox: Inbound email forgery via Mailgun webhook signature replay",
+            "severity": "low",
+            "cvssScore": 2,
+            "cvssSeverity": "LOW",
+            "published": "2026-11-10T20:32:29Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00486,
-              "percentile": 0.42146
-            }
-          },
-          {
-            "id": "CVE-2026-61846",
-            "source": "redhat",
-            "description": "crass: crass: Denial of Service via deeply nested CSS structures",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-30T18:43:25Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00486,
-              "percentile": 0.42146
-            }
-          },
-          {
-            "id": "CVE-2026-119566",
-            "source": "redhat",
-            "description": "github.com/prometheus/common: Prometheus: Information disclosure via HTTP redirects in remote write requests",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-30T11:31:13Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00201,
-              "percentile": 0.10055
-            }
-          },
-          {
-            "id": "CVE-2026-118764",
-            "source": "redhat",
-            "description": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-29T17:07:11Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00301,
-              "percentile": 0.23083
-            }
+            "epss": null
           }
         ],
         "sourcesAttempted": [
@@ -426,7 +390,7 @@
         "scanNeedsMapping": true,
         "scanNote": "No confirmed version for this APIM instance - structured scan skipped pending manual version entry. See needsReview in inventory.json.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-11-11T03:50:22.941Z"
+        "lastScanned": "2026-11-12T04:57:55.844Z"
       }
     },
     {
@@ -609,7 +573,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Version 2.15 in inventory.json is flagged as a likely source-data copy/paste error (shares OpenShift's reference text) - verify against Confluence before trusting scan results.",
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:50:29.920Z"
+        "lastScanned": "2026-11-12T04:58:02.497Z"
       }
     },
     {
@@ -770,74 +734,59 @@
             }
           },
           {
-            "id": "CVE-2026-19706",
+            "id": "CVE-2026-108472",
             "source": "redhat",
-            "description": "openshift/installer: OpenShift Installer: Unconditional CSR approval during Agent-Based Installation (ABI) bootstrap",
+            "description": "xfsprogs: xfsprogs: Local privilege escalation via command injection in xfs_admin",
             "severity": "important",
             "cvssScore": 7.5,
             "cvssSeverity": "IMPORTANT",
-            "published": "2026-11-09T15:00:00Z",
+            "published": "2026-11-11T00:00:00Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.0013,
-              "percentile": 0.02655
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-99284",
+            "id": "CVE-2026-99288",
             "source": "redhat",
-            "description": "kernel: kernel: privilege escalation via missing shared fragment flag in skb_zerocopy",
+            "description": "kernel: kernel: Denial of Service via race condition in TCP socket lookup",
             "severity": "important",
             "cvssScore": 7.5,
             "cvssSeverity": "IMPORTANT",
-            "published": "2026-11-07T20:40:33Z",
+            "published": "2026-11-10T18:19:08Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00209,
-              "percentile": 0.11159
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-99281",
+            "id": "CVE-2026-111760",
             "source": "redhat",
-            "description": "kernel: kernel: Unauthorized network device access via missing permission checks on ownerless TUN/TAP devices",
+            "description": "git: Git: Arbitrary code execution via unsafe submodule metadata during recursive clones",
             "severity": "important",
             "cvssScore": 7.5,
             "cvssSeverity": "IMPORTANT",
-            "published": "2026-11-07T14:08:47Z",
+            "published": "2026-11-10T18:00:00Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00155,
-              "percentile": 0.04666
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-99272",
+            "id": "CVE-2026-105437",
             "source": "redhat",
-            "description": "kernel: kernel: out-of-bounds read in SMB client via crafted read response",
+            "description": "git: git: Heap corruption via integer overflow in merge size calculations",
             "severity": "important",
             "cvssScore": 7.5,
             "cvssSeverity": "IMPORTANT",
-            "published": "2026-11-07T14:08:45Z",
+            "published": "2026-11-10T18:00:00Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00145,
-              "percentile": 0.03807
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-116592",
+            "id": "CVE-2026-114466",
             "source": "redhat",
-            "description": "undici: undici: Cache poisoning via intermediate redirect hops",
+            "description": "git: git: Arbitrary file system access via fast-import features",
             "severity": "important",
             "cvssScore": 7.5,
             "cvssSeverity": "IMPORTANT",
-            "published": "2026-11-06T10:05:41Z",
+            "published": "2026-11-10T18:00:00Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00157,
-              "percentile": 0.04872
-            }
+            "epss": null
           }
         ],
         "sourcesAttempted": [
@@ -849,7 +798,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:50:36.985Z"
+        "lastScanned": "2026-11-12T04:58:09.652Z"
       }
     },
     {
@@ -992,7 +941,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:50:43.988Z"
+        "lastScanned": "2026-11-12T04:58:16.246Z"
       }
     },
     {
@@ -1143,7 +1092,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:50:50.724Z"
+        "lastScanned": "2026-11-12T04:58:22.982Z"
       }
     },
     {
@@ -1290,7 +1239,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:50:57.533Z"
+        "lastScanned": "2026-11-12T04:58:29.688Z"
       }
     },
     {
@@ -1320,6 +1269,17 @@
         "highestCvssScore": 7.5,
         "hasKnownExploited": false,
         "findings": [
+          {
+            "id": "CVE-2026-116468",
+            "source": "redhat",
+            "description": "keycloak-services: keycloak-services: Delegated admin escalates to realm-admin via group move",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-11-11T00:00:00Z",
+            "knownExploited": false,
+            "epss": null
+          },
           {
             "id": "CVE-2026-12977",
             "source": "redhat",
@@ -1461,18 +1421,15 @@
             }
           },
           {
-            "id": "CVE-2026-107123",
+            "id": "CVE-2026-112201",
             "source": "redhat",
-            "description": "keycloak-services: keycloak-services: Unauthenticated CPU denial of service via SAML XML dateTime and duration parsing",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-11-05T00:00:00Z",
+            "description": "keycloak-services: keycloak-services: Login-failure upsert trusts MySQL/MariaDB affected-row count",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T00:00:00Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00686,
-              "percentile": 0.52968
-            }
+            "epss": null
           },
           {
             "id": "CVE-2026-125652",
@@ -1515,20 +1472,6 @@
               "epssScore": 0.00362,
               "percentile": 0.30328
             }
-          },
-          {
-            "id": "CVE-2026-92856",
-            "source": "redhat",
-            "description": "keycloak-services: keycloak-services: SAML broker ignores ProxyRestriction delegation constraints",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-11-05T00:00:00Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00246,
-              "percentile": 0.15964
-            }
           }
         ],
         "sourcesAttempted": [
@@ -1540,7 +1483,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:51:04.499Z"
+        "lastScanned": "2026-11-12T04:58:36.750Z"
       }
     },
     {
@@ -1572,6 +1515,39 @@
         "hasKnownExploited": false,
         "findings": [
           {
+            "id": "CVE-2026-126186",
+            "source": "redhat",
+            "description": "activestorage: Active Storage: Remote code execution via unsafe file extension handling in media processing",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-11-10T21:14:22Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-126083",
+            "source": "redhat",
+            "description": "actionpack: actionpack: IP address spoofing via crafted Forwarded header",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-11-10T21:09:33Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-126080",
+            "source": "redhat",
+            "description": "activesupport: Active Support: Denial of Service via unescaped regular expressions in safe_constantize",
+            "severity": "important",
+            "cvssScore": 7.5,
+            "cvssSeverity": "IMPORTANT",
+            "published": "2026-11-10T21:04:44Z",
+            "knownExploited": false,
+            "epss": null
+          },
+          {
             "id": "CVE-2026-122006",
             "source": "redhat",
             "description": "activestorage: activestorage: arbitrary file read and write via ImageMagick attachment analysis",
@@ -1586,116 +1562,92 @@
             }
           },
           {
-            "id": "CVE-2026-61847",
+            "id": "CVE-2026-126085",
             "source": "redhat",
-            "description": "crass: crass: Denial of Service via excessive recursion when processing comments",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-30T18:44:22Z",
+            "description": "activestorage: Active Storage: File size validation bypass via missing direct-upload content length constraints",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T21:12:44Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00486,
-              "percentile": 0.42146
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-61845",
+            "id": "CVE-2026-126076",
             "source": "redhat",
-            "description": "crass: crass: Denial of Service via crafted scientific notation in CSS",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-30T18:41:58Z",
+            "description": "actionpack: actionpack: Session retention across logout via race condition in CacheStore",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:57:07Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00386,
-              "percentile": 0.33045
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-119191",
+            "id": "CVE-2026-126075",
             "source": "redhat",
-            "description": "node-forge: node-forge: Denial of Service via nested ASN.1 BIT STRING decoding",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-29T19:26:29Z",
+            "description": "activesupport: Active Support: Cross-site scripting via MessagePack deserialization",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:50:44Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00429,
-              "percentile": 0.37427
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-119188",
+            "id": "CVE-2026-126074",
             "source": "redhat",
-            "description": "node-forge: node-forge: Denial of Service via interleaved record during fragmented TLS handshake",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-29T19:21:27Z",
+            "description": "activestorage: activestorage: Denial of Service via filenames containing null bytes",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:48:25Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00411,
-              "percentile": 0.35741
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-119025",
+            "id": "CVE-2026-126073",
             "source": "redhat",
-            "description": "open: open: Arbitrary code execution via crafted URLs",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-29T11:24:18Z",
+            "description": "actionpack: Action Pack: Web cache poisoning via improper Vary header generation during content negotiation",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:46:43Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.01446,
-              "percentile": 0.73511
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-78661",
+            "id": "CVE-2026-126071",
             "source": "redhat",
-            "description": "golang.org/x/net/html: golang.org/x/net/html: Denial of Service via crafted HTML input",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-27T21:38:56Z",
+            "description": "activestorage: Active Storage: Denial of Service via thread exhaustion from streaming storage errors",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T20:40:37Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00409,
-              "percentile": 0.35481
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-113872",
+            "id": "CVE-2026-125333",
             "source": "redhat",
-            "description": "multer: multer: Denial of Service via aborted request during asynchronous file filtering",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-22T14:20:18Z",
+            "description": "node-forge: node-forge: Denial of Service via inefficient regular expression in HTTP header parsing",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T18:48:26Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00442,
-              "percentile": 0.38687
-            }
+            "epss": null
           },
           {
-            "id": "CVE-2026-78667",
+            "id": "CVE-2026-125332",
             "source": "redhat",
-            "description": "net/http: golang: golang: Denial of Service via crafted HTTP Range headers",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-08T22:53:59Z",
+            "description": "node-forge: node-forge: Denial of Service via unsupported TLS ServerHello compression method",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T18:47:10Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00663,
-              "percentile": 0.52044
-            }
+            "epss": null
           },
           {
             "id": "CVE-2026-125110",
@@ -1726,60 +1678,15 @@
             }
           },
           {
-            "id": "CVE-2026-61848",
+            "id": "CVE-2026-126068",
             "source": "redhat",
-            "description": "crass: crass: Denial of Service via crafted non-ASCII CSS input",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-30T18:45:20Z",
+            "description": "actionmailbox: Action Mailbox: Inbound email forgery via Mailgun webhook signature replay",
+            "severity": "low",
+            "cvssScore": 2,
+            "cvssSeverity": "LOW",
+            "published": "2026-11-10T20:32:29Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00486,
-              "percentile": 0.42146
-            }
-          },
-          {
-            "id": "CVE-2026-61846",
-            "source": "redhat",
-            "description": "crass: crass: Denial of Service via deeply nested CSS structures",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-30T18:43:25Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00486,
-              "percentile": 0.42146
-            }
-          },
-          {
-            "id": "CVE-2026-119566",
-            "source": "redhat",
-            "description": "github.com/prometheus/common: Prometheus: Information disclosure via HTTP redirects in remote write requests",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-30T11:31:13Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00201,
-              "percentile": 0.10055
-            }
-          },
-          {
-            "id": "CVE-2026-118764",
-            "source": "redhat",
-            "description": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-29T17:07:11Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00301,
-              "percentile": 0.23083
-            }
+            "epss": null
           }
         ],
         "sourcesAttempted": [
@@ -1791,7 +1698,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:51:11.364Z"
+        "lastScanned": "2026-11-12T04:58:43.368Z"
       }
     },
     {
@@ -1913,7 +1820,7 @@
         "scanNeedsMapping": true,
         "scanNote": "FME/Safe Software rarely appears in NVD - may need vendor security bulletins instead",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-11-11T03:51:18.163Z"
+        "lastScanned": "2026-11-12T04:58:50.090Z"
       }
     },
     {
@@ -1961,7 +1868,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-11-11T03:51:24.751Z"
+        "lastScanned": "2026-11-12T04:58:56.707Z"
       }
     },
     {
@@ -2140,18 +2047,26 @@
             }
           },
           {
-            "id": "CVE-2026-118779",
+            "id": "CVE-2026-125333",
             "source": "redhat",
-            "description": "node-forge: node-forge: Denial of Service via inefficient regular expression in PEM decoding",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-10-29T18:45:55Z",
+            "description": "node-forge: node-forge: Denial of Service via inefficient regular expression in HTTP header parsing",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T18:48:26Z",
             "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00556,
-              "percentile": 0.46719
-            }
+            "epss": null
+          },
+          {
+            "id": "CVE-2026-125332",
+            "source": "redhat",
+            "description": "node-forge: node-forge: Denial of Service via unsupported TLS ServerHello compression method",
+            "severity": "moderate",
+            "cvssScore": 5,
+            "cvssSeverity": "MODERATE",
+            "published": "2026-11-10T18:47:10Z",
+            "knownExploited": false,
+            "epss": null
           },
           {
             "id": "CVE-2026-100302",
@@ -2194,20 +2109,6 @@
               "epssScore": 0.00264,
               "percentile": 0.18386
             }
-          },
-          {
-            "id": "CVE-2026-119189",
-            "source": "redhat",
-            "description": "node-forge: node-forge: Certificate validation bypass via unenforced path length constraints",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-10-29T19:23:25Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00165,
-              "percentile": 0.05813
-            }
           }
         ],
         "sourcesAttempted": [
@@ -2219,7 +2120,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:51:31.824Z"
+        "lastScanned": "2026-11-12T04:59:03.869Z"
       }
     },
     {
@@ -2426,7 +2327,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:51:39.251Z"
+        "lastScanned": "2026-11-12T04:59:11.180Z"
       }
     },
     {
@@ -2667,7 +2568,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:51:46.487Z"
+        "lastScanned": "2026-11-12T04:59:18.239Z"
       },
       "reviewNote": null
     },
@@ -2697,7 +2598,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-11T03:51:46.488Z"
+        "lastScanned": "2026-11-12T04:59:18.240Z"
       }
     }
   ],
@@ -2706,7 +2607,7 @@
     "extractedAt": "2026-08-04",
     "extractionMethod": "manual-reconstruction-from-jumbled-pdf-text",
     "itemsNeedingReview": 5,
-    "lastFullScan": "2026-11-11T03:51:46.488Z",
+    "lastFullScan": "2026-11-12T04:59:18.240Z",
     "lastVersionReconciliation": "2026-08-04",
     "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction. EOL dates cross-checked against the PDF's task-list table on 2026-08-04: corrected NeoDPS (2025-11-02 -> 2025-11-01) and Elasticsearch (2026-04-08 -> 2026-04-30)."
   }
