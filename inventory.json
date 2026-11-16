@@ -44,7 +44,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Appears to be an internal/custom application - no public CVE source likely applies. Confirm before relying on scan results.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-11-15T03:53:28.392Z"
+        "lastScanned": "2026-11-16T03:54:02.065Z"
       }
     },
     {
@@ -84,7 +84,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.63541
+              "percentile": 0.6354
             }
           },
           {
@@ -97,7 +97,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0041,
-              "percentile": 0.35798
+              "percentile": 0.35782
             }
           },
           {
@@ -110,7 +110,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.39981
+              "percentile": 0.39959
             }
           },
           {
@@ -123,7 +123,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.31401
+              "percentile": 0.3138
             }
           },
           {
@@ -136,7 +136,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.49058
+              "percentile": 0.49045
             }
           },
           {
@@ -149,7 +149,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.47087
+              "percentile": 0.47075
             }
           },
           {
@@ -162,7 +162,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00159,
-              "percentile": 0.05092
+              "percentile": 0.05078
             }
           },
           {
@@ -175,7 +175,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00214,
-              "percentile": 0.11782
+              "percentile": 0.11761
             }
           }
         ],
@@ -188,7 +188,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:54:03.511Z"
+        "lastScanned": "2026-11-16T03:54:28.316Z"
       }
     },
     {
@@ -217,7 +217,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00513,
-              "percentile": 0.44314
+              "percentile": 0.44293
             }
           },
           {
@@ -231,7 +231,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00357,
-              "percentile": 0.29943
+              "percentile": 0.29918
             }
           },
           {
@@ -245,7 +245,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00829,
-              "percentile": 0.58088
+              "percentile": 0.58086
             }
           },
           {
@@ -259,7 +259,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00469,
-              "percentile": 0.4112
+              "percentile": 0.41099
             }
           },
           {
@@ -273,7 +273,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00417,
-              "percentile": 0.36521
+              "percentile": 0.36499
             }
           },
           {
@@ -287,7 +287,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0048,
-              "percentile": 0.42021
+              "percentile": 0.41998
             }
           },
           {
@@ -301,7 +301,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0031,
-              "percentile": 0.24168
+              "percentile": 0.24145
             }
           },
           {
@@ -315,7 +315,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00336,
-              "percentile": 0.27419
+              "percentile": 0.27394
             }
           },
           {
@@ -329,7 +329,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00499,
-              "percentile": 0.43367
+              "percentile": 0.43345
             }
           },
           {
@@ -343,7 +343,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00422,
-              "percentile": 0.37039
+              "percentile": 0.37018
             }
           },
           {
@@ -357,7 +357,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00444,
-              "percentile": 0.39187
+              "percentile": 0.39167
             }
           },
           {
@@ -371,7 +371,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00561,
-              "percentile": 0.47262
+              "percentile": 0.47251
             }
           },
           {
@@ -385,7 +385,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00559,
-              "percentile": 0.47135
+              "percentile": 0.47123
             }
           },
           {
@@ -399,7 +399,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00434,
-              "percentile": 0.38198
+              "percentile": 0.38176
             }
           },
           {
@@ -413,7 +413,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00251,
-              "percentile": 0.16582
+              "percentile": 0.16556
             }
           }
         ],
@@ -426,7 +426,7 @@
         "scanNeedsMapping": true,
         "scanNote": "No confirmed version for this APIM instance - structured scan skipped pending manual version entry. See needsReview in inventory.json.",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-11-15T03:54:03.897Z"
+        "lastScanned": "2026-11-16T03:54:28.714Z"
       }
     },
     {
@@ -467,7 +467,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.02149,
-              "percentile": 0.82417
+              "percentile": 0.82414
             }
           },
           {
@@ -480,7 +480,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0205,
-              "percentile": 0.81561
+              "percentile": 0.81558
             }
           },
           {
@@ -506,7 +506,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.02442,
-              "percentile": 0.84582
+              "percentile": 0.84579
             }
           },
           {
@@ -519,7 +519,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00659,
-              "percentile": 0.52121
+              "percentile": 0.52112
             }
           },
           {
@@ -532,7 +532,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00243,
-              "percentile": 0.15577
+              "percentile": 0.15555
             }
           },
           {
@@ -545,7 +545,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01008,
-              "percentile": 0.63601
+              "percentile": 0.636
             }
           },
           {
@@ -571,7 +571,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01187,
-              "percentile": 0.68387
+              "percentile": 0.68385
             }
           },
           {
@@ -584,7 +584,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0149,
-              "percentile": 0.74518
+              "percentile": 0.74517
             }
           },
           {
@@ -597,7 +597,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01085,
-              "percentile": 0.6579
+              "percentile": 0.65832
             }
           }
         ],
@@ -609,7 +609,7 @@
         "scanNeedsMapping": true,
         "scanNote": "Version 2.15 in inventory.json is flagged as a likely source-data copy/paste error (shares OpenShift's reference text) - verify against Confluence before trusting scan results.",
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:54:26.754Z"
+        "lastScanned": "2026-11-16T03:54:40.840Z"
       }
     },
     {
@@ -634,11 +634,141 @@
       "confidence": "high",
       "needsReview": false,
       "scan": {
-        "vulnerabilityStatus": "high",
-        "vulnerabilityCount": 20,
-        "highestCvssScore": 7.5,
-        "hasKnownExploited": false,
+        "vulnerabilityStatus": "critical",
+        "vulnerabilityCount": 37,
+        "highestCvssScore": 9.8,
+        "hasKnownExploited": true,
         "findings": [
+          {
+            "id": "CVE-2026-31431",
+            "source": "nvd",
+            "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: algif_aead - Revert to operating out-of-place\n\nThis mostly reverts commit 72548b093ee3 except for the copying of\nthe associated data.\n\nThere is no benefit in operating in-place in algif_aead since the\nsource and destination come from different mappings.  Get rid of\nall the complexity added for in-place operation and just copy the\nAD directly.",
+            "cvssScore": 7.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-04-22T09:16:21.270",
+            "knownExploited": true,
+            "epss": {
+              "epssScore": 0.98114,
+              "percentile": 0.99912
+            }
+          },
+          {
+            "id": "CVE-2026-46300",
+            "source": "nvd",
+            "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: skbuff: preserve shared-frag marker during coalescing\n\nskb_try_coalesce() can attach paged frags from @from to @to.  If @from\nhas SKBFL_SHARED_FRAG set, the resulting @to skb can contain the same\nexternally-owned or page-cache-backed frags, but the shared-frag marker\nis currently lost.\n\nThat breaks the invariant relied on by later in-place writers.  In\nparticular, ESP input checks skb_has_shared_frag() before deciding\nwhether an uncloned nonlinear skb can skip skb_cow_data().  If TCP\nreceive coalescing has moved shared frags into an unmarked skb, ESP can\nsee skb_has_shared_frag() as false and decrypt in place over page-cache\nbacked frags.\n\nPropagate SKBFL_SHARED_FRAG when skb_try_coalesce() transfers paged\nfrags.  The tailroom copy path does not need the marker because it copies\nbytes into @to's linear data rather than transferring frag descriptors.",
+            "cvssScore": 7.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-23T12:17:02.660",
+            "knownExploited": true,
+            "epss": {
+              "epssScore": 0.1613,
+              "percentile": 0.96979
+            }
+          },
+          {
+            "id": "CVE-2026-29063",
+            "source": "nvd",
+            "description": "Immutable.js provides many Persistent Immutable data structures. Prior to versions 3.8.3, 4.3.7, and 5.1.5, Prototype Pollution is possible in immutable via the mergeDeep(), mergeDeepWith(), merge(), Map.toJS(), and Map.toObject() APIs. This issue has been patched in versions 3.8.3, 4.3.7, and 5.1.5.",
+            "cvssScore": 9.8,
+            "cvssSeverity": "CRITICAL",
+            "published": "2026-03-06T19:16:21.557",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.0099,
+              "percentile": 0.63062
+            }
+          },
+          {
+            "id": "CVE-2026-54099",
+            "source": "nvd",
+            "description": "A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. The WICD CSR auto-approver validates that a Certificate Signing Request contains the organization system:wicd-nodes but does not reject additional organization values such as system:masters. A compromised Windows worker node that holds WICD credentials can submit a CSR that is auto-approved and signed by the cluster, yielding a client certificate that grants cluster-administrator privileges and enabling full cluster takeover.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-06-22T14:17:40.820",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00131,
+              "percentile": 0.0277
+            }
+          },
+          {
+            "id": "CVE-2026-54100",
+            "source": "nvd",
+            "description": "A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. WMCO establishes SSH connections to Windows worker nodes without verifying the remote server host key. An adjacent-network attacker who can intercept or redirect WMCO's SSH session can capture WICD and kubelet bootstrap credentials transferred during node configuration, enabling compromise of Windows node identities in the cluster.",
+            "cvssScore": 8.3,
+            "cvssSeverity": "HIGH",
+            "published": "2026-06-22T14:17:40.950",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00303,
+              "percentile": 0.23309
+            }
+          },
+          {
+            "id": "CVE-2024-9675",
+            "source": "nvd",
+            "description": "A vulnerability was found in Buildah. Cache mounts do not properly validate that user-specified paths for the cache are within our cache directory, allowing a `RUN` instruction in a Container file to mount an arbitrary directory from the host (read/write) into the container as long as those files can be accessed by the user running Buildah.",
+            "cvssScore": 7.8,
+            "cvssSeverity": "HIGH",
+            "published": "2024-10-09T15:15:17.837",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00392,
+              "percentile": 0.33889
+            }
+          },
+          {
+            "id": "CVE-2025-13601",
+            "source": "nvd",
+            "description": "A heap-based buffer overflow problem was found in glib through an incorrect calculation of buffer size in the g_escape_uri_string() function. If the string to escape contains a very large number of unacceptable characters (which would need escaping), the calculation of the length of the escaped string could overflow, leading to a potential write off the end of the newly allocated string.",
+            "cvssScore": 7.7,
+            "cvssSeverity": "HIGH",
+            "published": "2025-11-26T15:15:51.723",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.00346,
+              "percentile": 0.28539
+            }
+          },
+          {
+            "id": "CVE-2024-12085",
+            "source": "nvd",
+            "description": "A flaw was found in rsync which could be triggered when rsync compares file checksums. This flaw allows an attacker to manipulate the checksum length (s2length) to cause a comparison between a checksum and uninitialized memory and leak one byte of uninitialized stack data at a time.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2025-01-14T18:15:25.123",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.08641,
+              "percentile": 0.95191
+            }
+          },
+          {
+            "id": "CVE-2025-6021",
+            "source": "nvd",
+            "description": "A flaw was found in libxml2's xmlBuildQName function, where integer overflows in buffer size calculations can lead to a stack-based buffer overflow. This issue can result in memory corruption or a denial of service when processing crafted input.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2025-06-12T13:15:25.590",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01469,
+              "percentile": 0.74158
+            }
+          },
+          {
+            "id": "CVE-2026-4424",
+            "source": "nvd",
+            "description": "A flaw was found in libarchive. This heap out-of-bounds read vulnerability exists in the RAR archive processing logic due to improper validation of the LZSS sliding window size after transitions between compression methods. A remote attacker can exploit this by providing a specially crafted RAR archive, leading to the disclosure of sensitive heap memory information without requiring authentication or user interaction.",
+            "cvssScore": 7.5,
+            "cvssSeverity": "HIGH",
+            "published": "2026-03-19T15:16:28.300",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.01243,
+              "percentile": 0.69701
+            }
+          },
           {
             "id": "CVE-2026-121876",
             "source": "redhat",
@@ -650,7 +780,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00166,
-              "percentile": 0.05901
+              "percentile": 0.0587
             }
           },
           {
@@ -664,7 +794,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00922,
-              "percentile": 0.60905
+              "percentile": 0.60901
             }
           },
           {
@@ -678,7 +808,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00156,
-              "percentile": 0.04856
+              "percentile": 0.04847
             }
           },
           {
@@ -703,147 +833,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00399,
-              "percentile": 0.34749
-            }
-          },
-          {
-            "id": "CVE-2026-114466",
-            "source": "redhat",
-            "description": "git: git: Arbitrary file system access via fast-import features",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-11-10T18:00:00Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00232,
-              "percentile": 0.14212
-            }
-          },
-          {
-            "id": "CVE-2026-19706",
-            "source": "redhat",
-            "description": "openshift/installer: OpenShift Installer: Unconditional CSR approval during Agent-Based Installation (ABI) bootstrap",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-11-09T15:00:00Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.0013,
-              "percentile": 0.02687
-            }
-          },
-          {
-            "id": "CVE-2026-99284",
-            "source": "redhat",
-            "description": "kernel: kernel: privilege escalation via missing shared fragment flag in skb_zerocopy",
-            "severity": "important",
-            "cvssScore": 7.5,
-            "cvssSeverity": "IMPORTANT",
-            "published": "2026-11-07T20:40:33Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00209,
-              "percentile": 0.11183
-            }
-          },
-          {
-            "id": "CVE-2026-128086",
-            "source": "redhat",
-            "description": "go.opentelemetry.io/otel: go.opentelemetry.io/otel/baggage: go.opentelemetry.io/otel/propagation: OpenTelemetry Go: Denial of Service via crafted baggage headers",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-11-13T18:54:15Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00436,
-              "percentile": 0.3849
-            }
-          },
-          {
-            "id": "CVE-2026-128085",
-            "source": "redhat",
-            "description": "go.opentelemetry.io/otel/sdk: go.opentelemetry.io/otel/sdk/log: go.opentelemetry.io/otel/trace: OpenTelemetry-Go: Denial of Service via attribute truncation bypass using Unicode replacement characters",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-11-13T18:53:14Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00469,
-              "percentile": 0.4112
-            }
-          },
-          {
-            "id": "CVE-2026-127101",
-            "source": "redhat",
-            "description": "sssd: sssd: NULL pointer dereference in PAM responder when protocol version negotiation is skipped",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-11-12T16:37:13Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00107,
-              "percentile": 0.01189
-            }
-          },
-          {
-            "id": "CVE-2026-127100",
-            "source": "redhat",
-            "description": "sssd: sssd: Local denial of service through unchecked OAuth2 JSON code type in PAM responder",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-11-12T16:37:05Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00141,
-              "percentile": 0.03517
-            }
-          },
-          {
-            "id": "CVE-2026-127099",
-            "source": "redhat",
-            "description": "sssd: sssd: Stack buffer overflow during RSA certificate-to-SSH key conversion",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-11-12T16:36:54Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00169,
-              "percentile": 0.06366
-            }
-          },
-          {
-            "id": "CVE-2026-99287",
-            "source": "redhat",
-            "description": "kernel: kernel: xen-netback: Denial of Service via double unmapping of shared data rings",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-11-10T18:16:54Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00172,
-              "percentile": 0.06695
-            }
-          },
-          {
-            "id": "CVE-2026-99286",
-            "source": "redhat",
-            "description": "kernel: kernel: xen-netback: Denial of Service via race condition during connection cleanup",
-            "severity": "moderate",
-            "cvssScore": 5,
-            "cvssSeverity": "MODERATE",
-            "published": "2026-11-10T18:16:53Z",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00172,
-              "percentile": 0.06695
+              "percentile": 0.3473
             }
           }
         ],
@@ -856,7 +846,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:54:40.077Z"
+        "lastScanned": "2026-11-16T03:54:57.938Z"
       }
     },
     {
@@ -896,7 +886,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.63541
+              "percentile": 0.6354
             }
           },
           {
@@ -909,7 +899,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0041,
-              "percentile": 0.35798
+              "percentile": 0.35782
             }
           },
           {
@@ -922,7 +912,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.39981
+              "percentile": 0.39959
             }
           },
           {
@@ -935,7 +925,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.31401
+              "percentile": 0.3138
             }
           },
           {
@@ -948,7 +938,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.49058
+              "percentile": 0.49045
             }
           },
           {
@@ -961,7 +951,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.47087
+              "percentile": 0.47075
             }
           },
           {
@@ -974,7 +964,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00159,
-              "percentile": 0.05092
+              "percentile": 0.05078
             }
           },
           {
@@ -987,7 +977,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00214,
-              "percentile": 0.11782
+              "percentile": 0.11761
             }
           }
         ],
@@ -999,7 +989,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:54:47.875Z"
+        "lastScanned": "2026-11-16T03:55:12.241Z"
       }
     },
     {
@@ -1047,7 +1037,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.63541
+              "percentile": 0.6354
             }
           },
           {
@@ -1060,7 +1050,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0041,
-              "percentile": 0.35798
+              "percentile": 0.35782
             }
           },
           {
@@ -1073,7 +1063,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.39981
+              "percentile": 0.39959
             }
           },
           {
@@ -1086,7 +1076,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.31401
+              "percentile": 0.3138
             }
           },
           {
@@ -1099,7 +1089,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.49058
+              "percentile": 0.49045
             }
           },
           {
@@ -1112,7 +1102,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.47087
+              "percentile": 0.47075
             }
           },
           {
@@ -1125,7 +1115,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00159,
-              "percentile": 0.05092
+              "percentile": 0.05078
             }
           },
           {
@@ -1138,7 +1128,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00214,
-              "percentile": 0.11782
+              "percentile": 0.11761
             }
           }
         ],
@@ -1150,7 +1140,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:55:04.468Z"
+        "lastScanned": "2026-11-16T03:55:25.090Z"
       }
     },
     {
@@ -1194,7 +1184,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01006,
-              "percentile": 0.63541
+              "percentile": 0.6354
             }
           },
           {
@@ -1207,7 +1197,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0041,
-              "percentile": 0.35798
+              "percentile": 0.35782
             }
           },
           {
@@ -1220,7 +1210,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00454,
-              "percentile": 0.39981
+              "percentile": 0.39959
             }
           },
           {
@@ -1233,7 +1223,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0037,
-              "percentile": 0.31401
+              "percentile": 0.3138
             }
           },
           {
@@ -1246,7 +1236,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00595,
-              "percentile": 0.49058
+              "percentile": 0.49045
             }
           },
           {
@@ -1259,7 +1249,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00558,
-              "percentile": 0.47087
+              "percentile": 0.47075
             }
           },
           {
@@ -1272,7 +1262,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00159,
-              "percentile": 0.05092
+              "percentile": 0.05078
             }
           },
           {
@@ -1285,7 +1275,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00214,
-              "percentile": 0.11782
+              "percentile": 0.11761
             }
           }
         ],
@@ -1297,7 +1287,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:55:26.706Z"
+        "lastScanned": "2026-11-16T03:55:37.336Z"
       }
     },
     {
@@ -1338,7 +1328,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00457,
-              "percentile": 0.40167
+              "percentile": 0.40145
             }
           },
           {
@@ -1352,7 +1342,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00283,
-              "percentile": 0.21123
+              "percentile": 0.21105
             }
           },
           {
@@ -1366,7 +1356,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00394,
-              "percentile": 0.34185
+              "percentile": 0.34169
             }
           },
           {
@@ -1380,7 +1370,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00355,
-              "percentile": 0.29693
+              "percentile": 0.2967
             }
           },
           {
@@ -1394,7 +1384,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00649,
-              "percentile": 0.51678
+              "percentile": 0.5167
             }
           },
           {
@@ -1408,7 +1398,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00412,
-              "percentile": 0.36031
+              "percentile": 0.36011
             }
           },
           {
@@ -1422,7 +1412,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00361,
-              "percentile": 0.30393
+              "percentile": 0.30364
             }
           },
           {
@@ -1436,7 +1426,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00262,
-              "percentile": 0.18115
+              "percentile": 0.18095
             }
           },
           {
@@ -1450,7 +1440,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0022,
-              "percentile": 0.12671
+              "percentile": 0.12654
             }
           },
           {
@@ -1464,7 +1454,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00367,
-              "percentile": 0.31051
+              "percentile": 0.31029
             }
           },
           {
@@ -1478,7 +1468,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00315,
-              "percentile": 0.24796
+              "percentile": 0.24774
             }
           },
           {
@@ -1492,7 +1482,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00247,
-              "percentile": 0.16118
+              "percentile": 0.16095
             }
           },
           {
@@ -1506,7 +1496,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00245,
-              "percentile": 0.1581
+              "percentile": 0.15786
             }
           },
           {
@@ -1520,7 +1510,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00455,
-              "percentile": 0.40005
+              "percentile": 0.39985
             }
           },
           {
@@ -1534,7 +1524,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00362,
-              "percentile": 0.30518
+              "percentile": 0.30491
             }
           }
         ],
@@ -1547,7 +1537,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:55:50.657Z"
+        "lastScanned": "2026-11-16T03:55:51.756Z"
       }
     },
     {
@@ -1589,7 +1579,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00513,
-              "percentile": 0.44314
+              "percentile": 0.44293
             }
           },
           {
@@ -1603,7 +1593,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00357,
-              "percentile": 0.29943
+              "percentile": 0.29918
             }
           },
           {
@@ -1617,7 +1607,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00829,
-              "percentile": 0.58088
+              "percentile": 0.58086
             }
           },
           {
@@ -1631,7 +1621,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00469,
-              "percentile": 0.4112
+              "percentile": 0.41099
             }
           },
           {
@@ -1645,7 +1635,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00417,
-              "percentile": 0.36521
+              "percentile": 0.36499
             }
           },
           {
@@ -1659,7 +1649,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0048,
-              "percentile": 0.42021
+              "percentile": 0.41998
             }
           },
           {
@@ -1673,7 +1663,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0031,
-              "percentile": 0.24168
+              "percentile": 0.24145
             }
           },
           {
@@ -1687,7 +1677,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00336,
-              "percentile": 0.27419
+              "percentile": 0.27394
             }
           },
           {
@@ -1701,7 +1691,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00499,
-              "percentile": 0.43367
+              "percentile": 0.43345
             }
           },
           {
@@ -1715,7 +1705,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00422,
-              "percentile": 0.37039
+              "percentile": 0.37018
             }
           },
           {
@@ -1729,7 +1719,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00444,
-              "percentile": 0.39187
+              "percentile": 0.39167
             }
           },
           {
@@ -1743,7 +1733,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00561,
-              "percentile": 0.47262
+              "percentile": 0.47251
             }
           },
           {
@@ -1757,7 +1747,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00559,
-              "percentile": 0.47135
+              "percentile": 0.47123
             }
           },
           {
@@ -1771,7 +1761,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00434,
-              "percentile": 0.38198
+              "percentile": 0.38176
             }
           },
           {
@@ -1785,7 +1775,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00251,
-              "percentile": 0.16582
+              "percentile": 0.16556
             }
           }
         ],
@@ -1798,7 +1788,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:56:01.804Z"
+        "lastScanned": "2026-11-16T03:56:11.054Z"
       }
     },
     {
@@ -1827,90 +1817,11 @@
       "confidence": "high",
       "needsReview": false,
       "scan": {
-        "vulnerabilityStatus": "critical",
-        "vulnerabilityCount": 6,
-        "highestCvssScore": 9.6,
+        "vulnerabilityStatus": "clear",
+        "vulnerabilityCount": 0,
+        "highestCvssScore": null,
         "hasKnownExploited": false,
-        "findings": [
-          {
-            "id": "CVE-2022-38339",
-            "source": "nvd",
-            "description": "Safe Software FME Server v2021.2.5, v2022.0.0.2 and below contains a cross-site scripting (XSS) vulnerability which allows attackers to execute arbitrary web scripts or HTML via a crafted payload injected into the login page.",
-            "cvssScore": 9.6,
-            "cvssSeverity": "CRITICAL",
-            "published": "2022-09-19T22:15:11.407",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00588,
-              "percentile": 0.48674
-            }
-          },
-          {
-            "id": "CVE-2022-38340",
-            "source": "nvd",
-            "description": "Safe Software FME Server v2021.2.5, v2022.0.0.2 and below was discovered to contain a Path Traversal vulnerability via the component fmedataupload.",
-            "cvssScore": 9.1,
-            "cvssSeverity": "CRITICAL",
-            "published": "2022-09-20T18:15:10.310",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.01442,
-              "percentile": 0.73665
-            }
-          },
-          {
-            "id": "CVE-2018-20402",
-            "source": "nvd",
-            "description": "Safe Software FME Server through 2018.1 creates and enables three additional accounts in addition to the initial administrator account. The passwords to the three accounts are the same as the usernames, which are guest, user, and author. Logging in with these accounts will grant any user the default privilege roles that were also created for each of the accounts.",
-            "cvssScore": 8.8,
-            "cvssSeverity": "HIGH",
-            "published": "2018-12-23T21:29:01.623",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.01035,
-              "percentile": 0.64398
-            }
-          },
-          {
-            "id": "CVE-2022-38342",
-            "source": "nvd",
-            "description": "Safe Software FME Server v2021.2.5, v2022.0.0.2 and below was discovered to contain a XML External Entity (XXE) vulnerability which allows authenticated attackers to perform data exfiltration or Server-Side Request Forgery (SSRF) attacks.",
-            "cvssScore": 8.5,
-            "cvssSeverity": "HIGH",
-            "published": "2022-09-13T20:15:09.833",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00616,
-              "percentile": 0.5011
-            }
-          },
-          {
-            "id": "CVE-2023-35801",
-            "source": "nvd",
-            "description": "A directory traversal vulnerability in Safe Software FME Server before 2022.2.5 allows an attacker to bypass validation when editing a network-based resource connection, resulting in the unauthorized reading and writing of arbitrary files. Successful exploitation requires an attacker to have access to a user account with write privileges. FME Flow 2023.0 is also a fixed version.",
-            "cvssScore": 8.1,
-            "cvssSeverity": "HIGH",
-            "published": "2023-06-23T06:15:11.767",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.01477,
-              "percentile": 0.74288
-            }
-          },
-          {
-            "id": "CVE-2022-38341",
-            "source": "nvd",
-            "description": "Safe Software FME Server v2021.2.5 and below does not employ server-side validation.",
-            "cvssScore": 7.1,
-            "cvssSeverity": "HIGH",
-            "published": "2022-09-19T14:15:11.110",
-            "knownExploited": false,
-            "epss": {
-              "epssScore": 0.00629,
-              "percentile": 0.50724
-            }
-          }
-        ],
+        "findings": [],
         "sourcesAttempted": [
           "nvd:keyword",
           "websearch:skipped",
@@ -1920,7 +1831,7 @@
         "scanNeedsMapping": true,
         "scanNote": "FME/Safe Software rarely appears in NVD - may need vendor security bulletins instead",
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-11-15T03:56:16.566Z"
+        "lastScanned": "2026-11-16T03:56:23.852Z"
       }
     },
     {
@@ -1968,7 +1879,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": "Skipped - ANTHROPIC_API_KEY not configured",
-        "lastScanned": "2026-11-15T03:56:35.017Z"
+        "lastScanned": "2026-11-16T03:56:35.334Z"
       }
     },
     {
@@ -2017,7 +1928,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00157,
-              "percentile": 0.04899
+              "percentile": 0.0489
             }
           },
           {
@@ -2031,7 +1942,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00262,
-              "percentile": 0.18115
+              "percentile": 0.18095
             }
           },
           {
@@ -2045,7 +1956,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0022,
-              "percentile": 0.12671
+              "percentile": 0.12654
             }
           },
           {
@@ -2059,7 +1970,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.0061,
-              "percentile": 0.49814
+              "percentile": 0.49804
             }
           },
           {
@@ -2073,7 +1984,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00532,
-              "percentile": 0.45568
+              "percentile": 0.45553
             }
           },
           {
@@ -2087,7 +1998,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00429,
-              "percentile": 0.37668
+              "percentile": 0.37648
             }
           },
           {
@@ -2101,7 +2012,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00242,
-              "percentile": 0.15542
+              "percentile": 0.15522
             }
           },
           {
@@ -2115,7 +2026,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00415,
-              "percentile": 0.36342
+              "percentile": 0.3632
             }
           },
           {
@@ -2129,7 +2040,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00415,
-              "percentile": 0.36342
+              "percentile": 0.3632
             }
           },
           {
@@ -2143,7 +2054,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00121,
-              "percentile": 0.01974
+              "percentile": 0.0197
             }
           },
           {
@@ -2157,7 +2068,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00559,
-              "percentile": 0.47135
+              "percentile": 0.47123
             }
           },
           {
@@ -2171,7 +2082,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00434,
-              "percentile": 0.38198
+              "percentile": 0.38176
             }
           },
           {
@@ -2185,7 +2096,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00528,
-              "percentile": 0.45272
+              "percentile": 0.45256
             }
           },
           {
@@ -2199,7 +2110,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00338,
-              "percentile": 0.27628
+              "percentile": 0.27605
             }
           },
           {
@@ -2213,7 +2124,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00264,
-              "percentile": 0.18432
+              "percentile": 0.1841
             }
           }
         ],
@@ -2226,7 +2137,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:56:55.221Z"
+        "lastScanned": "2026-11-16T03:56:50.317Z"
       }
     },
     {
@@ -2259,11 +2170,50 @@
       "confidence": "high",
       "needsReview": false,
       "scan": {
-        "vulnerabilityStatus": "low",
-        "vulnerabilityCount": 102,
-        "highestCvssScore": null,
+        "vulnerabilityStatus": "high",
+        "vulnerabilityCount": 105,
+        "highestCvssScore": 8.8,
         "hasKnownExploited": false,
         "findings": [
+          {
+            "id": "CVE-2026-23479",
+            "source": "nvd",
+            "description": "Redis is an in-memory data structure store. In redis-server from 7.2.0 until 8.6.3, the unblock client flow does not handle an error return from `processCommandAndResetClient` when re-executing a blocked command. If a blocked client is evicted during this flow, an authenticated attacker can trigger a use-after-free that may lead to remote code execution. This has been patched in version 8.6.3.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-05T17:17:02.577",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.02612,
+              "percentile": 0.8567
+            }
+          },
+          {
+            "id": "CVE-2026-25243",
+            "source": "nvd",
+            "description": "Redis is an in-memory data structure store. In versions of redis-server up to 8.6.3, the RESTORE command does not properly validate serialized values. An authenticated attacker with permission to execute RESTORE can supply a crafted serialized payload that triggers invalid memory access and may lead to remote code execution. A workaround is to restrict access to the RESTORE command with ACL rules. This is patched in version 8.6.3.",
+            "cvssScore": 8.8,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-05T17:17:03.667",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.04033,
+              "percentile": 0.90766
+            }
+          },
+          {
+            "id": "CVE-2026-23631",
+            "source": "nvd",
+            "description": "Redis is an in-memory data structure store. In all versions of redis-server with Lua scripting, an authenticated attacker can exploit the master-replica synchronization mechanism to trigger a use-after-free on replicas where replica-read-only is disabled or can be disabled, which may lead to remote code execution. A workaround is to prevent users from executing Lua scripts or avoid using replicas where replica-read-only is disabled. This is patched in version 8.6.3.",
+            "cvssScore": 8.1,
+            "cvssSeverity": "HIGH",
+            "published": "2026-05-05T17:17:03.503",
+            "knownExploited": false,
+            "epss": {
+              "epssScore": 0.03088,
+              "percentile": 0.87918
+            }
+          },
           {
             "id": "DEBIAN-CVE-2013-0178",
             "source": "osv",
@@ -2383,36 +2333,6 @@
             "published": "2018-06-17T14:29:00.260Z",
             "knownExploited": false,
             "epss": null
-          },
-          {
-            "id": "DEBIAN-CVE-2019-10192",
-            "source": "osv",
-            "description": "A heap-buffer overflow vulnerability was found in the Redis hyperloglog data structure versions 3.x before 3.2.13, 4.x before 4.0.14 and 5.x before 5.0.4. By carefully corrupting a hyperloglog using the SETRANGE command, an attacker could trick Redis interpretation of dense HLL encoding to write up ",
-            "cvssScore": null,
-            "cvssSeverity": null,
-            "published": "2019-07-11T19:15:12.627Z",
-            "knownExploited": false,
-            "epss": null
-          },
-          {
-            "id": "DEBIAN-CVE-2019-10193",
-            "source": "osv",
-            "description": "A stack-buffer overflow vulnerability was found in the Redis hyperloglog data structure versions 3.x before 3.2.13, 4.x before 4.0.14 and 5.x before 5.0.4. By corrupting a hyperloglog using the SETRANGE command, an attacker could cause Redis to perform controlled increments of up to 12 bytes past th",
-            "cvssScore": null,
-            "cvssSeverity": null,
-            "published": "2019-07-11T19:15:12.720Z",
-            "knownExploited": false,
-            "epss": null
-          },
-          {
-            "id": "DEBIAN-CVE-2020-14147",
-            "source": "osv",
-            "description": "An integer overflow in the getnum function in lua_struct.c in Redis before 6.0.3 allows context-dependent attackers with permission to run Lua code in a Redis session to cause a denial of service (memory corruption and application crash) or possibly bypass intended sandbox restrictions via a large n",
-            "cvssScore": null,
-            "cvssSeverity": null,
-            "published": "2020-06-15T18:15:14.990Z",
-            "knownExploited": false,
-            "epss": null
           }
         ],
         "sourcesAttempted": [
@@ -2424,7 +2344,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:57:08.700Z"
+        "lastScanned": "2026-11-16T03:57:08.527Z"
       }
     },
     {
@@ -2472,7 +2392,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.02104,
-              "percentile": 0.82039
+              "percentile": 0.82036
             }
           },
           {
@@ -2485,7 +2405,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01273,
-              "percentile": 0.70356
+              "percentile": 0.70359
             }
           },
           {
@@ -2498,7 +2418,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01739,
-              "percentile": 0.78096
+              "percentile": 0.78097
             }
           },
           {
@@ -2511,7 +2431,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.19563,
-              "percentile": 0.97425
+              "percentile": 0.97426
             }
           },
           {
@@ -2524,7 +2444,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00827,
-              "percentile": 0.58046
+              "percentile": 0.58043
             }
           },
           {
@@ -2537,7 +2457,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00791,
-              "percentile": 0.56874
+              "percentile": 0.5687
             }
           },
           {
@@ -2560,7 +2480,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01492,
-              "percentile": 0.74557
+              "percentile": 0.74556
             }
           },
           {
@@ -2573,7 +2493,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01257,
-              "percentile": 0.70028
+              "percentile": 0.70031
             }
           },
           {
@@ -2586,7 +2506,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01188,
-              "percentile": 0.68405
+              "percentile": 0.68403
             }
           },
           {
@@ -2599,7 +2519,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01305,
-              "percentile": 0.71012
+              "percentile": 0.71014
             }
           },
           {
@@ -2612,7 +2532,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.01225,
-              "percentile": 0.69288
+              "percentile": 0.6929
             }
           },
           {
@@ -2625,7 +2545,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00886,
-              "percentile": 0.59833
+              "percentile": 0.59829
             }
           },
           {
@@ -2651,7 +2571,7 @@
             "knownExploited": false,
             "epss": {
               "epssScore": 0.00749,
-              "percentile": 0.55505
+              "percentile": 0.55495
             }
           }
         ],
@@ -2665,7 +2585,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:57:20.445Z"
+        "lastScanned": "2026-11-16T03:57:28.701Z"
       },
       "reviewNote": null
     },
@@ -2695,7 +2615,7 @@
         "scanNeedsMapping": false,
         "scanNote": null,
         "webSearchNote": null,
-        "lastScanned": "2026-11-15T03:57:20.446Z"
+        "lastScanned": "2026-11-16T03:57:28.702Z"
       }
     }
   ],
@@ -2704,7 +2624,7 @@
     "extractedAt": "2026-08-04",
     "extractionMethod": "manual-reconstruction-from-jumbled-pdf-text",
     "itemsNeedingReview": 5,
-    "lastFullScan": "2026-11-15T03:57:20.446Z",
+    "lastFullScan": "2026-11-16T03:57:28.702Z",
     "lastVersionReconciliation": "2026-08-04",
     "reconciliationNote": "Versions reconciled against source PDF (IMS-Software End of Life Tracker-140526-011406.pdf) using pdfplumber table extraction, replacing the earlier jumbled-text reconstruction. EOL dates cross-checked against the PDF's task-list table on 2026-08-04: corrected NeoDPS (2025-11-02 -> 2025-11-01) and Elasticsearch (2026-04-08 -> 2026-04-30)."
   }
